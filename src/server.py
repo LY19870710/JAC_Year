@@ -274,6 +274,15 @@ tr:hover td{background:#fff7ed}
 .bar-fill{height:100%;border-radius:4px;transition:width .3s}
 .bar-count{width:36px;text-align:right;font-size:.82rem;font-weight:700;color:#78716c;flex-shrink:0}
 .empty{text-align:center;padding:40px;color:#a8a29e}
+/* card layout */
+.articles-grid{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+.article-card{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:16px 18px;transition:box-shadow .15s,border-color .15s}
+.article-card:hover{box-shadow:0 2px 8px rgba(234,88,12,.15);border-color:#fb923c}
+.card-header{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.vol-issue{font-size:.82rem;font-weight:700;color:#9a3412;background:#fed7aa;padding:2px 10px;border-radius:12px;white-space:nowrap}
+.doi-link{font-family:monospace;font-size:.82rem;color:#ea580c;font-weight:600}.doi-link:hover{color:#c2410c}
+.ris-btn{color:#ea580c;text-decoration:none;font-size:.9rem;margin-left:auto;opacity:.6}.ris-btn:hover{opacity:1}
+.card-abstract{font-size:.88rem;color:#44403c;line-height:1.7;text-align:justify}
 /* tooltip */
 .tip{position:relative;cursor:help;border-bottom:1px dashed #d1c4b0}
 .tip:hover::after{content:attr(data-tip);position:absolute;left:0;top:100%;z-index:99;background:#1c1917;color:#fff;padding:6px 10px;border-radius:6px;font-size:.75rem;white-space:pre-wrap;max-width:360px;line-height:1.5;box-shadow:0 4px 12px rgba(0,0,0,.25);pointer-events:none;margin-top:4px}
@@ -359,79 +368,30 @@ def render_search(conn, filters=None, articles=None, total=0, page=1, per_page=5
         body = form + '<div class="card"><p class="empty">输入条件后点击Search</p></div>'
         return layout("Search", body, "search")
 
-    rows = ""
+    cards = ""
+    import html as _html_mod
     for a in articles:
-        color = AREA_COLORS.get(a["research_area_id"], "#6b7280")
-
-        # ── 通讯作者（JSON格式，每人独立一行）──
-        corr_json_str = a["corresponding_json"] if "corresponding_json" in a.keys() else "[]"
-        try:
-            corr_list = json.loads(corr_json_str or "[]")
-        except Exception:
-            corr_list = []
-
-        if corr_list:
-            items_html = ""
-            for c in corr_list:
-                raw_name = c.get("name", "")
-                # 剥离HTML标签（sciopen有时返回<a>标签）
-                name = esc(re.sub(r'<[^>]+>', '', raw_name).strip()) if raw_name else ""
-                email = esc(c.get("email", ""))
-                email_html = f'<a class="corr-email" href="mailto:{email}">{email}</a>' if email else ""
-                items_html += f'<div class="corr-item"><span class="corr-name">✉ {name}</span>{email_html}</div>'
-            corr_html = f'<div class="corr-list">{items_html}</div>'
-        else:
-            corr_html = ""
-
-        # ── 机构提取（优化版 + tooltip）──
-        aff_raw = a["affiliations"] or ""
-        if aff_raw:
-            aff_parts = []
-            seen_short = set()
-            for aff_item in aff_raw.split(";"):
-                short, original = extract_institution(aff_item)
-                if not short:
-                    continue
-                if short in seen_short:
-                    continue
-                seen_short.add(short)
-                # tooltip 显示原文（换行转义）
-                import html as _html_mod
-                tip_text = esc(_html_mod.unescape(original)).replace('\n', ' ')
-                aff_parts.append(f'<span class="tip" data-tip="{tip_text}">{esc(short)}</span>')
-            aff_html = "; ".join(aff_parts) if aff_parts else '<span style="color:#d1c4b0">—</span>'
-        else:
-            aff_html = '<span style="color:#d1c4b0">—</span>'
-
-        # ── Funding（可折叠）──
-        funding = (a["funding"] if "funding" in a.keys() else "") or ""
-        if funding.strip():
-            uid = f"f{a['id']}"
-            funding_html = (
-                f'<div class="funding-toggle" onclick="'
-                f'var b=document.getElementById(\'{uid}\');'
-                f'b.style.display=b.style.display===\'block\'?\'none\':\'block\'">'
-                f'▶ Funding</div>'
-                f'<div class="funding-body" id="{uid}">{esc(funding)}</div>'
-            )
-        else:
-            funding_html = ""
-
         # ── Volume/Issue ──
         vol_issue = f"Vol.{a['volume'] or '?'} Issue {a['issue'] or '?'}"
 
-        rows += f"""<tr>
-  <td style="white-space:nowrap;font-size:.82rem">{vol_issue}</td>
-  <td><span class="tag tag-type">{esc(a['type'])}</span></td>
-  <td class="title-cell">
-    <a href="{esc(a['url'])}" target="_blank">{esc(a['title'])}</a>
-    {funding_html}
-  </td>
-  <td class="authors-cell">{esc(a['authors'])}{corr_html}</td>
-  <td style="font-size:.78rem;color:#57534e;max-width:240px">{aff_html}</td>
-  <td><span class="area-badge" style="background:{color}">{esc(a['research_area_zh'])}</span></td>
-  <td style="white-space:nowrap"><a class="doi-link" href="{esc(a['url'])}" target="_blank">{esc(a['doi'])}</a> <a href="/api/export-ris?ids={a['id']}" style="color:#ea580c;text-decoration:none;font-size:.85rem" target="_blank" title="导出RIS">📥</a></td>
-</tr>"""
+        # ── Abstract（清理HTML标签）──
+        abstract_raw = a["abstract"] if "abstract" in a.keys() else ""
+        if abstract_raw:
+            abstract_clean = re.sub(r'<[^>]+>', '', abstract_raw)
+            abstract_clean = _html_mod.unescape(abstract_clean)
+            abstract_clean = re.sub(r'\\u([0-9a-fA-F]{4})', lambda m: chr(int(m.group(1), 16)), abstract_clean)
+            abstract_clean = re.sub(r'\s+', ' ', abstract_clean).strip()
+        else:
+            abstract_clean = ""
+
+        cards += f"""<div class="article-card">
+  <div class="card-header">
+    <span class="vol-issue">{vol_issue}</span>
+    <a class="doi-link" href="{esc(a['url'])}" target="_blank">{esc(a['doi'])}</a>
+    <a href="/api/export-ris?ids={a['id']}" class="ris-btn" title="导出RIS">📥</a>
+  </div>
+  <div class="card-abstract">{esc(abstract_clean) if abstract_clean else '<span style="color:#d1c4b0">— No abstract —</span>'}</div>
+</div>"""
 
     # ── 导出按钮 ──
     export_qs = ""
@@ -450,13 +410,12 @@ def render_search(conn, filters=None, articles=None, total=0, page=1, per_page=5
   <a href="/api/export-ris?{export_qs[1:]}" class="btn" style="background:#ea580c;color:#fff;text-decoration:none;font-size:.82rem" title="导出RIS格式，可导入EndNote">EndNote</a>
 </div>"""
 
+    cards_html = cards if cards else '<div class="empty">No results</div>'
+
     table = f"""<div class="card">
   <p class="count">Found <strong>{total}</strong> articles (showing {len(articles)} of {total})</p>
   {export_btns}
-  <table>
-    <thead><tr><th>Issue</th><th>Type</th><th>Title</th><th>Authors / Corr.</th><th>Affiliations</th><th>Research Area</th><th>DOI</th></tr></thead>
-    <tbody>{rows if rows else '<tr><td colspan="7" class="empty">No results</td></tr>'}</tbody>
-  </table>
+  <div class="articles-grid">{cards_html}</div>
 </div>"""
 
     # 分页控件
