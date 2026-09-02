@@ -1,5 +1,6 @@
 """
 Extract metadata from all markdown files and generate articles.json for GitHub Pages.
+Enhanced version: full abstract, corresponding author, institutions, all citation metrics.
 """
 import json
 import os
@@ -14,110 +15,97 @@ def parse_markdown_metadata(filepath):
     """Parse a markdown file and extract metadata."""
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
-    
-    # Extract title (first # heading)
+
+    # Extract title
     title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
     title = title_match.group(1).strip() if title_match else ''
-    
-    # Extract metadata table values
-    metadata = {}
-    table_pattern = re.compile(r'\|\s*\*?\*?(.+?)\*?\*?\s*\|\s*(.+?)\s*\|')
-    in_metadata = False
-    in_dates = False
-    in_stats = False
-    
+
+    # Parse sections by headers
+    sections = {}
+    current_section = None
     for line in content.split('\n'):
-        if '## Metadata' in line:
-            in_metadata = True
-            continue
-        if '## Publication Dates' in line:
-            in_metadata = False
-            in_dates = True
-            continue
-        if '## Authors' in line:
-            in_dates = False
-            continue
-        if '## Keywords' in line:
-            continue
-        if '## Statistics' in line:
-            in_stats = True
-            continue
-        if '## ' in line and in_stats:
-            in_stats = False
-        
-        if in_metadata or in_dates or in_stats:
-            m = table_pattern.match(line)
-            if m:
-                key = m.group(1).strip().strip('*')
-                value = m.group(2).strip()
-                if in_dates:
-                    key = f"date_{key.lower()}"
-                if in_stats:
-                    key = f"stat_{key.lower()}"
-                metadata[key] = value
-    
-    # Extract year from DOI or metadata
+        if line.startswith('## '):
+            current_section = line[3:].strip()
+            sections[current_section] = []
+        elif current_section:
+            sections[current_section].append(line)
+
+    # Extract metadata table
+    metadata = {}
+    for line in sections.get('Metadata', []):
+        m = re.match(r'\|\s*\*?\*?(.+?)\*?\*?\s*\|\s*(.+?)\s*\|', line)
+        if m:
+            key = m.group(1).strip().strip('*')
+            val = m.group(2).strip()
+            metadata[key] = val
+
+    # DOI
     doi = metadata.get('DOI', '')
     year_match = re.search(r'JAC\.(\d{4})', doi)
     year = int(year_match.group(1)) if year_match else None
-    
-    # Extract article number from DOI
-    article_num_match = re.search(r'JAC\.\d{4}\.(\d+)', doi)
-    article_num = article_num_match.group(1) if article_num_match else ''
-    
-    # Extract authors
+
+    # Publication dates
+    dates = {}
+    for line in sections.get('Publication Dates', []):
+        m = re.match(r'\|\s*\*?\*?(.+?)\*?\*?\s*\|\s*(.+?)\s*\|', line)
+        if m:
+            dates[m.group(1).strip().strip('*').lower()] = m.group(2).strip()
+
+    # Authors with emails
     authors = []
-    in_authors = False
-    for line in content.split('\n'):
-        if '## Authors' in line:
-            in_authors = True
-            continue
-        if in_authors and line.startswith('## '):
-            break
-        if in_authors:
-            author_match = re.match(r'^\d+\.\s+(.+?)(?:\s*—|\s*$)', line)
-            if author_match:
-                author_name = author_match.group(1).strip()
-                # Check for email
-                email_match = re.search(r'📧\s*(.+)', line)
-                email = email_match.group(1).strip() if email_match else ''
-                authors.append({'name': author_name, 'email': email})
-    
-    # Extract keywords
+    for line in sections.get('Authors', []):
+        m = re.match(r'^\d+\.\s+(.+?)(?:\s*—|\s*$)', line)
+        if m:
+            name = m.group(1).strip()
+            email_match = re.search(r'📧\s*([^\s)]+)', line)
+            email = email_match.group(1).strip() if email_match else ''
+            # Extract institution after —
+            inst_match = re.search(r'—\s*(.+)', line)
+            institution = inst_match.group(1).strip() if inst_match else ''
+            # Clean institution (remove email part)
+            institution = re.sub(r'\s*📧.*$', '', institution).strip()
+            authors.append({'name': name, 'email': email, 'institution': institution})
+
+    # Keywords
     keywords = []
-    in_keywords = False
-    for line in content.split('\n'):
-        if '## Keywords' in line:
-            in_keywords = True
-            continue
-        if in_keywords and line.startswith('## '):
-            break
-        if in_keywords:
-            kws = re.findall(r'`([^`]+)`', line)
-            keywords.extend(kws)
-    
-    # Extract abstract
+    for line in sections.get('Keywords', []):
+        keywords.extend(re.findall(r'`([^`]+)`', line))
+
+    # Statistics
+    stats = {}
+    for line in sections.get('Statistics', []):
+        m = re.match(r'\|\s*\*?\*?(.+?)\*?\*?\s*\|\s*(.+?)\s*\|', line)
+        if m:
+            key = m.group(1).strip().strip('*').lower()
+            val = m.group(2).strip()
+            stats[key] = val
+
+    # Full abstract - extract from Full Text section
     abstract = ''
-    abstract_start = content.find('## Abstract')
-    if abstract_start == -1:
-        # Try to find first section after metadata block
-        abstract_start = content.find('## Full Text')
-    if abstract_start > 0:
-        # Find the first paragraph after ## Full Text or similar
-        text_after = content[abstract_start:]
-        # Get text after the heading
-        lines_after = text_after.split('\n')[1:]
-        para_lines = []
-        for line in lines_after:
-            if line.startswith('#') or line.startswith('## '):
-                break
-            if line.strip():
-                para_lines.append(line.strip())
-            elif para_lines:
-                break
-        abstract = ' '.join(para_lines)[:500]  # First 500 chars
-    
-    # Build article object
+    full_text_lines = sections.get('Full Text', [])
+    if full_text_lines:
+        # Find first meaningful paragraph after ## Full Text
+        para = []
+        started = False
+        for line in full_text_lines:
+            if not started and line.strip() and not line.startswith('#'):
+                started = True
+            if started:
+                if line.startswith('#') or line.startswith('## '):
+                    break
+                if line.strip():
+                    para.append(line.strip())
+                elif para:
+                    break
+        abstract = ' '.join(para)
+        # Truncate to ~1000 chars for display
+        if len(abstract) > 1000:
+            abstract = abstract[:1000] + '...'
+
+    # Research area
+    research_area = metadata.get('Research Area', '')
+    research_area_zh = metadata.get('Research Area (中文)', '')
+
     article = {
         'doi': doi,
         'title': title,
@@ -130,23 +118,28 @@ def parse_markdown_metadata(filepath):
         'authors': authors,
         'keywords': keywords,
         'abstract': abstract,
-        'research_area': metadata.get('Research Area', ''),
-        'research_area_zh': metadata.get('Research Area (中文)', ''),
-        'received': metadata.get('date_Received', ''),
-        'accepted': metadata.get('date_Accepted', ''),
-        'published': metadata.get('date_Published', ''),
-        'views': metadata.get('stat_Views', ''),
-        'downloads': metadata.get('stat_Downloads', ''),
-        'citations': metadata.get('stat_Crossref Citations', metadata.get('stat_Web of Science Citations', '')),
+        'research_area': research_area,
+        'research_area_zh': research_area_zh,
+        'received': dates.get('received', ''),
+        'revised': dates.get('revised', ''),
+        'accepted': dates.get('accepted', ''),
+        'published': dates.get('published', ''),
+        'views': stats.get('views', ''),
+        'downloads': stats.get('downloads', ''),
+        'citations_crossref': stats.get('crossref citations', ''),
+        'citations_wos': stats.get('web of science citations', ''),
+        'citations_scopus': stats.get('scopus citations', ''),
+        'citations_csdb': stats.get('csdb citations', ''),
+        'altmetric': stats.get('altmetric score', ''),
     }
-    
+
     return article
 
 
 def main():
     md_files = sorted(Path(INPUT_DIR).glob('*.md'))
     articles = []
-    
+
     for md_file in md_files:
         try:
             article = parse_markdown_metadata(md_file)
@@ -154,18 +147,14 @@ def main():
                 articles.append(article)
         except Exception as e:
             print(f"Error parsing {md_file.name}: {e}")
-    
-    # Sort by year descending, then by DOI
+
     articles.sort(key=lambda x: (x['year'] or 0, x['doi']), reverse=True)
-    
-    # Write JSON
+
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(articles, f, ensure_ascii=False, indent=2)
-    
+
     print(f"Generated {OUTPUT_FILE}")
     print(f"Total articles: {len(articles)}")
-    
-    # Print year distribution
     year_counts = {}
     for a in articles:
         y = a['year']

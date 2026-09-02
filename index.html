@@ -3,341 +3,312 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAC Year Manager - Journal of Advanced Ceramics</title>
+<title>JAC Year Manager | Journal of Advanced Ceramics</title>
 <style>
 :root {
+  --bg: #f7f8fa;
+  --card: #ffffff;
   --primary: #1a5276;
-  --primary-light: #2980b9;
-  --accent: #e74c3c;
-  --bg: #f5f6fa;
-  --card-bg: #ffffff;
+  --primary-dark: #0e3a5a;
+  --accent: #e67e22;
+  --accent-light: #fdebd0;
   --text: #2c3e50;
-  --text-light: #7f8c8d;
-  --border: #dcdde1;
-  --shadow: 0 2px 8px rgba(0,0,0,0.08);
-  --radius: 8px;
+  --text-muted: #6b7c93;
+  --border: #e2e6ed;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.1), 0 8px 24px rgba(0,0,0,0.06);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Header */
+/* ── Header ── */
 .header {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  color: white;
-  padding: 24px 0;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #2980b9 100%);
+  color: #fff;
+  padding: 28px 0 24px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.18);
 }
-
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
+.header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.3px; }
+.header p { font-size: 0.85rem; opacity: 0.8; font-weight: 400; }
 
-.header h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 4px;
+.export-btns { display: flex; gap: 8px; }
+.export-btn {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
 }
+.export-btn:hover { background: rgba(255,255,255,0.28); }
 
-.header p {
-  font-size: 0.85rem;
-  opacity: 0.85;
-}
-
-/* Search bar */
+/* ── Search ── */
 .search-section {
   max-width: 1200px;
-  margin: 20px auto 12px;
-  padding: 0 20px;
+  margin: 24px auto 12px;
+  padding: 0 24px;
 }
-
-.search-bar {
+.search-row {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
 }
-
-.search-input-wrap {
+.search-wrap {
   flex: 1;
-  min-width: 240px;
+  min-width: 220px;
   position: relative;
 }
-
-.search-input-wrap input {
+.search-wrap input {
   width: 100%;
-  padding: 12px 16px 12px 42px;
+  padding: 12px 16px 12px 44px;
   border: 2px solid var(--border);
   border-radius: var(--radius);
   font-size: 0.95rem;
-  background: var(--card-bg);
-  transition: border-color 0.2s;
+  background: var(--card);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-
-.search-input-wrap input:focus {
+.search-wrap input:focus {
   outline: none;
-  border-color: var(--primary-light);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(26,82,118,0.1);
 }
-
-.search-input-wrap::before {
-  content: "🔍";
+.search-wrap .icon {
   position: absolute;
-  left: 14px;
-  top: 50%;
+  left: 14px; top: 50%;
   transform: translateY(-50%);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  pointer-events: none;
 }
 
 .filter-select {
   padding: 12px 14px;
   border: 2px solid var(--border);
   border-radius: var(--radius);
-  font-size: 0.9rem;
-  background: var(--card-bg);
+  font-size: 0.88rem;
+  background: var(--card);
   cursor: pointer;
-  min-width: 120px;
+  min-width: 130px;
+  transition: border-color 0.2s;
 }
-
 .filter-select:focus {
   outline: none;
-  border-color: var(--primary-light);
+  border-color: var(--primary);
 }
 
-/* Stats bar */
-.stats-bar {
+/* ── Stats ── */
+.stats-row {
   max-width: 1200px;
-  margin: 0 auto 16px;
-  padding: 0 20px;
+  margin: 0 auto 20px;
+  padding: 0 24px;
   display: flex;
-  gap: 16px;
+  gap: 10px;
   flex-wrap: wrap;
-  align-items: center;
 }
-
-.stat-badge {
-  background: var(--card-bg);
-  padding: 6px 14px;
-  border-radius: 20px;
+.stat-chip {
+  background: var(--card);
+  padding: 8px 16px;
+  border-radius: 24px;
   font-size: 0.82rem;
-  color: var(--text-light);
+  color: var(--text-muted);
   border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
+.stat-chip strong { color: var(--primary); font-size: 1rem; }
+.stat-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: #2ecc71; }
 
-.stat-badge strong {
-  color: var(--primary);
-}
-
-/* Article list */
-.article-list {
+/* ── Article List ── */
+.list {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 40px;
+  padding: 0 24px 48px;
 }
 
-.article-card {
-  background: var(--card-bg);
+.card {
+  background: var(--card);
   border-radius: var(--radius);
   padding: 20px 24px;
   margin-bottom: 12px;
   box-shadow: var(--shadow);
   border-left: 4px solid transparent;
-  transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
-
-.article-card:hover {
-  border-left-color: var(--primary-light);
+.card:hover {
+  border-left-color: var(--primary);
+  box-shadow: var(--shadow-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
+.card.open { border-left-color: var(--accent); }
 
-.article-card.expanded {
-  border-left-color: var(--accent);
-}
-
-.article-header {
+.card-head {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
 }
-
-.article-title {
+.card-title {
   font-size: 1rem;
   font-weight: 600;
   color: var(--primary);
   flex: 1;
-  line-height: 1.4;
+  line-height: 1.45;
 }
+.card-title a { color: inherit; text-decoration: none; }
+.card-title a:hover { text-decoration: underline; }
 
-.article-title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.article-title a:hover {
-  text-decoration: underline;
-}
-
-.article-meta {
-  display: flex;
-  gap: 8px;
-  flex-shrink: 0;
-  align-items: center;
-}
-
-.article-year {
+.badges { display: flex; gap: 6px; flex-shrink: 0; align-items: center; }
+.badge-year {
   background: var(--primary);
-  color: white;
-  padding: 2px 10px;
-  border-radius: 12px;
-  font-size: 0.78rem;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 0.75rem;
   font-weight: 600;
 }
-
-.article-type {
-  background: #eaf2f8;
-  color: var(--primary);
-  padding: 2px 10px;
-  border-radius: 12px;
-  font-size: 0.78rem;
+.badge-type {
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
-.article-authors {
-  font-size: 0.85rem;
-  color: var(--text-light);
+.card-authors {
+  font-size: 0.84rem;
+  color: var(--text-muted);
   margin-top: 8px;
   line-height: 1.5;
 }
-
-.article-keywords {
+.card-keywords {
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
-
-.keyword-tag {
-  background: #f0f3f5;
-  color: var(--text-light);
+.kw {
+  background: #f1f4f7;
+  color: var(--text-muted);
   padding: 2px 10px;
   border-radius: 10px;
-  font-size: 0.75rem;
+  font-size: 0.74rem;
 }
 
-.article-details {
+/* ── Detail Panel ── */
+.detail {
   display: none;
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 18px;
+  padding-top: 18px;
   border-top: 1px solid var(--border);
 }
-
-.article-card.expanded .article-details { display: block; }
+.card.open .detail { display: block; }
 
 .detail-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  margin-bottom: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
 }
-
-.detail-item {
-  font-size: 0.83rem;
-}
-
-.detail-item label {
+.d-item { font-size: 0.83rem; }
+.d-item label {
   display: block;
-  color: var(--text-light);
-  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
   margin-bottom: 2px;
 }
+.d-item span { color: var(--text); font-weight: 500; }
 
-.detail-item span {
-  color: var(--text);
-}
-
-.detail-abstract {
+.d-abstract {
   font-size: 0.88rem;
   color: var(--text);
-  line-height: 1.7;
-  margin-top: 8px;
+  line-height: 1.75;
+  margin-top: 10px;
+  padding: 12px 16px;
+  background: #fafbfc;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
 }
 
-.detail-links {
-  margin-top: 12px;
+.d-links {
+  margin-top: 14px;
   display: flex;
-  gap: 12px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
-
-.detail-links a {
+.d-links a {
   font-size: 0.83rem;
-  color: var(--primary-light);
+  color: var(--primary);
   text-decoration: none;
+  font-weight: 500;
 }
+.d-links a:hover { text-decoration: underline; }
 
-.detail-links a:hover { text-decoration: underline; }
-
-/* Loading */
-.loading {
+/* ── Loading / Empty ── */
+.center-msg {
   text-align: center;
   padding: 60px 20px;
-  color: var(--text-light);
-  font-size: 1rem;
+  color: var(--text-muted);
 }
-
-.loading-spinner {
+.spinner {
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 28px; height: 28px;
   border: 3px solid var(--border);
   border-top-color: var(--primary);
   border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin-bottom: 12px;
+  animation: spin 0.7s linear infinite;
+  margin-bottom: 10px;
 }
-
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* No results */
-.no-results {
-  text-align: center;
-  padding: 60px 20px;
-  color: var(--text-light);
-}
-
-.no-results-icon {
-  font-size: 3rem;
-  margin-bottom: 12px;
-}
-
-/* Footer */
+/* ── Footer ── */
 .footer {
   text-align: center;
-  padding: 20px;
-  color: var(--text-light);
+  padding: 24px;
+  color: var(--text-muted);
   font-size: 0.8rem;
   border-top: 1px solid var(--border);
-  margin-top: 20px;
+  margin-top: 24px;
 }
+.footer a { color: var(--primary); text-decoration: none; }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 640px) {
-  .header h1 { font-size: 1.2rem; }
-  .search-bar { flex-direction: column; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .search-row { flex-direction: column; }
   .filter-select { width: 100%; }
-  .article-header { flex-direction: column; }
-  .article-meta { flex-shrink: 1; }
+  .card-head { flex-direction: column; }
+  .badges { flex-shrink: 1; }
 }
 </style>
 </head>
@@ -345,166 +316,137 @@ body {
 
 <header class="header">
   <div class="header-inner">
-    <h1>JAC Year Manager</h1>
-    <p>Journal of Advanced Ceramics — Article Index & Search</p>
+    <div>
+      <h1>JAC Year Manager</h1>
+      <p>Journal of Advanced Ceramics — Article Index & Search</p>
+    </div>
+    <div class="export-btns">
+      <button class="export-btn" onclick="exportCSV()">Export CSV</button>
+      <button class="export-btn" onclick="exportJSON()">Export JSON</button>
+    </div>
   </div>
 </header>
 
 <section class="search-section">
-  <div class="search-bar">
-    <div class="search-input-wrap">
+  <div class="search-row">
+    <div class="search-wrap">
+      <span class="icon">🔍</span>
       <input type="text" id="searchInput" placeholder="Search by title, author, keyword...">
     </div>
-    <select class="filter-select" id="yearFilter">
-      <option value="">All Years</option>
-    </select>
-    <select class="filter-select" id="typeFilter">
-      <option value="">All Types</option>
-    </select>
+    <select class="filter-select" id="yearFilter"><option value="">All Years</option></select>
+    <select class="filter-select" id="typeFilter"><option value="">All Types</option></select>
   </div>
 </section>
 
-<div class="stats-bar" id="statsBar"></div>
+<div class="stats-row" id="statsRow"></div>
 
-<div class="article-list" id="articleList">
-  <div class="loading">
-    <div class="loading-spinner"></div>
-    <div>Loading articles...</div>
-  </div>
+<div class="list" id="articleList">
+  <div class="center-msg"><div class="spinner"></div><div>Loading articles...</div></div>
 </div>
 
 <div class="footer">
-  JAC Year Manager &copy; 2026 — Data from <a href="https://www.sciopen.com" style="color:var(--primary-light)">SciOpen</a>
+  JAC Year Manager &copy; 2026 — Data from <a href="https://www.sciopen.com" target="_blank">SciOpen</a>
 </div>
 
 <script>
 const DATA_URL = 'articles_md/articles.json';
-
 let allArticles = [];
 let filteredArticles = [];
 
-// DOM elements
-const searchInput = document.getElementById('searchInput');
-const yearFilter = document.getElementById('yearFilter');
-const typeFilter = document.getElementById('typeFilter');
-const articleList = document.getElementById('articleList');
-const statsBar = document.getElementById('statsBar');
+const $search = document.getElementById('searchInput');
+const $year = document.getElementById('yearFilter');
+const $type = document.getElementById('typeFilter');
+const $list = document.getElementById('articleList');
+const $stats = document.getElementById('statsRow');
 
-// Load data
+/* ── Load ── */
 async function loadData() {
   try {
-    const resp = await fetch(DATA_URL);
-    allArticles = await resp.json();
+    const r = await fetch(DATA_URL);
+    allArticles = await r.json();
     filteredArticles = allArticles;
-    populateFilters();
+    fillFilters();
     render();
   } catch (e) {
-    articleList.innerHTML = `<div class="no-results"><div class="no-results-icon">⚠️</div><div>Failed to load data: ${e.message}</div></div>`;
+    $list.innerHTML = `<div class="center-msg">⚠️ Failed to load: ${e.message}</div>`;
   }
 }
 
-// Populate filter dropdowns
-function populateFilters() {
-  const years = new Set();
-  const types = new Set();
-  allArticles.forEach(a => {
-    if (a.year) years.add(a.year);
-    if (a.type) types.add(a.type);
+/* ── Filters ── */
+function fillFilters() {
+  const years = new Set(), types = new Set();
+  allArticles.forEach(a => { if (a.year) years.add(a.year); if (a.type) types.add(a.type); });
+  [...years].sort((a,b)=>b-a).forEach(y => {
+    const o = document.createElement('option'); o.value = y; o.textContent = y; $year.appendChild(o);
   });
-
-  [...years].sort((a,b) => b-a).forEach(y => {
-    const opt = document.createElement('option');
-    opt.value = y;
-    opt.textContent = y;
-    yearFilter.appendChild(opt);
-  });
-
   [...types].sort().forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t;
-    opt.textContent = t;
-    typeFilter.appendChild(opt);
+    const o = document.createElement('option'); o.value = t; o.textContent = t; $type.appendChild(o);
   });
 }
 
-// Filter and search
 function applyFilters() {
-  const query = searchInput.value.toLowerCase().trim();
-  const yearVal = yearFilter.value;
-  const typeVal = typeFilter.value;
-
+  const q = $search.value.toLowerCase().trim();
+  const yv = $year.value, tv = $type.value;
   filteredArticles = allArticles.filter(a => {
-    // Year filter
-    if (yearVal && a.year != yearVal) return false;
-    // Type filter
-    if (typeVal && a.type !== typeVal) return false;
-    // Search query
-    if (query) {
-      const searchable = [
-        a.title,
-        ...(a.authors?.map(au => au.name) || []),
-        ...(a.keywords || []),
-        a.research_area || '',
-        a.abstract || '',
-      ].join(' ').toLowerCase();
-      if (!searchable.includes(query)) return false;
+    if (yv && a.year != yv) return false;
+    if (tv && a.type !== tv) return false;
+    if (q) {
+      const hay = [a.title, ...(a.authors||[]).map(x=>x.name), ...(a.keywords||[]), a.research_area||'', a.abstract||''].join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
     }
     return true;
   });
-
   render();
 }
 
-// Render article list
+/* ── Render ── */
 function render() {
-  // Stats
-  const totalViews = filteredArticles.reduce((s, a) => s + (parseInt(a.views) || 0), 0);
-  const totalDownloads = filteredArticles.reduce((s, a) => s + (parseInt(a.downloads) || 0), 0);
-  statsBar.innerHTML = `
-    <span class="stat-badge"><strong>${filteredArticles.length}</strong> articles</span>
-    <span class="stat-badge"><strong>${totalViews.toLocaleString()}</strong> views</span>
-    <span class="stat-badge"><strong>${totalDownloads.toLocaleString()}</strong> downloads</span>
+  const views = filteredArticles.reduce((s,a) => s + (parseInt(a.views)||0), 0);
+  const downloads = filteredArticles.reduce((s,a) => s + (parseInt(a.downloads)||0), 0);
+  $stats.innerHTML = `
+    <div class="stat-chip"><span class="dot"></span><strong>${filteredArticles.length}</strong>&nbsp;articles</div>
+    <div class="stat-chip"><strong>${views.toLocaleString()}</strong>&nbsp;views</div>
+    <div class="stat-chip"><strong>${downloads.toLocaleString()}</strong>&nbsp;downloads</div>
   `;
 
-  if (filteredArticles.length === 0) {
-    articleList.innerHTML = `<div class="no-results"><div class="no-results-icon">🔍</div><div>No articles found</div></div>`;
+  if (!filteredArticles.length) {
+    $list.innerHTML = `<div class="center-msg"><div style="font-size:2.5rem;margin-bottom:8px">🔍</div><div>No articles found</div></div>`;
     return;
   }
 
-  articleList.innerHTML = filteredArticles.map((a, i) => {
-    const authorNames = (a.authors || []).map(au => au.name).join(', ');
-    const shortAuthors = authorNames.length > 120 ? authorNames.substring(0, 120) + '...' : authorNames;
-    const keywords = (a.keywords || []).slice(0, 5).map(k =>
-      `<span class="keyword-tag">${escapeHtml(k)}</span>`
-    ).join('');
+  $list.innerHTML = filteredArticles.map((a,i) => {
+    const names = (a.authors||[]).map(x => x.name).join(', ');
+    const shortNames = names.length > 150 ? names.substring(0,150) + '...' : names;
+    const kws = (a.keywords||[]).slice(0,5).map(k => `<span class="kw">${esc(k)}</span>`).join('');
 
     return `
-    <div class="article-card" onclick="toggleExpand(this)" data-idx="${i}">
-      <div class="article-header">
-        <div class="article-title">
-          <a href="${a.url || '#'}" target="_blank" onclick="event.stopPropagation()">${escapeHtml(a.title)}</a>
-        </div>
-        <div class="article-meta">
-          ${a.year ? `<span class="article-year">${a.year}</span>` : ''}
-          ${a.type ? `<span class="article-type">${escapeHtml(a.type)}</span>` : ''}
+    <div class="card" onclick="toggle(this)" data-idx="${i}">
+      <div class="card-head">
+        <div class="card-title"><a href="${a.url||'#'}" target="_blank" onclick="event.stopPropagation()">${esc(a.title)}</a></div>
+        <div class="badges">
+          ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
+          ${a.type ? `<span class="badge-type">${esc(a.type)}</span>` : ''}
         </div>
       </div>
-      <div class="article-authors">${escapeHtml(shortAuthors)}</div>
-      ${keywords ? `<div class="article-keywords">${keywords}</div>` : ''}
-      <div class="article-details">
+      <div class="card-authors">${esc(shortNames)}</div>
+      ${kws ? `<div class="card-keywords">${kws}</div>` : ''}
+      <div class="detail">
         <div class="detail-grid">
-          ${a.doi ? `<div class="detail-item"><label>DOI</label><span>${escapeHtml(a.doi)}</span></div>` : ''}
-          ${a.volume ? `<div class="detail-item"><label>Volume / Issue</label><span>${a.volume}(${a.issue})</span></div>` : ''}
-          ${a.research_area ? `<div class="detail-item"><label>Research Area</label><span>${escapeHtml(a.research_area)}</span></div>` : ''}
-          ${a.received ? `<div class="detail-item"><label>Received</label><span>${escapeHtml(a.received)}</span></div>` : ''}
-          ${a.accepted ? `<div class="detail-item"><label>Accepted</label><span>${escapeHtml(a.accepted)}</span></div>` : ''}
-          ${a.published ? `<div class="detail-item"><label>Published</label><span>${escapeHtml(a.published)}</span></div>` : ''}
-          ${a.views ? `<div class="detail-item"><label>Views</label><span>${a.views}</span></div>` : ''}
-          ${a.downloads ? `<div class="detail-item"><label>Downloads</label><span>${a.downloads}</span></div>` : ''}
-          ${a.citations ? `<div class="detail-item"><label>Citations</label><span>${a.citations}</span></div>` : ''}
+          ${a.doi ? `<div class="d-item"><label>DOI</label><span>${esc(a.doi)}</span></div>` : ''}
+          ${a.volume ? `<div class="d-item"><label>Volume(Issue)</label><span>${a.volume}(${a.issue})</span></div>` : ''}
+          ${a.research_area ? `<div class="d-item"><label>Research Area</label><span>${esc(a.research_area)}</span></div>` : ''}
+          ${a.received ? `<div class="d-item"><label>Received</label><span>${esc(a.received)}</span></div>` : ''}
+          ${a.accepted ? `<div class="d-item"><label>Accepted</label><span>${esc(a.accepted)}</span></div>` : ''}
+          ${a.published ? `<div class="d-item"><label>Published</label><span>${esc(a.published)}</span></div>` : ''}
+          ${a.views ? `<div class="d-item"><label>Views</label><span>${a.views}</span></div>` : ''}
+          ${a.downloads ? `<div class="d-item"><label>Downloads</label><span>${a.downloads}</span></div>` : ''}
+          ${a.citations_crossref ? `<div class="d-item"><label>Crossref Cit.</label><span>${a.citations_crossref}</span></div>` : ''}
+          ${a.citations_wos ? `<div class="d-item"><label>WoS Cit.</label><span>${a.citations_wos}</span></div>` : ''}
+          ${a.citations_scopus ? `<div class="d-item"><label>Scopus Cit.</label><span>${a.citations_scopus}</span></div>` : ''}
+          ${a.altmetric ? `<div class="d-item"><label>Altmetric</label><span>${a.altmetric}</span></div>` : ''}
         </div>
-        ${a.abstract ? `<div class="detail-abstract"><strong>Abstract:</strong> ${escapeHtml(a.abstract)}</div>` : ''}
-        <div class="detail-links">
+        ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${esc(a.abstract)}</div>` : ''}
+        <div class="d-links">
           ${a.url ? `<a href="${a.url}" target="_blank">View on SciOpen →</a>` : ''}
           ${a.pdf ? `<a href="${a.pdf}" target="_blank">Download PDF →</a>` : ''}
         </div>
@@ -513,30 +455,66 @@ function render() {
   }).join('');
 }
 
-// Toggle expand
-function toggleExpand(card) {
-  card.classList.toggle('expanded');
+/* ── Toggle ── */
+function toggle(card) { card.classList.toggle('open'); }
+
+/* ── Escape ── */
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
-// Escape HTML
-function escapeHtml(str) {
-  if (!str) return '';
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
+/* ── Export CSV ── */
+function exportCSV() {
+  const headers = ['Title','Year','Volume','Issue','Type','DOI','URL','PDF','Authors','Keywords','Research Area','Received','Accepted','Published','Views','Downloads','Crossref Cit.','WoS Cit.','Scopus Cit.','Abstract'];
+  const rows = filteredArticles.map(a => [
+    a.title, a.year||'', a.volume||'', a.issue||'', a.type||'', a.doi||'', a.url||'', a.pdf||'',
+    (a.authors||[]).map(x=>x.name).join('; '),
+    (a.keywords||[]).join('; '),
+    a.research_area||'', a.received||'', a.accepted||'', a.published||'',
+    a.views||'', a.downloads||'', a.citations_crossref||'', a.citations_wos||'', a.citations_scopus||'',
+    (a.abstract||'').replace(/\n/g,' ')
+  ]);
+  const csv = [headers, ...rows].map(r => r.map(c => `"${(c||'').replace(/"/g,'""')}"`).join(',')).join('\n');
+  download(csv, 'JAC_articles.csv', 'text/csv;charset=utf-8;');
 }
 
-// Event listeners
-searchInput.addEventListener('input', debounce(applyFilters, 300));
-yearFilter.addEventListener('change', applyFilters);
-typeFilter.addEventListener('change', applyFilters);
+/* ── Export JSON ── */
+function exportJSON() {
+  const data = filteredArticles.map(a => ({
+    title: a.title, year: a.year, volume: a.volume, issue: a.issue, type: a.type,
+    doi: a.doi, url: a.url, pdf: a.pdf,
+    authors: (a.authors||[]).map(x => x.name),
+    keywords: a.keywords, research_area: a.research_area,
+    received: a.received, accepted: a.accepted, published: a.published,
+    views: a.views, downloads: a.downloads,
+    citations: { crossref: a.citations_crossref, wos: a.citations_wos, scopus: a.citations_scopus },
+    abstract: a.abstract
+  }));
+  download(JSON.stringify(data, null, 2), 'JAC_articles.json', 'application/json');
+}
+
+/* ── Download helper ── */
+function download(content, filename, mime) {
+  const blob = new Blob([content], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a); URL.revokeObjectURL(url);
+}
+
+/* ── Events ── */
+$search.addEventListener('input', debounce(applyFilters, 300));
+$year.addEventListener('change', applyFilters);
+$type.addEventListener('change', applyFilters);
 
 function debounce(fn, ms) {
-  let timer;
-  return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), ms); };
+  let t;
+  return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
 }
 
-// Init
+/* ── Init ── */
 loadData();
 </script>
 </body>
