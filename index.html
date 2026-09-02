@@ -436,12 +436,12 @@ function render() {
 
     return `
     <div class="card" data-idx="${i}">
-      <div class="card-head">
+      <div class="card-head" onclick="toggle(this.parentElement)">
         <div class="card-title">${esc(a.title)}</div>
         <div class="badges">
           ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
           ${a.type ? `<span class="badge-type">${esc(a.type)}</span>` : ''}
-          <button class="btn-expand" onclick="toggle(this.closest('.card'))">展开 ▾</button>
+          <button class="btn-expand" onclick="event.stopPropagation();toggle(this.closest('.card'))">展开 ▾</button>
         </div>
       </div>
       <div class="card-authors">${esc(shortNames)}</div>
