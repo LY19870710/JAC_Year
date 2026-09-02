@@ -161,14 +161,12 @@ body {
   box-shadow: var(--shadow);
   border-left: 4px solid transparent;
   transition: all 0.2s ease;
-  cursor: pointer;
 }
 .card:hover {
   border-left-color: var(--accent);
   box-shadow: var(--shadow-hover);
   transform: translateY(-1px);
 }
-.card.open { border-left-color: var(--primary); }
 
 .card-head {
   display: flex;
@@ -226,12 +224,11 @@ body {
 
 /* ── Detail Panel ── */
 .detail {
-  display: none;
+  display: block;
   margin-top: 18px;
   padding-top: 18px;
   border-top: 1px solid var(--border);
 }
-.card.open .detail { display: block; }
 
 .detail-grid {
   display: grid;
@@ -422,7 +419,7 @@ function render() {
 
     return `
     <div class="card" data-idx="${i}">
-      <div class="card-head" onclick="toggle(this.parentElement)">
+      <div class="card-head">
         <div class="card-title">${esc(a.title)}</div>
         <div class="badges">
           ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
@@ -431,7 +428,7 @@ function render() {
       </div>
       <div class="card-authors">${esc(shortNames)}</div>
       ${kws ? `<div class="card-keywords">${kws}</div>` : ''}
-      <div class="detail" style="display:block">
+      <div class="detail">
         <div class="detail-grid">
           ${a.doi ? `<div class="d-item"><label>DOI</label><span>${esc(a.doi)}</span></div>` : ''}
           ${a.volume ? `<div class="d-item"><label>Volume(Issue)</label><span>${a.volume}(${a.issue})</span></div>` : ''}
