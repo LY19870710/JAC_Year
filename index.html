@@ -471,19 +471,6 @@ function render() {
           ${a.doi ? `<div class="d-item"><label>DOI</label><span>${esc(a.doi)}</span></div>` : ''}
           ${a.volume ? `<div class="d-item"><label>Volume(Issue)</label><span>${a.volume}(${a.issue})</span></div>` : ''}
           ${a.research_area ? `<div class="d-item"><label>Research Area</label><span>${esc(a.research_area)}</span></div>` : ''}
-          ${a.received ? `<div class="d-item"><label>Received</label><span>${esc(a.received)}</span></div>` : ''}
-          ${a.accepted ? `<div class="d-item"><label>Accepted</label><span>${esc(a.accepted)}</span></div>` : ''}
-          ${a.published ? `<div class="d-item"><label>Published</label><span>${esc(a.published)}</span></div>` : ''}
-          ${a.views ? `<div class="d-item"><label>Views</label><span>${a.views}</span></div>` : ''}
-          ${a.downloads ? `<div class="d-item"><label>Downloads</label><span>${a.downloads}</span></div>` : ''}
-          ${a.citations_crossref ? `<div class="d-item"><label>Crossref Cit.</label><span>${a.citations_crossref}</span></div>` : ''}
-          ${a.citations_wos ? `<div class="d-item"><label>WoS Cit.</label><span>${a.citations_wos}</span></div>` : ''}
-          ${a.citations_scopus ? `<div class="d-item"><label>Scopus Cit.</label><span>${a.citations_scopus}</span></div>` : ''}
-          ${a.altmetric ? `<div class="d-item"><label>Altmetric</label><span>${a.altmetric}</span></div>` : ''}
-          ${a.corresponding_author ? `<div class="d-item"><label>Corresponding Author</label><span>${esc(a.corresponding_author)}</span></div>` : ''}
-          ${a.corresponding_email ? `<div class="d-item"><label>Contact Email</label><span>${esc(a.corresponding_email)}</span></div>` : ''}
-          ${a.institutions ? `<div class="d-item"><label>Institutions</label><span>${esc(a.institutions)}</span></div>` : ''}
-          ${a.funding ? `<div class="d-item"><label>Funding</label><span>${esc(a.funding)}</span></div>` : ''}
         </div>
         ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${esc(a.abstract)}</div>` : ''}
         <div class="d-links">
