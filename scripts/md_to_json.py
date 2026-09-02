@@ -80,27 +80,24 @@ def parse_markdown_metadata(filepath):
             val = m.group(2).strip()
             stats[key] = val
 
-    # Full abstract - extract from Full Text section
+    # Full abstract - extract from the first numbered section (e.g. "## 1 Introduction")
     abstract = ''
-    full_text_lines = sections.get('Full Text', [])
-    if full_text_lines:
-        # Find first meaningful paragraph after ## Full Text
-        para = []
-        started = False
-        for line in full_text_lines:
-            if not started and line.strip() and not line.startswith('#'):
-                started = True
-            if started:
-                if line.startswith('#') or line.startswith('## '):
+    # Find the section whose name starts with a number like "1 Introduction"
+    for section_name, section_lines in sections.items():
+        if re.match(r'^\d+\s', section_name):
+            # Found the first numbered section, extract first paragraph
+            para = []
+            for line in section_lines:
+                if line.startswith('#') or line.startswith('###'):
                     break
                 if line.strip():
                     para.append(line.strip())
                 elif para:
                     break
-        abstract = ' '.join(para)
-        # Truncate to ~1000 chars for display
-        if len(abstract) > 1000:
-            abstract = abstract[:1000] + '...'
+            abstract = ' '.join(para)
+            if len(abstract) > 800:
+                abstract = abstract[:800] + '...'
+            break  # Only use the first numbered section
 
     # Research area
     research_area = metadata.get('Research Area', '')
