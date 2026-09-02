@@ -14,17 +14,41 @@ OUTPUT_FILE = r'D:/Claw/JAC_Year/articles_md/articles.json'
 DB_PATH = r'D:/Claw/JAC_Year/jac_articles.db'
 
 
-def get_db_types():
-    """Get article types from the SQLite database."""
+def get_db_data():
+    """Get article data from the SQLite database (abstract, type, corresponding author, etc.)."""
     if not os.path.exists(DB_PATH):
         print(f"Warning: Database not found at {DB_PATH}")
         return {}
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    c.execute('SELECT doi, type FROM articles')
-    types = {row[0]: row[1] for row in c.fetchall()}
+    c.execute('''SELECT doi, type, abstract, corresponding_author, corresponding_email,
+                        corresponding_authors, corresponding_emails, funding, institutions
+                 FROM articles''')
+    data = {}
+    for row in c.fetchall():
+        doi = row[0]
+        data[doi] = {
+            'type': row[1],
+            'abstract': clean_html(row[2]) if row[2] else '',
+            'corresponding_author': row[3] or '',
+            'corresponding_email': row[4] or '',
+            'corresponding_authors': row[5] or '',
+            'corresponding_emails': row[6] or '',
+            'funding': clean_html(row[7]) if row[7] else '',
+            'institutions': row[8] or '',
+        }
     conn.close()
-    return types
+    return data
+
+
+def clean_html(text):
+    """Remove HTML tags and unescape entities."""
+    if not text:
+        return ''
+    import html
+    text = html.unescape(text)
+    text = re.sub(r'<[^>]+>', '', text)
+    return text.strip()
 
 
 def parse_markdown_metadata(filepath):
@@ -150,7 +174,7 @@ def parse_markdown_metadata(filepath):
 
 
 def main():
-    db_types = get_db_types()
+    db_data = get_db_data()
     md_files = sorted(Path(INPUT_DIR).glob('*.md'))
     articles = []
 
@@ -158,10 +182,19 @@ def main():
         try:
             article = parse_markdown_metadata(md_file)
             if article['title'] and article['doi']:
-                # Override type with database value if available
                 doi = article['doi']
-                if doi in db_types:
-                    article['type'] = db_types[doi]
+                # Override with database values where available
+                if doi in db_data:
+                    db = db_data[doi]
+                    article['type'] = db.get('type', article.get('type', ''))
+                    if db.get('abstract'):
+                        article['abstract'] = db['abstract']
+                    article['corresponding_author'] = db.get('corresponding_author', '')
+                    article['corresponding_email'] = db.get('corresponding_email', '')
+                    article['corresponding_authors'] = db.get('corresponding_authors', '')
+                    article['corresponding_emails'] = db.get('corresponding_emails', '')
+                    article['funding'] = db.get('funding', '')
+                    article['institutions'] = db.get('institutions', '')
                 articles.append(article)
         except Exception as e:
             print(f"Error parsing {md_file.name}: {e}")

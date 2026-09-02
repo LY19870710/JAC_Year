@@ -460,6 +460,10 @@ function render() {
           ${a.citations_wos ? `<div class="d-item"><label>WoS Cit.</label><span>${a.citations_wos}</span></div>` : ''}
           ${a.citations_scopus ? `<div class="d-item"><label>Scopus Cit.</label><span>${a.citations_scopus}</span></div>` : ''}
           ${a.altmetric ? `<div class="d-item"><label>Altmetric</label><span>${a.altmetric}</span></div>` : ''}
+          ${a.corresponding_author ? `<div class="d-item"><label>Corresponding Author</label><span>${esc(a.corresponding_author)}</span></div>` : ''}
+          ${a.corresponding_email ? `<div class="d-item"><label>Contact Email</label><span>${esc(a.corresponding_email)}</span></div>` : ''}
+          ${a.institutions ? `<div class="d-item"><label>Institutions</label><span>${esc(a.institutions)}</span></div>` : ''}
+          ${a.funding ? `<div class="d-item"><label>Funding</label><span>${esc(a.funding)}</span></div>` : ''}
         </div>
         ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${esc(a.abstract)}</div>` : ''}
         <div class="d-links">
