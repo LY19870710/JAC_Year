@@ -175,6 +175,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 14px;
+  cursor: pointer;
 }
 .card-title {
   font-size: 1rem;
@@ -183,8 +184,7 @@ body {
   flex: 1;
   line-height: 1.45;
 }
-.card-title a { color: inherit; text-decoration: none; }
-.card-title a:hover { color: var(--accent); }
+.card-title:hover { color: var(--accent); }
 
 .badges { display: flex; gap: 6px; flex-shrink: 0; align-items: center; }
 .badge-year {
@@ -421,9 +421,9 @@ function render() {
     const kws = (a.keywords||[]).slice(0,5).map(k => `<span class="kw">${esc(k)}</span>`).join('');
 
     return `
-    <div class="card" onclick="toggle(this)" data-idx="${i}">
-      <div class="card-head">
-        <div class="card-title"><a href="${a.url||'#'}" target="_blank" onclick="event.stopPropagation()">${esc(a.title)}</a></div>
+    <div class="card" data-idx="${i}">
+      <div class="card-head" onclick="toggle(this.parentElement)">
+        <div class="card-title">${esc(a.title)}</div>
         <div class="badges">
           ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
           ${a.type ? `<span class="badge-type">${esc(a.type)}</span>` : ''}
@@ -431,7 +431,7 @@ function render() {
       </div>
       <div class="card-authors">${esc(shortNames)}</div>
       ${kws ? `<div class="card-keywords">${kws}</div>` : ''}
-      <div class="detail">
+      <div class="detail" style="display:block">
         <div class="detail-grid">
           ${a.doi ? `<div class="d-item"><label>DOI</label><span>${esc(a.doi)}</span></div>` : ''}
           ${a.volume ? `<div class="d-item"><label>Volume(Issue)</label><span>${a.volume}(${a.issue})</span></div>` : ''}
@@ -448,8 +448,8 @@ function render() {
         </div>
         ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${esc(a.abstract)}</div>` : ''}
         <div class="d-links">
-          ${a.url ? `<a href="${a.url}" target="_blank">View on SciOpen →</a>` : ''}
-          ${a.pdf ? `<a href="${a.pdf}" target="_blank">Download PDF →</a>` : ''}
+          ${a.url ? `<a href="${a.url}" target="_blank" onclick="event.stopPropagation()">View on SciOpen →</a>` : ''}
+          ${a.pdf ? `<a href="${a.pdf}" target="_blank" onclick="event.stopPropagation()">Download PDF →</a>` : ''}
         </div>
       </div>
     </div>`;
