@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAC Year Manager</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { background: #1e40af; color: white; padding: 20px; margin-bottom: 20px; }
+    header h1 { font-size: 1.5rem; }
+    nav { background: white; padding: 10px 20px; margin-bottom: 20px; border-radius: 8px; }
+    nav a { margin-right: 20px; color: #1e40af; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .search-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .form-group { display: flex; flex-direction: column; }
+    .form-group label { font-size: 0.875rem; color: #666; margin-bottom: 5px; }
+    .form-group input, .form-group select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; }
+    button { background: #1e40af; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #1e3a8a; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+    th { background: #f8fafc; font-weight: 600; }
+    tr:hover { background: #f8fafc; }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; background: #e0e7ff; color: #1e40af; }
+    .doi { color: #1e40af; text-decoration: none; }
+    .doi:hover { text-decoration: underline; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .stat-card { background: #f8fafc; padding: 20px; border-radius: 8px; text-align: center; }
+    .stat-number { font-size: 2rem; font-weight: bold; color: #1e40af; }
+    .stat-label { color: #666; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Journal of Advanced Ceramics - Year Manager</h1>
+    </div>
+  </header>
+  
+  <div class="container">
+    <nav>
+      <a href="/">搜索</a>
+      <a href="/stats">统计</a>
+    </nav>
+    
+    <div class="card">
+      <h2 style="margin-bottom: 20px;">搜索文章</h2>
+      <form class="search-form" action="/search" method="GET">
+        <div class="form-group">
+          <label>年份</label>
+          <select name="year">
+            <option value="">全部</option>
+            <% years.forEach(year => { %>
+              <option value="<%= year %>"><%= year %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>作者</label>
+          <input type="text" name="author" placeholder="输入作者姓名">
+        </div>
+        <div class="form-group">
+          <label>机构</label>
+          <input type="text" name="affiliation" placeholder="输入机构名称">
+        </div>
+        <div class="form-group">
+          <label>文章类型</label>
+          <select name="type">
+            <option value="">全部</option>
+            <option value="Research Article">Research Article</option>
+            <option value="Review">Review</option>
+            <option value="Editorial">Editorial</option>
+            <option value="Erratum">Erratum</option>
+            <option value="Perspective">Perspective</option>
+            <option value="Rapid Communication">Rapid Communication</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>关键词</label>
+          <input type="text" name="keyword" placeholder="标题或作者">
+        </div>
+        <div class="form-group">
+          <label>研究方向</label>
+          <select name="category">
+            <option value="">全部</option>
+            <% categories.forEach(cat => { %>
+              <option value="<%= cat %>"><%= cat %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>&nbsp;</label>
+          <button type="submit">搜索</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="card">
+      <h3>使用说明</h3>
+      <p style="margin-top: 10px; color: #666;">
+        1. 使用命令行抓取数据：<code>npm run fetch 2025</code><br>
+        2. 在上方表单搜索文章<br>
+        3. 查看统计页面了解发文趋势<br>
+        4. 导出数据：<a href="/api/export?format=xlsx" style="color:#1e40af;">XLSX</a> / 
+          <a href="/api/export?format=csv" style="color:#1e40af;">CSV</a> / 
+          <a href="/api/export?format=json" style="color:#1e40af;">JSON</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

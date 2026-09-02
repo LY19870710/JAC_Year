@@ -1,0 +1,23 @@
+TY  - JOUR
+AU  - Wang, Kun
+AU  - Liu, Chao
+AU  - Zhang, Yuan
+AU  - Lv, Fuyu
+AU  - Ouyang, Jun
+AU  - Huang, Houbing
+AU  - Yang, Rui-Long
+AU  - Zhao, Yu-Yao
+AU  - Cheng, Hongbo
+AU  - Zhu, Hanfei
+AU  - Shi, Xiaoming
+AU  - Tian, Yun
+PY  - 2024
+TI  - Pushing the high-k scalability limit with a superparaelectric gate layer
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9220876
+VL  - 13
+IS  - 4
+AB  - To meet the expectation set by Moore’s law on transistors, the search for thickness-scalable high dielectric constant (k) gate layers has become an emergent research frontier. Previous investigations have failed to solve the “polarizability–scalability–insulation robustness” trilemma. In this work, we show that this trilemma can be solved by using a gate layer of a high k ferroelectric oxide in its superparaelectric (SPE) state. In the SPE, its polar order becomes local and is dispersed in an amorphous matrix with a crystalline size down to a few nanometers, leading to an excellent dimensional scalability and a good field-stability of the k value. As an example, a stable high k value (37±3) is shown in ultrathin SPE films of (Ba0.95,Sr0.05)(Zr0.2,Ti0.8)O3 deposited on LaNiO3-buffered Pt/Ti/SiO2/(100)Si down to a 4 nm thickness, leading to a small equivalent oxide thickness of ~0.46 nm. The aforementioned characteristic microstructure endows the SPE film a high breakdown strength (~10.5 MV·cm−1 for the 4 nm film), and hence ensures a low leakage current for the operation of the complementary metal oxide semiconductor (CMOS) gate. Lastly, a high electrical fatigue resistance is displayed by the SPE films. These results reveal a great potential of superparaelectric materials as gate dielectrics in the next-generation microelectronics.
+UR  - https://www.sciopen.com/article/10.26599/JAC.2024.9220876
+DO  - 10.26599/JAC.2024.9220876

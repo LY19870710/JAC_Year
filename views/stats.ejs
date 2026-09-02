@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>统计 - JAC Year Manager</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { background: #1e40af; color: white; padding: 20px; margin-bottom: 20px; }
+    header h1 { font-size: 1.5rem; }
+    nav { background: white; padding: 10px 20px; margin-bottom: 20px; border-radius: 8px; }
+    nav a { margin-right: 20px; color: #1e40af; text-decoration: none; }
+    .card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 20px; }
+    .stat-card { background: #f8fafc; padding: 30px; border-radius: 8px; text-align: center; }
+    .stat-number { font-size: 2.5rem; font-weight: bold; color: #1e40af; }
+    .stat-label { color: #666; margin-top: 10px; }
+    .chart { margin-top: 20px; }
+    .bar { display: flex; align-items: center; margin-bottom: 10px; }
+    .bar-label { width: 150px; font-size: 0.875rem; }
+    .bar-fill { flex: 1; height: 24px; background: #e0e7ff; border-radius: 4px; overflow: hidden; }
+    .bar-inner { height: 100%; background: #1e40af; }
+    .bar-value { width: 50px; text-align: right; font-size: 0.875rem; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+    th { background: #f8fafc; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Journal of Advanced Ceramics - Year Manager</h1>
+    </div>
+  </header>
+  
+  <div class="container">
+    <nav>
+      <a href="/">搜索</a>
+      <a href="/stats">统计</a>
+    </nav>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number"><%= stats.total %></div>
+        <div class="stat-label">总文章数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number"><%= Object.keys(stats.byYear).length %></div>
+        <div class="stat-label">年份覆盖</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number"><%= Object.keys(stats.byType).length %></div>
+        <div class="stat-label">文章类型</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom: 20px;">按年份分布</h3>
+      <div class="chart">
+        <% Object.entries(stats.byYear).sort((a,b) => b[0]-a[0]).forEach(([year, count]) => { %>
+          <div class="bar">
+            <div class="bar-label"><%= year %></div>
+            <div class="bar-fill">
+              <div class="bar-inner" style="width: <%= Math.min(100, (count / Math.max(...Object.values(stats.byYear))) * 100) %>"></div>
+            </div>
+            <div class="bar-value"><%= count %></div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom: 20px;">按类型分布</h3>
+      <div class="chart">
+        <% Object.entries(stats.byType).sort((a,b) => b[1]-a[1]).forEach(([type, count]) => { %>
+          <div class="bar">
+            <div class="bar-label"><%= type %></div>
+            <div class="bar-fill">
+              <div class="bar-inner" style="width: <%= Math.min(100, (count / Math.max(...Object.values(stats.byType))) * 100) %>"></div>
+            </div>
+            <div class="bar-value"><%= count %></div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom: 20px;">发文量 Top 10 机构</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>机构</th>
+            <th>文章数</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% stats.topAffiliations.forEach((aff, idx) => { %>
+            <tr>
+              <td><%= idx + 1 %></td>
+              <td><%= aff.name %></td>
+              <td><%= aff.count %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

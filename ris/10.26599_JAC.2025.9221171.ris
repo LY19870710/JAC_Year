@@ -1,0 +1,21 @@
+TY  - JOUR
+AU  - Lu, Haowei
+AU  - Hu, Zhenghua
+AU  - Wang, Xin
+AU  - Chen, Gaoru
+AU  - Zheng, Xiaogan
+AU  - Xia, Jintao
+AU  - Huang, Mingju
+AU  - Yang, Wenlong
+AU  - Liu, Junhui
+AU  - Hu, Benlin
+PY  - 2025
+TI  - Performance enhancement of nanogenerator achieved in branch-heterostructure piezoelectric ceramic fiber toward electrical transmission power line monitoring
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221171
+VL  - 14
+IS  - 11
+AB  - A flexible composite-based piezoelectric nanogenerator (PENG) with low cost, stable properties, and sensitivity to mechanical deformation is highly suitable for constructing self-powered sensing layers for distributed electrical transmission power lines. However, the lower output performance of the PENG resulting from inadequate effective polarization hinders its integration with energy management circuits and signal recognition systems. In this study, we propose a high-performance PENG by designing a new piezoelectric ceramic fiber, where (Ba,Ca)(Zr,Ti)O3 (BCZT)@Ag nanoparticles are grown on the surface of BCZT fibers to form a branch-heterostructure, leading to enhanced charge transport mechanisms and induced polarization in the PENG. The branch-heterostructure ceramic fiber-based PENG results in significantly increased outputs of 96.4 V and 15.52 µA, which are approximately 3.2 and 6.5 times greater than those of the PENG without a specific design. Moreover, an intelligent power Internet of Things (power IoT) system through the synergistic integration of this high-performance PENG and learning-assisted data analytics has been constructed, which enables accurate self-powered real-time monitoring of abnormal vibration states in transmission power lines to prevent rupture-related failures with approximately 96% identification accuracy. This work not only provides an effective strategy to increase the performance of PENGs but also broadens the application prospects of lead-free piezoelectric ceramics in power IoTs.
+UR  - https://doi.org/10.26599/JAC.2025.9221171
+DO  - 10.26599/JAC.2025.9221171

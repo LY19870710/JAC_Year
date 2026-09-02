@@ -1,0 +1,24 @@
+TY  - JOUR
+AU  - Luo, Hongyu
+AU  - Niu, Miaomiao
+AU  - Zhu, Hanfei
+AU  - Li, Li
+AU  - Cheng, Hongbo
+AU  - Liu, Chao
+AU  - Li, Jianting
+AU  - Zhao, Yuyao
+AU  - Zhang, Chenxi
+AU  - Cao, Xiaojie
+AU  - Kanno, Isaku
+AU  - Chi, Qingguo
+AU  - Ouyang, Jun
+PY  - 2024
+TI  - Temperature-modulated crystallographic orientation and electrical properties of BiFeO3 thick films sputtered on LaNiO3/Pt/Ti/SiO2/Si for piezo-MEMS applications
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9220985
+VL  - 13
+IS  - 12
+AB  - In this work, thick BiFeO3 films (~1 μm) were prepared on LaNiO3-buffered (111)Pt/Ti/SiO2/(100)Si substrates via radio-frequency magnetron sputtering without post-growth annealing. The effects of the substrate temperature on the film’s crystallinity, defect chemistry, and associated electrical properties were investigated. In contrast to the poorly crystallized BiFeO3 film deposited at 300 °C and the randomly-oriented and (111)-textured films deposited at 500 and 650 °C, respectively, a (001)-preferred orientation was achieved in the BiFeO3 film deposited at 350 °C. This film not only showed a dense, fine-grained morphology but also displayed enhanced electrical properties due to the (001) texture and improved defect chemistry. These properties include a reduced leakage current (J ≈ 2.4×10−5 A/cm2@200 kV/cm), a small dielectric constant (εr ≈ 243–217) with a low loss (tanδ ≤ 0.086) measured from 100 Hz to 1 MHz, and a nearly intrinsic remnant polarization (Pr) of ~60 μC/cm2. A detailed TEM analysis confirmed the R3c symmetry of the BFO films and hence ensured good stability of their electrical properties. In particular, single-beam cantilevers fabricated from BiFeO3/LaNiO3/Pt/Ti/SiO2/Si heterostructures showed excellent electromechanical performance, including a large transverse piezoelectric coefficient (e31,f) of ~−2.8 C/m2, a high figure of merit (FOM) parameter of ~4.0 GPa, and a large signal-to-noise ratio of ~1.5 C/m2. An in-depth analysis revealed the intrinsic nature of the e31,f piezoelectric coefficient, which is well fitted along a straight line of e31,f ratio = (εrPr) ratio with the reported representative results. These high-quality lead-free piezoelectric films processed with a reduced thermal budget can open many possibilities for the integration of piezoelectricity into Si-based micro-electro–mechanical systems (MEMSs).
+UR  - https://www.sciopen.com/article/10.26599/JAC.2024.9220985
+DO  - 10.26599/JAC.2024.9220985

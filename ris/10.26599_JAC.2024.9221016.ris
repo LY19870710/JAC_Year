@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - Huang, Chi
+AU  - Zheng, Liya
+AU  - Tian, Zhilin
+AU  - Shi, Lei
+AU  - Li, Bin
+PY  - 2024
+TI  - A warpage-free Si3N4 slurry strategy for vat photopolymerization
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221016
+VL  - 14
+IS  - 1
+AB  - Si3N4 ceramics are promising wave-transparent materials with excellent mechanical and dielectric properties. Vat photopolymerization (VPP) three-dimensional (3D) printing provides a strategy for preparing ceramics with controllable complex structures. However, the difficulty in solidifying the slurry due to partial ultraviolet (UV) light absorption and the high refractive index of Si3N4 particles during the VPP process severely hinder the molding of Si3N4 ceramics. A higher laser power must be used to increase the curing depth, which generates large internal stresses and warps the samples. This study presents a method to solve the warpage problem during VPP-3D printing using tributyl citrate as a plasticizer. The plasticizer can weaken the force between polymer molecular chains and reduce the internal stress of the green body. Warpage decreases gradually with increasing tributyl citrate content, and the warpage decreases to 0% when the plasticizer content reaches 30 wt% at high laser powers from 600 to 750 mW. Samples with different layer thicknesses were printed, and the optimum thickness of 40 μm was obtained, at which the sintered Si3N4 samples possessed a unique combination of mechanical properties, including a bending strength of 338.29±12.08 MPa and a fracture toughness of 6.94±0.11 MPa·m1\/2 for the loading direction perpendicular to the build surface and 5.37±0.99 MPa·m1\/2 for the loading direction parallel to the build surface. The dielectric constant of all the samples is maintained in the range of 5.462–6.414. This work is expected to guide vat photopolymerization and the preparation of complex Si3N4 ceramic components.
+UR  - https://doi.org/10.26599/JAC.2024.9221016
+DO  - 10.26599/JAC.2024.9221016

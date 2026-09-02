@@ -1,0 +1,18 @@
+TY  - JOUR
+AU  - Xiang, Huaicheng
+AU  - Zhou, Yang
+AU  - Chen, Junqi
+AU  - Zhang, Ning
+AU  - Wu, Xiaoyu
+AU  - Tang, Ying
+AU  - Fang, Liang
+PY  - 2025
+TI  - Regulation of the temperature stability in ordered olivine microwave dielectric ceramics with low loss for dielectric resonant antenna
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221149
+VL  - 14
+IS  - 9
+AB  - Olivine-type A2BO4 ceramics possess a low permittivity (εr) and low dielectric loss, contributing to a high quality factor (Q×f). However, the large negative temperature coefficient of the resonant frequency (τf) restricts their practical applications. In this work, we prepared a series of CaYGa1−xAlxO4 (x = 0–1) ceramics with low εr values via solid-state sintering. By controlling the evolution of orthorhombic olivine to the tetragonal perovskite-like structure (K2NiF4) and the ordered regulation of the A-site, an ultralow loss (tanδ = 1.38×10−4, Q×f = 125,530 GHz, and f = 17.3 GHz for x = 0) and a nearly zero temperature coefficient (τf = −0.5 ppm\/°C for x = 0.9) were achieved. The significant changes in the dielectric properties (εr = 8.3–16.2, Q×f = 125,530–50,660 GHz, and τf = −50.9 to 2.9 ppm\/°C) of these ceramics are primarily influenced by the characteristics of the second phase, ion polarization, ion order and disorder, and the chemical bonds resulting from structural evolution. Furthermore, a cylindrical dielectric resonator antenna (CDRA) was designed using an ultralow-loss CaYGaO4 ceramic, achieving a high gain (5.36–6.15 dBi) and efficiency (&gt; 90%) in the bandwidth region (5.065–5.747 GHz), thereby enhancing the efficiency and quality of 5G communications. This work advances the development of control strategies for high-performance dielectric ceramics and dielectric resonator antennas in high-frequency communications.
+UR  - https://doi.org/10.26599/JAC.2025.9221149
+DO  - 10.26599/JAC.2025.9221149

@@ -1,0 +1,21 @@
+TY  - JOUR
+AU  - Wang, Meng
+AU  - Zhang, Zhongkai
+AU  - Lei, Jiaming
+AU  - Li, Le
+AU  - Li, Bo
+AU  - Liu, Zhaojun
+AU  - Xia, Yong
+AU  - Liu, Dan
+AU  - Tian, Bian
+AU  - Jing, Weixuan
+PY  - 2025
+TI  - Performance evaluation and correction of Al2O3 and YSZ-doped In2O3/In2O3 multilayer heterogeneous thin-film thermocouples up to 1850 °C
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221071
+VL  - 14
+IS  - 5
+AB  - The combustion chamber temperature of new-generation aircraft engines can reach an ultrahigh temperature of 1800 °C, making temperature monitoring of key components crucial. Thin-film thermocouples (TFTCs) are highly sensitive and have rapid response times; however, their upper-temperature limit remains below 1800 °C. This study proposes an ultrahigh-temperature film thermocouple, which is enhanced by yttria-stabilized zirconia (YSZ) for positive films, indium oxide (In2O3) for negative films, and aluminum oxide (Al2O3) for protective films. The thermocouple is designed on the basis of temperature measurement principles, first principles, and simulations, and it is manufactured via screen printing. The results indicate that the maximum working temperature is 1850 °C. In experiments with different doping ratios at 1800 °C, the thermocouple achieves a maximum temperature electromotive force (TEMF) of 258.5 mV and a maximum Seebeck coefficient of 180.9 μV\/°C, with an In2O3 : YSZ92(ZrO2 (92 wt%) : Y2O3 (8 wt%)) ratio of 9 : 1 in wt%. Through the lumped heat capacity method, the response time was measured at 2.8 ms, which demonstrated good dynamic response characteristics. A film thermocouple was successfully utilized to measure a gas temperature of 1090 °C at the outlet of an air turbine rocket (ATR) engine, confirming its high-temperature operational capability. To improve the repeatability of the TFTCs without affecting their thermoelectric outputs, a convolutional neural network-long short-term memory network (CNN-LSTM)-attention neural network is implemented to mitigate the repeatability errors, achieving a high repeatability of 99.53%. Additionally, the compensated temperature data are compared with those obtained from a standard B-type thermocouple, showing a full-scale error of ±0.73% FS. This study provides a feasible solution for ultrahigh temperature measurements.
+UR  - https://doi.org/10.26599/JAC.2025.9221071
+DO  - 10.26599/JAC.2025.9221071

@@ -1,0 +1,39 @@
+version: '3.9'
+
+# JAC Year Manager — Production Stack
+#
+# Usage:
+#   docker compose up -d        # Start
+#   docker compose logs -f      # View logs
+#   docker compose restart      # Restart
+#   docker compose down         # Stop
+#
+# Tip: Mount a custom DB file:
+#   volumes:
+#     - ./jac_articles.db:/app/jac_articles.db
+#
+services:
+  jac-year:
+    build: .
+    container_name: jac-year
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3000
+      - NODE_ENV=production
+      - DB_PATH=/app/jac_articles.db
+    volumes:
+      # Persist DB across container restarts
+      - jac-data:/app
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  jac-data:
+    driver: local

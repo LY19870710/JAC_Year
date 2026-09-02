@@ -1,0 +1,94 @@
+# JAC_Year Memo.txt - 原始指令记录
+
+> 记录原始用户指令、参数变更和关键决策
+
+---
+
+## 原始指令
+
+**用户需求**：
+- JAC 期刊年度数据统计
+- 机构提取和统计
+- Web 界面展示
+
+**v0.3.1 新增需求** (2026-04-08)：
+- 机构显示太乱，需要更好的显示方式
+
+---
+
+## 参数变更
+
+| 版本 | 日期 | 变更内容 | 作者 |
+|------|------|---------|------|
+| v0.2.1 | 2026-03 | 基础功能 | Linux |
+| v0.3.0 | 2026-04-01 | 机构提取优化、通讯作者JSON、tooltip、funding字段 | Linux |
+| v0.3.1 | 2026-04-08 | 机构显示优化（新增institutions字段、tooltip、分行显示） | Linux |
+| v0.4.0 | 2026-04-24 | 导出功能（CSV/XLSX/JSON） | Jarvis |
+| v0.4.1 | 2026-04-30 | funding抓取实现 | Linux |
+
+---
+
+## 关键决策
+
+### 1. 机构提取规则（v0.3.0）
+- **决策**：只保留地址前1级（城市+邮编之前的最后一个有意义的部分）
+- **原因**：避免机构名过长，提升显示效果
+- **替代方案**：保留全部 / 保留前2级
+- **效果**：提取准确率显著提升
+
+### 2. 机构显示优化（v0.3.1）
+- **决策**：数据库新增 institutions 字段，显示简化名 + tooltip 显示完整原文
+- **原因**：解决显示太乱的问题，兼顾简洁和完整信息
+- **替代方案**：纯前端处理（性能差）
+- **实现**：
+  - 新增 `institutions` 字段存储提取后的简化机构名
+  - 显示时优先用简化名
+  - hover 时 tooltip 显示完整原文
+  - 多机构分行显示
+
+### 3. 通讯作者存储格式（v0.3.0）
+- **决策**：JSON 格式 `[{"name": "...", "email": "..."}, ...]`
+- **原因**：精确对应姓名和邮箱，支持多通讯作者
+
+### 4. 版本分配规则
+- **决策**：奇数版本 Linux，偶数版本 Jarvis
+- **原因**：明确分工，避免冲突
+
+---
+
+## 数据库变更
+
+### v0.3.0
+```sql
+ALTER TABLE articles ADD COLUMN funding TEXT DEFAULT '';
+ALTER TABLE articles ADD COLUMN corresponding_json TEXT DEFAULT '[]';
+ALTER TABLE articles ADD COLUMN corresponding_authors TEXT DEFAULT '';
+ALTER TABLE articles ADD COLUMN corresponding_emails TEXT DEFAULT '';
+```
+
+### v0.3.1
+```sql
+ALTER TABLE articles ADD COLUMN institutions TEXT DEFAULT '';
+CREATE INDEX idx_institutions ON articles(institutions);
+```
+
+---
+
+## 已知限制
+
+1. ✅ funding 抓取已实现（v0.4.1），可通过 API 触发
+2. 部分原文被截断的机构名无法完整提取（如 "Harbin 150"）
+
+---
+
+## 待办
+
+- [x] v0.4.0 导出功能（CSV/Excel）- Jarvis ✅
+- [x] v0.4.1 funding 抓取 - Linux ✅
+- [ ] v0.4.x 前端 funding 触发按钮
+
+---
+
+## 状态
+
+✅ v0.4.1 已发布 | funding 抓取可用

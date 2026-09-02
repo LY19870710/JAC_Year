@@ -1,0 +1,21 @@
+TY  - JOUR
+AU  - Park, Seonhwa
+AU  - Kim, Seokhwan
+AU  - Lee, Chanyeong
+AU  - Yang, Gyeongbok
+AU  - Song, Hyunseok
+AU  - Hwang, Geon-Tae
+AU  - Peddigari, Mahesh
+AU  - Roh, Jong Wook
+AU  - Ryu, Jungho
+AU  - Min, Yuho
+PY  - 2025
+TI  - A-/B-site engineering of AgNbO3-based ceramics for high-efficiency relaxor antiferroelectric energy storage
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221174
+VL  - 14
+IS  - 11
+AB  - Lead-free antiferroelectric (AFE) ceramics are promising candidates for next-generation pulsed power capacitors. However, their practical deployment remains limited by low recoverable energy density (Wrec), limited dielectric breakdown strength (Eb), and poor efficiency (η), particularly under moderate electric fields. To address these challenges, this study introduces a compositional design strategy that simultaneously engineers both A- and B-sites in AgNbO3 (AN) perovskite ceramics. Specifically, 20 mol% Ta5+ is fixed at the B-site, while dual A-site substitution with Li+ and Nd3+ is implemented. This codoping approach enables a tunable transition from conventional AFE behavior to a relaxor-antiferroelectric-like (R-AFE-like) state. This evolution is driven primarily by A-site chemical disorder introduced by Li+\/Nd3+ codoping, which disrupts long-range antiferroelectric ordering and facilitates the formation of nanodomains. In parallel, B-site Ta5+ substitution contributes by suppressing octahedral tilting and stabilizing the nonpolar phase. The optimized composition, (Ag1−4xLixNdx)(Nb0.8Ta0.2)O3 at x = 0.03, delivers a remarkable recoverable energy density of 7.2 J\/cm3 and an efficiency of 92.3% under a moderate electric field of 327 kV\/cm. In addition, this composition demonstrates an excellent Wrec\/Eb ratio and capacitor-grade reliability, including strong frequency and thermal stability, as well as ultrafast discharge characteristics (t0.9 ≈ 40 ns) with a peak power density of 172 MW\/cm3. Overall, this work provides a detailed structure–property–performance framework for designing high-efficiency, high-power, lead–free capacitors by harnessing tunable relaxor–antiferroelectricity.
+UR  - https://doi.org/10.26599/JAC.2025.9221174
+DO  - 10.26599/JAC.2025.9221174

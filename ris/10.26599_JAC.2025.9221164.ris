@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - Wu, Zhanming
+AU  - Huang, Jun
+AU  - Tan, Yunan
+AU  - Deng, Xiaomei
+AU  - Zeng, Xiaojun
+PY  - 2025
+TI  - Transition/rare earth metal co-modified SiC for low-frequency and high-temperature electromagnetic response
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221164
+VL  - 14
+IS  - 12
+AB  - There is unprecedented demand for low-frequency electromagnetic response in microwave technology, benefiting applications such as 5G communications, Wi-Fi, and radar systems. To date, the purest low-frequency response materials are induced by magnetic metals. However, magnetic metals demagnetize at high temperatures and cannot serve in high-temperature environments. Here, we introduced a SiC\/CoSi\/CeSi composite comodified with transition metal Co and rare earth metal Ce, which achieved a 14-fold increase in the reflection loss (RL) from −4.74 to −66.48 dB. The effective absorption bandwidth (EAB; RL ≤ −10 dB) is 2.46 GHz. With the SiC\/CoSi\/CeSi composite, the effective absorption frequency is shifted to the low-frequency band (3.65 GHz), and the high-temperature stability (500 °C) is maintained, resulting in 94.5% effective absorption. Radar cross-section (RCS) simulation further confirmed the excellent stealth capability of the composite, reducing the target reflection intensity by 22.7 dB∙m2. Mechanistic investigations indicate that the excellent EMW absorption performance of the composite is attributed to multiple reflections and scattering, conduction losses, abundant interface polarization, and good magnetic loss. This research provides critical inspiration for developing efficient SiC-based absorbers with both low-frequency and high-temperature responses.
+UR  - https://doi.org/10.26599/JAC.2025.9221164
+DO  - 10.26599/JAC.2025.9221164

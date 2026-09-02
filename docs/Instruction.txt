@@ -1,0 +1,135 @@
+# JAC_Year Instruction.txt - 程序功能说明
+
+> 说明程序功能、使用方法和注意事项
+
+---
+
+## 功能概述
+
+JAC (Journal of Advanced Ceramics) 年度文章管理系统，用于抓取、存储、统计和展示期刊文章数据。
+
+---
+
+## 技术栈
+
+- **后端**：Node.js + TypeScript + Express
+- **数据库**：SQLite
+- **抓取**：Playwright
+- **模板**：EJS
+- **导出**：xlsx（Excel）、内置 CSV（UTF-8 BOM）
+
+---
+
+## 使用方法
+
+### 安装依赖
+```bash
+npm install
+```
+
+### 编译 TypeScript
+```bash
+npm run build
+```
+
+### 抓取数据
+```bash
+# 抓取指定年份
+npm run fetch 2025
+```
+
+### 数据迁移（v0.3.1+）
+```bash
+# 为已有文章提取 institutions 字段
+npm run migrate
+```
+
+### 启动 Web 服务
+```bash
+npm start
+# 访问 http://localhost:3000
+```
+
+---
+
+## Web 界面
+
+| 路径 | 功能 |
+|------|------|
+| / | 搜索首页（含全量数据导出入口） |
+| /search | 搜索结果（支持年份、作者、机构、类型、研究方向筛选，含导出按钮） |
+| /stats | 统计报表 |
+| /api/export?format=csv\|xlsx\|json | 数据导出 API |
+| /health | 健康检查 |
+
+---
+
+## 核心功能
+
+### 1. 数据导出（v0.4.0）
+- **首页导出**：在首页底部点击 XLSX/CSV/JSON 直接导出全部数据
+- **搜索结果导出**：搜索结果页顶部有导出按钮栏，自动继承当前筛选条件
+- **API**: `GET /api/export?format=csv|xlsx|json`
+  - 支持参数：`year`, `type`, `category`, `author`, `affiliation`, `keyword`
+- 导出字段：年份、类型、标题、作者、通讯作者、通讯邮箱、机构（简化）、机构（原文）、研究方向、DOI、URL、资助信息
+
+### 2. 数据抓取
+- 从 SciOpen 抓取文章元数据
+- 支持分页和断点续传
+- **v0.3.1+**: 自动提取简化机构名
+
+### 3. 机构显示（v0.3.1 优化）
+- **简化显示**：只保留地址前1级
+- **完整信息**：hover 时 tooltip 显示原文
+- **分行显示**：多机构分行展示，更清晰
+
+### 4. 通讯作者处理
+- JSON 格式存储：`[{"name": "...", "email": "..."}, ...]`
+- Web 界面每位通讯作者独立一行显示
+
+### 5. 统计报表
+- 年度发文量
+- 文章类型分布
+- **v0.3.1+**: 机构排名基于简化后的 institutions 字段
+
+---
+
+## 项目结构
+
+```
+JAC_Year/
+├── src/
+│   ├── fetcher.ts      # Playwright 抓取
+│   ├── database.ts     # SQLite 操作
+│   ├── server.ts       # Express Web 服务
+│   ├── types.ts        # TypeScript 类型定义
+│   └── institution.ts  # v0.3.1: 机构提取工具
+├── scripts/
+│   └── migrate.ts      # v0.3.1: 数据迁移脚本
+├── views/              # EJS 模板
+├── public/             # 静态文件
+├── package.json
+├── tsconfig.json
+└── VERSION.txt         # 版本说明
+```
+
+---
+
+## 注意事项
+
+1. **版本规则**：奇数版本 Linux，偶数版本 Jarvis
+2. **funding 字段**：v0.4.0 框架就位，详情页爬取 TODO
+3. **v0.3.1 迁移**：升级后需运行 `npm run migrate` 为已有文章提取 institutions
+4. **机构提取**：部分截断的机构名无法完整提取
+5. **导出 CSV**：含 UTF-8 BOM，Excel 打开无乱码
+
+---
+
+## 版本历史
+
+| 版本 | 日期 | 主要功能 |
+|------|------|---------|
+| v0.4.0 | 2026-04-24 | 导出功能(CSV/XLSX/JSON)、funding框架、corresponding_json字段 |
+| v0.3.4 | 2026-04-09 | 机构显示优化（institutions字段、tooltip、分行显示） |
+| v0.3.0 | 2026-04-01 | 机构提取优化、通讯作者JSON、tooltip、funding字段 |
+| v0.2.1 | 2026-03 | 基础功能 |

@@ -1,0 +1,17 @@
+TY  - JOUR
+AU  - Liu, Yanjun
+AU  - He, Guoqiang
+AU  - Zhang, Wenjie
+AU  - Nie, Yuan
+AU  - Huang, Fangyi
+AU  - Zhou, Huanfu
+PY  - 2025
+TI  - Low loss and temperature-stable Y3MgAl3GeO12 microwave dielectric ceramics for X-band applications
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221136
+VL  - 14
+IS  - 9
+AB  - With the rapid deployment of 5G and the emergence of 6G technologies, the demand for high-performance microwave dielectric ceramics (MWDCs) has increased. This study developed Y3MgAl3GeO12 (YMAG) garnet ceramics to meet 5G\/6G requirements for low signal delay, low loss, and high-temperature stability. YMAG ceramics synthesized via a solid-state reaction were characterized for phase composition, crystal structure, microstructure, and microwave dielectric properties. The results revealed that YMAG ceramics exhibited excellent microwave performance: a permittivity (εr) of 9.86, a quality factor (Q×f) of 89,000 GHz, and a temperature coefficient of resonant frequency (τf) of −40 ppm\/°C. Far-infrared and terahertz (THz) spectroscopic analyses verified the low intrinsic dielectric loss and frequency-stable dielectric characteristics of the material in high-frequency ranges. Temperature-dependent dielectric measurements coupled with thermal expansion studies revealed outstanding stability in this material, as evidenced by its low coefficient of thermal expansion (αL = 9.13 ppm\/°C). To attain near-zero τf, we added TiO2 as a positive τf compensation agent. This strategy effectively tuned the τf value to within |τf| &lt; 10 ppm\/°C while preserving excellent microwave dielectric performance (Q×f ≈ 43,000 GHz). Furthermore, a rectangular dielectric resonator antenna (DRA) designed with the optimized YMAG–TiO2 composite demonstrated excellent impedance matching (VSWR = 1.02) and high radiation efficiency (&gt; 90%) in the X-band (10.21 GHz), validating its potential for 5G\/6G applications. This work provides a novel approach for developing high-performance MWDCs for next-generation communication technologies and emphasizes the critical role of material design and optimization in achieving superior microwave properties.
+UR  - https://doi.org/10.26599/JAC.2025.9221136
+DO  - 10.26599/JAC.2025.9221136

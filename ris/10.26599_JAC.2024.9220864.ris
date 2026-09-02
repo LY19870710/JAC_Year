@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - Gan, Mengdi
+AU  - Lu, Tianlong
+AU  - Yu, Wei
+AU  - Feng, Jing
+AU  - Chong, Xiaoyu
+PY  - 2024
+TI  - Capturing and visualizing the phase transition mediated thermal stress of thermal barrier coating materials via a cross-scale integrated computational approach
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9220864
+VL  - 13
+IS  - 4
+AB  - The generation and evaluation of severely high thermal stress (σ) is known to be responsible for failure of thermal barrier coatings (TBCs) during thermal cycling. It is crucial and challenging to capture fluctuations in σ caused by the phase transition, which has motivated us to develop a high-throughput multiscale evaluation method for σ in TBCs that considers the phase transition of the top ceramic materials by coupling first-principles calculations with finite element simulations. The method quantitatively evaluates and visualizes σ of the real TBC structure under thermal cycling by multifield coupling. Additionally, the thermophysical properties calculated by the first-principles calculations consider the effects of temperature and phase transition, which not only reduces the cost of obtaining data but also has a more physical connotation. In this work, rare earth tantalites (RETaO4) are introduced as ceramic layers, and the results demonstrate that σ undergoes a rapid escalation near the phase transition temperature (Tt), particularly in the TBCs_GdTaO4 system, where it rises from 224 to 435 MPa. This discontinuity in σ may originate from the significant alterations in Young’s modulus (increase by 27%–78%) and thermal conductivity (increase by 53%–146%) near Tt. The TBCs_NdTaO4 and TBCs_SmTaO4 systems exhibit noteworthy temperature drop gradients and minimal σ fluctuations, which are beneficial for extending service lifetime of TBCs. This approach facilitates the prediction of failure mechanisms and provides theoretical guidance for the reverse design of TBC materials to obtain low thermal stress systems.
+UR  - https://www.sciopen.com/article/10.26599/JAC.2024.9220864
+DO  - 10.26599/JAC.2024.9220864

@@ -1,0 +1,19 @@
+TY  - JOUR
+AU  - Liu, Chang
+AU  - Mao, Kaidi
+AU  - Sun, Haibin
+AU  - Hu, Qiangqiang
+AU  - Gong, Hongyu
+AU  - Colombo, Paolo
+AU  - Feng, Yurun
+AU  - Guo, Xue
+PY  - 2025
+TI  - Integrated design of multifunctional paraffin-impregnated porous ceramic metastructures for electromagnetic wave absorption and thermal management
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221155
+VL  - 14
+IS  - 10
+AB  - To address the growing demand for radar and infrared stealth materials in complex application scenarios, this study develops an integrated multifunctional composite through a vacuum impregnation process that combines SiCN ceramics, porous ceramics, and phase change materials (PCMs). The unmodified SiCN ceramic, as a standalone component, exhibits a minimum reflection loss (RLmin) of −14.91 dB, demonstrating its intrinsic electromagnetic absorption capability. When integrated into the composite, the porous ceramic matrix optimizes impedance matching, synergistically enhancing the overall microwave absorption performance. The resulting composite achieves RLmin of −31.29 dB with an effective absorption bandwidth (EAB) covering 96% of the X-band (8.2–12.4 GHz). Furthermore, the PCM embedded within the pores utilizes its latent heat during phase transition to regulate temperature fluctuations. When subjected to heating at 90 °C (exceeding the PCM solid–liquid transition temperature) for 42 min, the composite exhibits a temperature rise of only 16.5 °C, maintaining a 36.6 °C difference from the external thermal load. This special thermal buffering capability ensures stable thermal insulation and infrared stealth functions while improving the electromagnetic response stability of the material under dynamic thermal conditions. The proposed design strategy offers new insights for advancing multifunctional electromagnetic wave (EMW) absorbing materials with enhanced performance adaptability.
+UR  - https://doi.org/10.26599/JAC.2025.9221155
+DO  - 10.26599/JAC.2025.9221155

@@ -1,0 +1,19 @@
+TY  - JOUR
+AU  - Liang, Lili
+AU  - Yang, Yujie
+AU  - Gong, Yutong
+AU  - Wang, Zhiqi
+AU  - Li, Ke
+AU  - Su, Jianan
+AU  - Wang, Jinming
+AU  - Wang, Junjie
+PY  - 2025
+TI  - Machine learning-guided discovery of stable low-work-function perovskite oxides for advanced catalysis and energy technologies
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221159
+VL  - 14
+IS  - 10
+AB  - Perovskites with a low work function find extensive applications across various fields. However, the diverse nature of perovskite compounds presents challenges for conventional trial-and-error material screening methods. In this study, we introduced an effective target-driven approach that integrates machine learning (ML) and density functional theory (DFT) calculations. Initially, we explored an exhaustive chemical space encompassing ABO3-type single and A2BB'O6-type double perovskite oxides to identify stable compounds with work functions of AO-terminated (001) surfaces below 2.5 eV via a trained ML model. By employing high-precision calculations, we subsequently narrowed the selection to 27 stable perovskite oxides from the initial pool of 23,822 candidate materials. Two promising compounds, Ba2TiWO8 and Ba2FeMoO6, were then successfully synthesized and characterized experimentally. Furthermore, the first synthesized Ba2TiWO8 was found to exhibit catalytic activities for both NH3 synthesis and NH3 decomposition under mild conditions with Ru loading, suggesting its future application in catalysis. Moreover, as a Li-ion battery electrode material, Ba2FeMoO6 exhibited long-term cycling stability at a current density of 10 A∙g−1 (10,000 cycles), revealing many possibilities for sustainable electrochemical applications of perovskites. Our work demonstrates the efficacy and efficiency of the ML-assisted method in establishing a reliable structure–property relationship for mapping work functions.
+UR  - https://doi.org/10.26599/JAC.2025.9221159
+DO  - 10.26599/JAC.2025.9221159

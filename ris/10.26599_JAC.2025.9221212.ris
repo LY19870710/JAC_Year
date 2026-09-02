@@ -1,0 +1,17 @@
+TY  - JOUR
+AU  - Gai, Lixue
+AU  - Chen, Yongzheng
+AU  - Wang, Yan
+AU  - Han, Xijiang
+AU  - Xu, Ping
+AU  - Du, Yunchen
+PY  - 2025
+TI  - Engineering impedance-matched double-shells in hollow Co/carbon microspheres with gradient graphitization for high-efficiency electromagnetic wave absorption
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221212
+VL  - 14
+IS  - 12
+AB  - The inherent trade-off between impedance matching and electromagnetic (EM) attenuation capability has long been a fundamental limitation in carbon-based materials, hindering further advances in their EM absorption performance. To overcome this challenge, we innovatively designed hollow double-shell Co\/carbon microspheres with a gradient graphitization structure, where Co3O4 nanoparticles preanchored on melamine formaldehyde (MF) microspheres can induce the formation of graphitic inner shells during high-temperature pyrolysis; nevertheless, the outer carbon shells remain amorphous due to the lack of corelated species, ultimately resulting in gradient graphitization from the inside. This unique double-shell architecture combines the advantages of both gradient graphitization and a hollow structure, which are favorable for powerful EM attenuation and impedance matching at the same time. EM analyses revealed that the outer amorphous carbon shells not only play a key role in optimizing impedance matching but also create heterogeneous interfaces with the inner graphitic shells to enhance interfacial polarization. As a result, the as-prepared sample achieves a superior reflection loss (RL) of −62.9 dB, and its maximum effective absorption bandwidth (EABmax) can be extended to 11.3 GHz through a rationally designed multilayer structure, significantly surpassing that of its nongradient counterparts. Computer simulation technology (CST) simulations further verify a remarkable radar cross-section (RCS) reduction of 22.3 dB·m2. This work provides an effective strategy for reconciling the conflict between impedance matching and attenuation in carbon-based materials and demonstrates their great potential as lightweight and broadband EM wave absorbing materials (EWAMs) in the future.
+UR  - https://doi.org/10.26599/JAC.2025.9221212
+DO  - 10.26599/JAC.2025.9221212

@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - Tian, Huanrong
+AU  - Zhang, Xiaohan
+AU  - Zhang, Zidong
+AU  - Liu, Yao
+AU  - Wu, Haitao
+PY  - 2024
+TI  - Low-permittivity LiLn(PO3)4 (Ln = La, Sm, Eu) dielectric ceramics for microwave/millimeter-wave communication
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9220882
+VL  - 13
+IS  - 5
+AB  - The development of dielectric materials with low permittivity and low loss is a great challenge in wireless communication. In this study, LiLn(PO3)4 (Ln = La, Sm, Eu) ceramic systems were successfully prepared using the traditional solid-state method. X-ray diffraction analysis indicated that the LiLn(PO3)4 ceramics crystallized in a monoclinic structure when sintered at 850–940 ℃. The characteristic peak shifted to higher angles with variations in the Ln element, which was ascribed to a reduction in the cell volume. Further analysis by structure refinement revealed that the reduction in the cell volume resulted from the decrease in chemical bond lengths and the compression of [LiO4] and [PO4] tetrahedra. Remarkably, the LiLn(PO3)4 ceramic system displayed exceptional performance at low sintering temperatures (910–925 ℃), including a high quality factor (Q·f) of 41,607–75,968 GHz, low temperature coefficient of resonant frequency (τf) ranging from −19.64 to −47.49 ppm/℃, low permittivity (εr) between 5.04 and 5.26, and low density (3.04–3.26 g/cm3). The application of Phillips–van Vechten–Levine (P–V–L) theory revealed that the increased Q·f value of the LiLn(PO3)4 systems can be attributed to the enhanced packing fraction, bond covalency, and lattice energy, and the stability of τf was associated with the increase in the bond energy. Furthermore, a prototype microstrip patch antenna using LiEu(PO3)4 ceramics was fabricated. The measurement results demonstrated excellent antenna performance with a bandwidth of 360 MHz and a peak gain of 5.11 dB at a central frequency of 5.08 GHz. Therefore, low-εr LiLn(PO3)4 ceramic systems are promising candidates for microwave/millimeter-wave communication.
+UR  - https://www.sciopen.com/article/10.26599/JAC.2024.9220882
+DO  - 10.26599/JAC.2024.9220882

@@ -1,0 +1,1 @@
+require('child_process').execSync('npx tsc', { stdio: 'inherit', cwd: __dirname });

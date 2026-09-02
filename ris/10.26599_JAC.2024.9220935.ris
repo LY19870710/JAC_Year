@@ -1,0 +1,14 @@
+TY  - JOUR
+AU  - Feltrin, Ana C.
+AU  - Hedman, Daniel
+AU  - Akhtar, Farid
+PY  - 2024
+TI  - Thermal properties and high-temperature ablation of high-entropy (Ti0.25V0.25Zr0.25Hf0.25)B2 coating on graphite substrate
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9220935
+VL  - 13
+IS  - 8
+AB  - An entropy-stabilized multicomponent ultrahigh-temperature ceramic (UHTC) coating, (Ti0.25V0.25Zr0.25Hf0.25)B2, on a graphite substrate was in-situ sintered by spark plasma sintering (SPS) from constituent transition metal diboride powders. The (Ti0.25V0.25Zr0.25Hf0.25)B2 coating had a hardness of 31.2±2.1 GPa and resisted 36.9 GPa of stress before delamination, as observed at the interface. The temperature-dependent thermal properties of the multicomponent diboride (Ti0.25V0.25Zr0.25Hf0.25)B2 were obtained by molecular dynamics (MD) simulations driven by a machine learning force field (MLFF) trained on density functional theory (DFT) calculations. The thermal conductivity, density, heat capacity, and coefficient of thermal expansion obtained by the MD simulations were used in time-dependent thermal stress finite element model (FEM) simulations. The low thermal conductivity (< 6.52 W∙m−1∙K−1) of the multicomponent diboride coupled with its similar coefficient of thermal expansion to that of graphite indicated that stresses of less than 10 GPa were generated at the interface at high temperatures, and therefore, the coating was mechanically resistant to the thermal stress induced during ablation. Ablation experiments at 2200 °C showed that the multicomponent diboride coating was resistant to thermal stresses with no visible cracking or delamination. The ablation mechanisms were mechanical denudation and evaporation of B2O3 and light V–Ti oxides, which caused a decrease in the mass and thickness of the coating and resulted in mass and linear ablation rates of −0.51 mg·s−1 and −1.38 µm·s−1, respectively, after 60 s. These findings demonstrated the thermal and mechanical stability of multicomponent entropy-stabilized diborides as coatings for carbon materials in engineering components under extreme environments.
+UR  - https://www.sciopen.com/article/10.26599/JAC.2024.9220935
+DO  - 10.26599/JAC.2024.9220935

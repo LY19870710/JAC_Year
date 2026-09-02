@@ -1,0 +1,22 @@
+TY  - JOUR
+AU  - Yang, Hongyu
+AU  - Gao, Ce
+AU  - Jiang, Denghui
+AU  - Zhong, Dafang
+AU  - Ma, Yuxuan
+AU  - Li, Yihang
+AU  - Xing, Linzhuang
+AU  - Zhao, Heng
+AU  - Yang, Li
+AU  - Li, Zhimin
+AU  - Hao, Yue
+PY  - 2025
+TI  - Machine learning assisted prediction for the coefficient of thermal expansion of binary crystals
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221117
+VL  - 14
+IS  - 8
+AB  - It is challenging to theoretically predict the coefficient of thermal expansion (CTE) for binary AmBn crystals owing to the complexity of their crystal structures and computational procedures. Herein, the Pearson feature selection method is utilized to identify nine key features associated closely with crystal structures, and a back-propagation neural network model with two hidden layers containing 24 and 15 neurons is adopted to achieve the optimal matching effect of the CTE, which is specifically optimized by the pelican optimization algorithm. Moreover, the black-box nature of the model is well elucidated by interpretability techniques of Shapley additive explanations (SHAP) and accumulated local effects (ALE), including the specific impact rules of each feature and the interaction effects between features on the CTE. It is found that the feature of average bond length contributes up to 27%, while low-influence features serve an important function in increasing prediction accuracy. The findings demonstrate the high efficiency and accuracy of the developed model for predicting the CTE of binary crystals.
+UR  - https://doi.org/10.26599/JAC.2025.9221117
+DO  - 10.26599/JAC.2025.9221117

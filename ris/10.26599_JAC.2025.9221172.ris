@@ -1,0 +1,18 @@
+TY  - JOUR
+AU  - Wang, Xiaohan
+AU  - Yuan, Ye
+AU  - Wang, Leyao
+AU  - Sun, Xianxian
+AU  - Zhang, Tieliang
+AU  - Liu, Chi
+AU  - Li, Yibin
+PY  - 2025
+TI  - Intelligent design of multifunctional graphene-based aerogels for ultra-broadband microwave absorption
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221172
+VL  - 14
+IS  - 12
+AB  - The growing demand for microwave absorbing materials to mitigate electromagnetic pollution has driven the exploration of efficient design strategies. However, traditional experimental approaches for optimizing multicomponent and multilayer structures are time-consuming. To rapidly predict and optimize the electromagnetic parameters of microwave absorbing materials, a machine learning-assisted design framework has been proposed. A series of graphene\/SiO2 (GS) and graphene\/BaTiO3 (GB) aerogels were prepared by electrospinning technology, and their electromagnetic parameter datasets were used to train a machine learning model. The model achieved a maximum prediction accuracy of 97.3%, significantly accelerating the design process. By integrating the predicted parameters into simulation software, gradient impedance structures were rapidly designed, yielding multifunctional aerogels with an ultrawideband absorption range of 3.26–17.30 GHz at a thickness of 20 mm. Compared with conventional methods, this machine learning strategy reduces the research cycle to mere weeks, enabling the fast and efficient design of high-performance absorbing materials. Additionally, the aerogel demonstrated excellent thermal insulation and soundproofing capabilities, underscoring its multifunctionality. This study demonstrates the potential of machine learning in accelerating the development of next-generation microwave absorbing materials.
+UR  - https://doi.org/10.26599/JAC.2025.9221172
+DO  - 10.26599/JAC.2025.9221172

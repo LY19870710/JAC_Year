@@ -1,0 +1,33 @@
+# 临时文件
+_temp_*.py
+_debug_*.py
+*.pyc
+__pycache__/
+
+# 环境
+.env
+.venv/
+node_modules/
+
+# 输出
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 数据库与日志（运行时生成）
+jac_articles.db
+jac_articles.db-journal
+server.log
+backups/
+
+# 测试缓存
+.pytest_cache/
+
+# 系统
+.DS_Store
+Thumbs.db

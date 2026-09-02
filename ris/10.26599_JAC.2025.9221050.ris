@@ -1,0 +1,21 @@
+TY  - JOUR
+AU  - Lu, Zhiyao
+AU  - Fan, Yun
+AU  - Sun, Zhaoxu
+AU  - He, Xiaodong
+AU  - Yang, Chuchu
+AU  - Yin, Hang
+AU  - Zhang, Jinze
+AU  - Song, Guangping
+AU  - Zheng, Yongting
+AU  - Bai, Yuelei
+PY  - 2025
+TI  - A fast composition-stability machine learning model for screening MAX phases and guiding discovery of Ti2SnN
+JO  - Journal of Advanced Ceramics
+SN  - 2226-4108
+SP  - 9221050
+VL  - 14
+IS  - 4
+AB  - To explore the MAX phase with experimental value over a wider range, a data-driven machine learning (ML) model was trained to rapidly predict the stability of MAX phases via a random forest classifier (RFC), support vector machine (SVM), and gradient boosting tree (GBT), where the deemed significant descriptors were compiled from the literature and the stability of 1804 combinations of MAX phases was collected. Using this well-trained model, 190 new MAX phases were screened from 4347 MAX phases, 150 of which met the criteria for thermodynamic and intrinsic stability on the basis of first-principles calculations. Additionally, with the help of the ML model, the mean number of valence electrons and the valence electron deviation are the two most critical factors influencing stability. Additionally, one of these predicted MAX phases, Ti₂SnN, was experimentally synthesized through Lewis acid substitution reactions at 750 °C, with interesting A-site deintercalation and self-extrusion. First-principles calculations revealed that Ti₂SnN has lower elastic properties, higher damage tolerance and fracture toughness, and a higher coefficient of thermal expansion (CTE).
+UR  - https://doi.org/10.26599/JAC.2025.9221050
+DO  - 10.26599/JAC.2025.9221050
