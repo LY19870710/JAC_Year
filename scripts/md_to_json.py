@@ -1,14 +1,30 @@
 """
 Extract metadata from all markdown files and generate articles.json for GitHub Pages.
 Enhanced version: full abstract, corresponding author, institutions, all citation metrics.
+Article types are read from the SQLite database for accuracy.
 """
 import json
 import os
 import re
+import sqlite3
 from pathlib import Path
 
 INPUT_DIR = r'D:/Claw/JAC_Year/articles_md'
 OUTPUT_FILE = r'D:/Claw/JAC_Year/articles_md/articles.json'
+DB_PATH = r'D:/Claw/JAC_Year/jac_articles.db'
+
+
+def get_db_types():
+    """Get article types from the SQLite database."""
+    if not os.path.exists(DB_PATH):
+        print(f"Warning: Database not found at {DB_PATH}")
+        return {}
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute('SELECT doi, type FROM articles')
+    types = {row[0]: row[1] for row in c.fetchall()}
+    conn.close()
+    return types
 
 
 def parse_markdown_metadata(filepath):
@@ -134,6 +150,7 @@ def parse_markdown_metadata(filepath):
 
 
 def main():
+    db_types = get_db_types()
     md_files = sorted(Path(INPUT_DIR).glob('*.md'))
     articles = []
 
@@ -141,6 +158,10 @@ def main():
         try:
             article = parse_markdown_metadata(md_file)
             if article['title'] and article['doi']:
+                # Override type with database value if available
+                doi = article['doi']
+                if doi in db_types:
+                    article['type'] = db_types[doi]
                 articles.append(article)
         except Exception as e:
             print(f"Error parsing {md_file.name}: {e}")
