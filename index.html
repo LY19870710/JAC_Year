@@ -161,7 +161,6 @@ body {
   box-shadow: var(--shadow);
   border-left: 4px solid transparent;
   transition: all 0.2s ease;
-  cursor: pointer;
 }
 .card:hover {
   border-left-color: var(--accent);
@@ -202,6 +201,21 @@ body {
   border-radius: 14px;
   font-size: 0.75rem;
   font-weight: 500;
+}
+.btn-expand {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn-expand:hover {
+  background: var(--accent);
+  color: #fff;
 }
 
 .card-authors {
@@ -422,11 +436,12 @@ function render() {
 
     return `
     <div class="card" data-idx="${i}">
-      <div class="card-head" onclick="toggle(this.parentElement)">
+      <div class="card-head">
         <div class="card-title">${esc(a.title)}</div>
         <div class="badges">
           ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
           ${a.type ? `<span class="badge-type">${esc(a.type)}</span>` : ''}
+          <button class="btn-expand" onclick="toggle(this.closest('.card'))">展开 ▾</button>
         </div>
       </div>
       <div class="card-authors">${esc(shortNames)}</div>
@@ -457,7 +472,13 @@ function render() {
 }
 
 /* ── Toggle ── */
-function toggle(card) { card.classList.toggle('open'); }
+function toggle(card) {
+  card.classList.toggle('open');
+  const btn = card.querySelector('.btn-expand');
+  if (btn) {
+    btn.textContent = card.classList.contains('open') ? '收起 ▴' : '展开 ▾';
+  }
+}
 
 /* ── Escape ── */
 function esc(s) {
