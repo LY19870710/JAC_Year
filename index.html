@@ -6,18 +6,19 @@
 <title>JAC Year Manager | Journal of Advanced Ceramics</title>
 <style>
 :root {
-  --bg: #f7f8fa;
+  --bg: #fef9f3;
   --card: #ffffff;
-  --primary: #1a5276;
-  --primary-dark: #0e3a5a;
+  --primary: #d35400;
+  --primary-dark: #a04000;
   --accent: #e67e22;
   --accent-light: #fdebd0;
-  --text: #2c3e50;
-  --text-muted: #6b7c93;
-  --border: #e2e6ed;
+  --accent-bg: #fff5e6;
+  --text: #3e2723;
+  --text-muted: #795548;
+  --border: #f0d9c8;
   --radius: 12px;
-  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
-  --shadow-hover: 0 4px 12px rgba(0,0,0,0.1), 0 8px 24px rgba(0,0,0,0.06);
+  --shadow: 0 1px 3px rgba(139,69,19,0.06), 0 4px 12px rgba(139,69,19,0.04);
+  --shadow-hover: 0 4px 12px rgba(139,69,19,0.1), 0 8px 24px rgba(139,69,19,0.06);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,13 +33,13 @@ body {
 
 /* ── Header ── */
 .header {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #2980b9 100%);
+  background: linear-gradient(135deg, #e67e22 0%, #f39c12 50%, #f1c40f 100%);
   color: #fff;
   padding: 28px 0 24px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 20px rgba(230,126,34,0.25);
 }
 .header-inner {
   max-width: 1200px;
@@ -55,8 +56,8 @@ body {
 
 .export-btns { display: flex; gap: 8px; }
 .export-btn {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.35);
   color: #fff;
   padding: 6px 14px;
   border-radius: 20px;
@@ -65,7 +66,7 @@ body {
   transition: background 0.2s;
   backdrop-filter: blur(4px);
 }
-.export-btn:hover { background: rgba(255,255,255,0.28); }
+.export-btn:hover { background: rgba(255,255,255,0.35); }
 
 /* ── Search ── */
 .search-section {
@@ -95,8 +96,8 @@ body {
 }
 .search-wrap input:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(26,82,118,0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(230,126,34,0.12);
 }
 .search-wrap .icon {
   position: absolute;
@@ -118,7 +119,7 @@ body {
 }
 .filter-select:focus {
   outline: none;
-  border-color: var(--primary);
+  border-color: var(--accent);
 }
 
 /* ── Stats ── */
@@ -140,10 +141,10 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 2px rgba(139,69,19,0.04);
 }
-.stat-chip strong { color: var(--primary); font-size: 1rem; }
-.stat-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: #2ecc71; }
+.stat-chip strong { color: var(--accent); font-size: 1rem; }
+.stat-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: #e67e22; }
 
 /* ── Article List ── */
 .list {
@@ -163,11 +164,11 @@ body {
   cursor: pointer;
 }
 .card:hover {
-  border-left-color: var(--primary);
+  border-left-color: var(--accent);
   box-shadow: var(--shadow-hover);
   transform: translateY(-1px);
 }
-.card.open { border-left-color: var(--accent); }
+.card.open { border-left-color: var(--primary); }
 
 .card-head {
   display: flex;
@@ -178,16 +179,16 @@ body {
 .card-title {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--text);
   flex: 1;
   line-height: 1.45;
 }
 .card-title a { color: inherit; text-decoration: none; }
-.card-title a:hover { text-decoration: underline; }
+.card-title a:hover { color: var(--accent); }
 
 .badges { display: flex; gap: 6px; flex-shrink: 0; align-items: center; }
 .badge-year {
-  background: var(--primary);
+  background: var(--accent);
   color: #fff;
   padding: 3px 10px;
   border-radius: 14px;
@@ -195,8 +196,8 @@ body {
   font-weight: 600;
 }
 .badge-type {
-  background: var(--accent-light);
-  color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--primary);
   padding: 3px 10px;
   border-radius: 14px;
   font-size: 0.75rem;
@@ -205,7 +206,7 @@ body {
 
 .card-authors {
   font-size: 0.84rem;
-  color: var(--text-muted);
+  color: #8d6e63;
   margin-top: 8px;
   line-height: 1.5;
 }
@@ -216,8 +217,8 @@ body {
   gap: 5px;
 }
 .kw {
-  background: #f1f4f7;
-  color: var(--text-muted);
+  background: var(--accent-bg);
+  color: var(--primary);
   padding: 2px 10px;
   border-radius: 10px;
   font-size: 0.74rem;
@@ -241,7 +242,7 @@ body {
 .d-item { font-size: 0.83rem; }
 .d-item label {
   display: block;
-  color: var(--text-muted);
+  color: #a1887f;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -255,7 +256,7 @@ body {
   line-height: 1.75;
   margin-top: 10px;
   padding: 12px 16px;
-  background: #fafbfc;
+  background: var(--accent-bg);
   border-radius: 8px;
   border-left: 3px solid var(--accent);
 }
@@ -268,7 +269,7 @@ body {
 }
 .d-links a {
   font-size: 0.83rem;
-  color: var(--primary);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
 }
@@ -284,7 +285,7 @@ body {
   display: inline-block;
   width: 28px; height: 28px;
   border: 3px solid var(--border);
-  border-top-color: var(--primary);
+  border-top-color: var(--accent);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
   margin-bottom: 10px;
@@ -300,7 +301,7 @@ body {
   border-top: 1px solid var(--border);
   margin-top: 24px;
 }
-.footer a { color: var(--primary); text-decoration: none; }
+.footer a { color: var(--accent); text-decoration: none; }
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
