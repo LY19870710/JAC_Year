@@ -289,15 +289,21 @@ body {
 }
 .d-links a:hover { text-decoration: underline; }
 
-/* ── DOI link ── */
-.doi-link {
+/* ── Card DOI & Abstract ── */
+.card-doi {
   font-family: 'SF Mono', 'Fira Code', monospace;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
+  margin-top: 6px;
+  word-break: break-all;
 }
-.doi-link:hover { text-decoration: underline; }
+.card-abstract {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 8px;
+  text-align: justify;
+}
 
 /* ── Loading / Empty ── */
 .center-msg {
@@ -438,22 +444,55 @@ function render() {
     $list.innerHTML = `<div class="center-msg"><div style="font-size:2.5rem;margin-bottom:8px">🔍</div><div>No articles found</div></div>`;
     return;
   }
-  $list.innerHTML = filteredArticles.map((a,i) => {
-     const volIssue = (a.volume || a.issue)
-       ? `Vol.${a.volume||"?"} Issue ${a.issue||"?"}`
-       : "";
 
-     return `
-     <div class="card">
-       <div class="card-head">
-         <div class="badges">
-           ${volIssue ? `<span class="badge-year">${esc(volIssue)}</span>` : ""}
-           ${a.doi ? `<a class="doi-link" href="${a.url||"#"}" target="_blank">${esc(a.doi)}</a>` : ""}
-         </div>
-       </div>
-       ${a.abstract ? `<div class="d-abstract">${esc(a.abstract)}</div>` : "<div class=\"d-abstract\" style=\"color:#a1887f\">— No abstract —</div>"}
-     </div>`;
-   }).join('');
+  $list.innerHTML = filteredArticles.map((a,i) => {
+    const names = (a.authors||[]).map(x => x.name).join(', ');
+    const shortNames = names.length > 150 ? names.substring(0,150) + '...' : names;
+    const kws = (a.keywords||[]).slice(0,5).map(k => `<span class="kw">${esc(k)}</span>`).join('');
+     const volIssue = (a.volume || a.issue) ? `Vol.${a.volume||'?'} Issue ${a.issue||'?'}` : '';
+
+    return `
+    <div class="card" data-idx="${i}">
+      <div class="card-head" onclick="toggle(this.parentElement)">
+        <div class="card-title">${esc(a.title)}</div>
+        <div class="badges">
+          ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
+          ${a.type ? `<span class="badge-type">${esc(a.type)}</span>` : ''}
+           ${volIssue ? `<span class="badge-type">${esc(volIssue)}</span>` : ''}
+          <button class="btn-expand" onclick="event.stopPropagation();toggle(this.closest('.card'))">展开 ▾</button>
+        </div>
+      </div>
+      <div class="card-authors">${esc(shortNames)}</div>
+      ${kws ? `<div class="card-keywords">${kws}</div>` : ''}
+       ${a.doi ? `<div class="card-doi">${esc(a.doi)}</div>` : ''}
+       ${a.abstract ? `<div class="card-abstract">${esc(a.abstract)}</div>` : ''}
+      <div class="detail">
+        <div class="detail-grid">
+          ${a.doi ? `<div class="d-item"><label>DOI</label><span>${esc(a.doi)}</span></div>` : ''}
+          ${a.volume ? `<div class="d-item"><label>Volume(Issue)</label><span>${a.volume}(${a.issue})</span></div>` : ''}
+          ${a.research_area ? `<div class="d-item"><label>Research Area</label><span>${esc(a.research_area)}</span></div>` : ''}
+          ${a.received ? `<div class="d-item"><label>Received</label><span>${esc(a.received)}</span></div>` : ''}
+          ${a.accepted ? `<div class="d-item"><label>Accepted</label><span>${esc(a.accepted)}</span></div>` : ''}
+          ${a.published ? `<div class="d-item"><label>Published</label><span>${esc(a.published)}</span></div>` : ''}
+          ${a.views ? `<div class="d-item"><label>Views</label><span>${a.views}</span></div>` : ''}
+          ${a.downloads ? `<div class="d-item"><label>Downloads</label><span>${a.downloads}</span></div>` : ''}
+          ${a.citations_crossref ? `<div class="d-item"><label>Crossref Cit.</label><span>${a.citations_crossref}</span></div>` : ''}
+          ${a.citations_wos ? `<div class="d-item"><label>WoS Cit.</label><span>${a.citations_wos}</span></div>` : ''}
+          ${a.citations_scopus ? `<div class="d-item"><label>Scopus Cit.</label><span>${a.citations_scopus}</span></div>` : ''}
+          ${a.altmetric ? `<div class="d-item"><label>Altmetric</label><span>${a.altmetric}</span></div>` : ''}
+          ${a.corresponding_author ? `<div class="d-item"><label>Corresponding Author</label><span>${esc(a.corresponding_author)}</span></div>` : ''}
+          ${a.corresponding_email ? `<div class="d-item"><label>Contact Email</label><span>${esc(a.corresponding_email)}</span></div>` : ''}
+          ${a.institutions ? `<div class="d-item"><label>Institutions</label><span>${esc(a.institutions)}</span></div>` : ''}
+          ${a.funding ? `<div class="d-item"><label>Funding</label><span>${esc(a.funding)}</span></div>` : ''}
+        </div>
+        ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${esc(a.abstract)}</div>` : ''}
+        <div class="d-links">
+          ${a.url ? `<a href="${a.url}" target="_blank" onclick="event.stopPropagation()">View on SciOpen →</a>` : ''}
+          ${a.pdf ? `<a href="${a.pdf}" target="_blank" onclick="event.stopPropagation()">Download PDF →</a>` : ''}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
 }
 
 /* ── Toggle ── */
