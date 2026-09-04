@@ -366,6 +366,7 @@ body {
     </div>
     <select class="filter-select" id="yearFilter"><option value="">All Years</option></select>
     <select class="filter-select" id="typeFilter"><option value="">All Types</option></select>
+    <select class="filter-select" id="areaFilter"><option value="">All Areas</option></select>
   </div>
 </section>
 
@@ -387,6 +388,7 @@ let filteredArticles = [];
 const $search = document.getElementById('searchInput');
 const $year = document.getElementById('yearFilter');
 const $type = document.getElementById('typeFilter');
+const $area = document.getElementById('areaFilter');
 const $list = document.getElementById('articleList');
 const $stats = document.getElementById('statsRow');
 
@@ -405,22 +407,26 @@ async function loadData() {
 
 /* ── Filters ── */
 function fillFilters() {
-  const years = new Set(), types = new Set();
-  allArticles.forEach(a => { if (a.year) years.add(a.year); if (a.type) types.add(a.type); });
+  const years = new Set(), types = new Set(), areas = new Set();
+  allArticles.forEach(a => { if (a.year) years.add(a.year); if (a.type) types.add(a.type); if (a.research_area_zh) areas.add(a.research_area_zh); });
   [...years].sort((a,b)=>b-a).forEach(y => {
     const o = document.createElement('option'); o.value = y; o.textContent = y; $year.appendChild(o);
   });
   [...types].sort().forEach(t => {
     const o = document.createElement('option'); o.value = t; o.textContent = t; $type.appendChild(o);
   });
+  [...areas].sort().forEach(a => {
+    const o = document.createElement('option'); o.value = a; o.textContent = a; $area.appendChild(o);
+  });
 }
 
 function applyFilters() {
   const q = $search.value.toLowerCase().trim();
-  const yv = $year.value, tv = $type.value;
+  const yv = $year.value, tv = $type.value, av = $area.value;
   filteredArticles = allArticles.filter(a => {
     if (yv && a.year != yv) return false;
     if (tv && a.type !== tv) return false;
+    if (av && a.research_area_zh !== av) return false;
     if (q) {
       const hay = [a.title, ...(a.authors||[]).map(x=>x.name), ...(a.keywords||[]), a.research_area||'', a.abstract||''].join(' ').toLowerCase();
       if (!hay.includes(q)) return false;
@@ -540,6 +546,7 @@ function download(content, filename, mime) {
 $search.addEventListener('input', debounce(applyFilters, 300));
 $year.addEventListener('change', applyFilters);
 $type.addEventListener('change', applyFilters);
+$area.addEventListener('change', applyFilters);
 
 function debounce(fn, ms) {
   let t;
