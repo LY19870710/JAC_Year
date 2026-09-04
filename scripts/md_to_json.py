@@ -22,7 +22,8 @@ def get_db_data():
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute('''SELECT doi, type, abstract, corresponding_author, corresponding_email,
-                        corresponding_authors, corresponding_emails, funding, institutions
+                        corresponding_authors, corresponding_emails, funding, institutions,
+                        research_area, research_area_zh
                  FROM articles''')
     data = {}
     for row in c.fetchall():
@@ -36,6 +37,8 @@ def get_db_data():
             'corresponding_emails': row[6] or '',
             'funding': clean_html(row[7]) if row[7] else '',
             'institutions': row[8] or '',
+            'research_area': row[9] or '',
+            'research_area_zh': row[10] or '',
         }
     conn.close()
     return data
@@ -195,6 +198,11 @@ def main():
                     article['corresponding_emails'] = db.get('corresponding_emails', '')
                     article['funding'] = db.get('funding', '')
                     article['institutions'] = db.get('institutions', '')
+                    # Override research_area from database if available
+                    if db.get('research_area'):
+                        article['research_area'] = db['research_area']
+                    if db.get('research_area_zh'):
+                        article['research_area_zh'] = db['research_area_zh']
                 articles.append(article)
         except Exception as e:
             print(f"Error parsing {md_file.name}: {e}")
