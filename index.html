@@ -466,7 +466,7 @@ function render() {
       </div>
       <div class="card-authors">${esc(shortNames)}</div>
       ${kws ? `<div class="card-keywords">${kws}</div>` : ''}
-       ${a.doi ? `<div class="card-doi">${esc(a.doi)}</div>` : ''}
+       ${a.doi ? `<div class="card-doi"><a href="https://doi.org/${a.doi}" target="_blank" onclick="event.stopPropagation()">https://doi.org/${esc(a.doi)}</a></div>` : ''}
       <div class="detail">
         <div class="detail-grid">
           ${a.doi ? `<div class="d-item"><label>DOI</label><span>${esc(a.doi)}</span></div>` : ''}
