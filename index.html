@@ -575,7 +575,7 @@ function render() {
         ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${highlight(a.abstract.replace(/<[^>]+>/g, ''), currentQuery)}</div>` : ''}
         ${a.doi ? `
         <div class="d-cite">
-          <div class="d-cite-text" id="cite-${i}"></div>
+          <div class="d-cite-text" id="cite-${i}"><strong>Cite this article:</strong> <span class="cite-content"></span></div>
           <button class="d-cite-copy" onclick="event.stopPropagation();copyCite(${i})">复制</button>
         </div>` : ''}
         <div class="d-links">
@@ -598,7 +598,7 @@ function toggle(card) {
   if (card.classList.contains('open')) {
     const idx = parseInt(card.dataset.idx);
     const a = filteredArticles[idx];
-    const citeEl = card.querySelector('.d-cite-text');
+    const citeEl = card.querySelector('.cite-content');
     if (citeEl && a) citeEl.textContent = getCiteText(a);
   }
 }
@@ -610,21 +610,23 @@ function getCiteText(a) {
     const parts = name.split(/\s+/);
     if (parts.length >= 2) {
       const last = parts[parts.length-1];
-      const initials = parts.slice(0,-1).map(p => p[0]?.toUpperCase() || '').join(' ');
-      return `${last} ${initials}`;
+      const firstInit = parts[0]?.[0]?.toUpperCase() || '';
+      return `${last} ${firstInit}`;
     }
     return name;
   });
   let authorStr;
   if (aus.length > 3) {
-    authorStr = aus.slice(0,3).join(', ') + ', et al.';
+    authorStr = aus.slice(0,3).join(', ') + ', et al';
   } else {
     authorStr = aus.join(', ');
   }
   const year = a.year || '';
   const title = (a.title || '').replace(/<[^>]+>/g, '');
+  const volIssue = (a.volume || a.issue) ? `${a.volume||''}(${a.issue||''})` : '';
+  const artNum = a.doi ? a.doi.match(/JAC\.\d+\.(\d+)/)?.[1] || '' : '';
   const doiUrl = `https://doi.org/${a.doi || ''}`;
-  return `${authorStr}. ${title}. Journal of Advanced Ceramics, ${year}, ${doiUrl}`;
+  return `${authorStr}. ${title}. Journal of Advanced Ceramics, ${year}, ${volIssue}: ${artNum}. ${doiUrl}`;
 }
 
 /* ── Copy Cite ── */
