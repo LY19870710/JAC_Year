@@ -558,9 +558,8 @@ function downloadRIS(idx) {
   }
   if (a.volume) ris.push('VL  - ' + a.volume);
   if (a.issue) ris.push('IS  - ' + a.issue);
-  (a.keywords||[]).forEach(kw => ris.push('KW  - ' + kw));
-  if (a.abstract) ris.push('AB  - ' + a.abstract.replace(/\s+/g,' ').trim());
-  if (a.url) ris.push('UR  - ' + a.url);
+  if (a.abstract) ris.push('AB  - ' + a.abstract.replace(/\\u([0-9a-fA-F]{4})/g, (_, h) => String.fromCharCode(parseInt(h, 16))).replace(/\s+/g,' ').trim());
+  if (a.doi) ris.push('UR  - https://doi.org/' + a.doi);
   if (a.doi) ris.push('DO  - ' + a.doi);
   const fn = (a.doi||'JAC').replace(/[/\\]/g,'_') + '.ris';
   download(ris.join('\r\n') + '\r\n', fn, 'application/x-research-info-systems;charset=utf-8;');
