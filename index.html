@@ -440,11 +440,7 @@ function applyFilters() {
 function render() {
   const views = filteredArticles.reduce((s,a) => s + (parseInt(a.views)||0), 0);
   const downloads = filteredArticles.reduce((s,a) => s + (parseInt(a.downloads)||0), 0);
-  $stats.innerHTML = `
-    <div class="stat-chip"><span class="dot"></span><strong>${filteredArticles.length}</strong>&nbsp;articles</div>
-    <div class="stat-chip"><strong>${views.toLocaleString()}</strong>&nbsp;views</div>
-    <div class="stat-chip"><strong>${downloads.toLocaleString()}</strong>&nbsp;downloads</div>
-  `;
+  $stats.innerHTML = `<div style="display:none"></div>`;
 
   if (!filteredArticles.length) {
     $list.innerHTML = `<div class="center-msg"><div style="font-size:2.5rem;margin-bottom:8px">🔍</div><div>No articles found</div></div>`;
