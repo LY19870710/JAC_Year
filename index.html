@@ -289,6 +289,38 @@ body {
 }
 .d-links a:hover { text-decoration: underline; }
 
+/* ── Cite ── */
+.d-cite {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.d-cite-text {
+  flex: 1;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  word-break: break-word;
+}
+.d-cite-copy {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.d-cite-copy:hover { background: var(--primary); }
+.d-cite-copy.copied { background: #27ae60; }
+
 /* ── Card DOI & Abstract ── */
 .card-doi {
   font-family: 'Source Han Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -541,6 +573,11 @@ function render() {
           ${a.research_area ? `<div class="d-item"><label>Research Area</label><span>${esc(a.research_area)}</span></div>` : ''}
         </div>
         ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${highlight(a.abstract.replace(/<[^>]+>/g, ''), currentQuery)}</div>` : ''}
+        ${a.doi ? `
+        <div class="d-cite">
+          <div class="d-cite-text" id="cite-${i}"></div>
+          <button class="d-cite-copy" onclick="event.stopPropagation();copyCite(${i})">复制</button>
+        </div>` : ''}
         <div class="d-links">
           ${a.url ? `<a href="${a.url}" target="_blank" onclick="event.stopPropagation()">View on SciOpen →</a>` : ''}
           ${a.pdf ? `<a href="${a.pdf}" target="_blank" onclick="event.stopPropagation()">Download PDF →</a>` : ''}
@@ -558,6 +595,76 @@ function toggle(card) {
   if (btn) {
     btn.textContent = card.classList.contains('open') ? '收起 ▴' : '展开 ▾';
   }
+  if (card.classList.contains('open')) {
+    const idx = parseInt(card.dataset.idx);
+    const a = filteredArticles[idx];
+    const citeEl = card.querySelector('.d-cite-text');
+    if (citeEl && a) citeEl.textContent = getCiteText(a);
+  }
+}
+
+/* ── Cite Text ── */
+function getCiteText(a) {
+  const aus = (a.authors||[]).map(au => {
+    const name = (au.name || '').trim();
+    const parts = name.split(/\s+/);
+    if (parts.length >= 2) {
+      const last = parts[parts.length-1];
+      const initials = parts.slice(0,-1).map(p => p[0]?.toUpperCase() || '').join(' ');
+      return `${last} ${initials}`;
+    }
+    return name;
+  });
+  let authorStr;
+  if (aus.length > 3) {
+    authorStr = aus.slice(0,3).join(', ') + ', et al.';
+  } else {
+    authorStr = aus.join(', ');
+  }
+  const year = a.year || '';
+  const title = (a.title || '').replace(/<[^>]+>/g, '');
+  const doiUrl = `https://doi.org/${a.doi || ''}`;
+  return `${authorStr}. ${title}. Journal of Advanced Ceramics, ${year}, ${doiUrl}`;
+}
+
+/* ── Copy Cite ── */
+function copyCite(idx) {
+  const a = filteredArticles[idx];
+  if (!a) return;
+  const text = getCiteText(a);
+  const btn = event.target;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      showCopied(btn);
+    }).catch(() => {
+      fallbackCopy(text, btn);
+    });
+  } else {
+    fallbackCopy(text, btn);
+  }
+}
+
+function fallbackCopy(text, btn) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    showCopied(btn);
+  } catch(e) {}
+  document.body.removeChild(ta);
+}
+
+function showCopied(btn) {
+  btn.textContent = '已复制 ✓';
+  btn.classList.add('copied');
+  setTimeout(() => {
+    btn.textContent = '复制';
+    btn.classList.remove('copied');
+  }, 1500);
 }
 
 /* ── Escape ── */
