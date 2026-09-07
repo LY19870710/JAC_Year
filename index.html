@@ -562,8 +562,7 @@ function downloadRIS(idx) {
   if (a.abstract) ris.push('AB  - ' + a.abstract.replace(/\s+/g,' ').trim());
   if (a.url) ris.push('UR  - ' + a.url);
   if (a.doi) ris.push('DO  - ' + a.doi);
-  ris.push('ER  -');
-  const fn = (a.doi||'JAC').replace(/[\/\\]/g,'_') + '.ris';
+  const fn = (a.doi||'JAC').replace(/[/\\]/g,'_') + '.ris';
   download(ris.join('\r\n') + '\r\n', fn, 'application/x-research-info-systems;charset=utf-8;');
 }
 
