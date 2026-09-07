@@ -480,7 +480,7 @@ function render() {
         <div class="d-links">
           ${a.url ? `<a href="${a.url}" target="_blank" onclick="event.stopPropagation()">View on SciOpen →</a>` : ''}
           ${a.pdf ? `<a href="${a.pdf}" target="_blank" onclick="event.stopPropagation()">Download PDF →</a>` : ''}
-          ${a.doi ? `<a href="#" onclick="event.stopPropagation();downloadRIS(${i})" style="color:#27ae60">Download RIS →</a>` : ''}
+          ${a.doi ? `<a href="javascript:void(0)" onclick="event.stopPropagation();downloadRIS(${i})" style="color:#27ae60">Download RIS →</a>` : ''}
         </div>
       </div>
     </div>`;
