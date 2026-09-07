@@ -481,6 +481,7 @@ function render() {
         <div class="d-links">
           ${a.url ? `<a href="${a.url}" target="_blank" onclick="event.stopPropagation()">View on SciOpen →</a>` : ''}
           ${a.pdf ? `<a href="${a.pdf}" target="_blank" onclick="event.stopPropagation()">Download PDF →</a>` : ''}
+          ${a.doi ? `<a href="#" onclick="event.stopPropagation();downloadRIS(${i})" style="color:#27ae60">Download RIS →</a>` : ''}
         </div>
       </div>
     </div>`;
@@ -530,6 +531,40 @@ function exportJSON() {
     abstract: a.abstract
   }));
   download(JSON.stringify(data, null, 2), 'JAC_articles.json', 'application/json');
+}
+
+/* ── Download RIS ── */
+function downloadRIS(idx) {
+  const a = filteredArticles[idx];
+  if (!a) return;
+  const ris = [];
+  ris.push('TY  - JOUR');
+  (a.authors||[]).forEach(au => {
+    const name = au.name || '';
+    const parts = name.trim().split(/\s+/);
+    if (parts.length >= 2) {
+      ris.push('AU  - ' + parts[parts.length-1] + ', ' + parts.slice(0,-1).join(' '));
+    } else {
+      ris.push('AU  - ' + name);
+    }
+  });
+  if (a.year) ris.push('PY  - ' + a.year);
+  ris.push('TI  - ' + (a.title||''));
+  ris.push('JO  - Journal of Advanced Ceramics');
+  ris.push('SN  - 2226-4108');
+  if (a.doi) {
+    const m = a.doi.match(/JAC\.\d+\.(\d+)/);
+    if (m) ris.push('SP  - ' + m[1]);
+  }
+  if (a.volume) ris.push('VL  - ' + a.volume);
+  if (a.issue) ris.push('IS  - ' + a.issue);
+  (a.keywords||[]).forEach(kw => ris.push('KW  - ' + kw));
+  if (a.abstract) ris.push('AB  - ' + a.abstract.replace(/\s+/g,' ').trim());
+  if (a.url) ris.push('UR  - ' + a.url);
+  if (a.doi) ris.push('DO  - ' + a.doi);
+  ris.push('ER  -');
+  const fn = (a.doi||'JAC').replace(/[\/\\]/g,'_') + '.ris';
+  download(ris.join('\r\n') + '\r\n', fn, 'application/x-research-info-systems;charset=utf-8;');
 }
 
 /* ── Download helper ── */
