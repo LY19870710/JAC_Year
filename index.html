@@ -454,13 +454,13 @@ function render() {
   $list.innerHTML = filteredArticles.map((a,i) => {
     const names = (a.authors||[]).map(x => x.name).join(', ');
     const shortNames = names.length > 150 ? names.substring(0,150) + '...' : names;
-    const kws = (a.keywords||[]).slice(0,5).map(k => `<span class="kw">${esc(k)}</span>`).join('');
+    const kws = (a.keywords||[]).slice(0,5).map(k => `<span class="kw">${esc(k.replace(/<[^>]+>/g, ''))}</span>`).join('');
      const volIssue = (a.volume || a.issue) ? `Vol.${a.volume||'?'} Issue ${a.issue||'?'}` : '';
 
     return `
     <div class="card" data-idx="${i}">
       <div class="card-head" onclick="toggle(this.parentElement)">
-        <div class="card-title">${esc(a.title)}</div>
+        <div class="card-title">${esc(a.title.replace(/<[^>]+>/g, ''))}</div>
         <div class="badges">
           ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
           ${a.type ? `<span class="badge-type">${esc(a.type)}</span>` : ''}
@@ -549,7 +549,7 @@ function downloadRIS(idx) {
     }
   });
   if (a.year) ris.push('PY  - ' + a.year);
-  ris.push('TI  - ' + (a.title||''));
+  ris.push('TI  - ' + (a.title||'').replace(/<[^>]+>/g, ''));
   ris.push('JO  - Journal of Advanced Ceramics');
   ris.push('SN  - 2226-4108');
   if (a.doi) {
