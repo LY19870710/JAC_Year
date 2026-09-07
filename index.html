@@ -477,7 +477,7 @@ function render() {
           ${a.volume ? `<div class="d-item"><label>Volume(Issue)</label><span>${a.volume}(${a.issue})</span></div>` : ''}
           ${a.research_area ? `<div class="d-item"><label>Research Area</label><span>${esc(a.research_area)}</span></div>` : ''}
         </div>
-        ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${esc(a.abstract)}</div>` : ''}
+        ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${esc(a.abstract.replace(/<[^>]+>/g, ''))}</div>` : ''}
         <div class="d-links">
           ${a.url ? `<a href="${a.url}" target="_blank" onclick="event.stopPropagation()">View on SciOpen →</a>` : ''}
           ${a.pdf ? `<a href="${a.pdf}" target="_blank" onclick="event.stopPropagation()">Download PDF →</a>` : ''}
