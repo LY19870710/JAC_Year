@@ -361,6 +361,129 @@ body {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 0 12px;
+    position: sticky;
+  }
+  .header-inner {
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .header h1 {
+    font-size: 1.2rem;
+  }
+  .header p {
+    font-size: 0.75rem;
+  }
+  .export-btns {
+    display: none;
+  }
+
+  .search-section {
+    margin: 16px auto 8px;
+    padding: 0 16px;
+  }
+  .search-row {
+    gap: 8px;
+  }
+  .search-wrap input {
+    padding: 10px 14px 10px 38px;
+    font-size: 0.9rem;
+  }
+  .filter-select {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    min-width: 100px;
+  }
+
+  .card {
+    padding: 16px;
+    margin-bottom: 10px;
+  }
+  .card-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-title {
+    font-size: 0.95rem;
+  }
+  .badges {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .btn-expand {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+  .card-authors {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+  .card-doi a {
+    font-size: 0.75rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .d-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .d-links a {
+    display: block;
+    padding: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  .d-cite {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .d-cite-text {
+    font-size: 0.78rem;
+  }
+  .d-cite-copy {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .badge-year, .badge-type {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+
+  .footer {
+    padding: 16px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.1rem;
+  }
+  .search-wrap input {
+    font-size: 0.85rem;
+  }
+  .filter-select {
+    width: 100%;
+  }
+  .card {
+    padding: 12px;
+  }
+  .card-title {
+    font-size: 0.9rem;
+  }
+}
+
 /* ── Footer ── */
 .footer {
   text-align: center;
@@ -417,7 +540,7 @@ body {
 </div>
 
 <script>
-const DATA_URL = 'articles_md/articles.json?v=20260902';
+const DATA_URL = 'articles_md/articles.json?v=20260908';
 let allArticles = [];
 let filteredArticles = [];
 
