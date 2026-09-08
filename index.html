@@ -225,6 +225,35 @@ body {
   line-height: 1.5;
   max-width: 700px;
 }
+.card-cite {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+}
+.card-cite-text {
+  flex: 1;
+  font-size: 0.78rem;
+  color: #607d8b;
+  line-height: 1.5;
+}
+.card-cite-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.card-cite-btn:hover { background: var(--primary); }
+.card-cite-btn.copied { background: #27ae60; }
 .card-keywords {
   margin-top: 8px;
   display: flex;
@@ -690,12 +719,18 @@ function render() {
           ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
           ${a.type ? `<span class="badge-type">${esc(a.type)}</span>` : ''}
            ${volIssue ? `<span class="badge-type">${esc(volIssue)}</span>` : ''}
-          <button class="btn-expand" onclick="event.stopPropagation();toggle(this.closest('.card'))">展开 ▾</button>
+          <button class="btn-expand toggle-btn" onclick="event.stopPropagation();toggle(this.closest('.card'))">展开 ▾</button>
         </div>
       </div>
       <div class="card-authors">${shortNames}</div>
       ${kws ? `<div class="card-keywords">${kws}</div>` : ''}
        ${a.doi ? `<div class="card-doi"><a href="https://doi.org/${a.doi}" target="_blank" onclick="event.stopPropagation()">https://doi.org/${esc(a.doi)}</a></div>` : ''}
+      ${a.doi ? `
+      <div class="card-cite" onclick="event.stopPropagation()">
+        <span class="card-cite-text">${getCiteText(a)}</span>
+        <button class="card-cite-btn" onclick="copyCite(${i})">复制</button>
+        <a class="card-cite-btn" href="javascript:void(0)" onclick="downloadRIS(${i})" style="background:#27ae60;color:#fff;text-decoration:none;display:inline-block;padding:3px 10px;border-radius:4px;font-size:0.72rem">RIS</a>
+      </div>` : ''}
       <div class="detail">
         <div class="detail-grid">
           ${a.doi ? `<div class="d-item"><label>DOI</label><span>${esc(a.doi)}</span></div>` : ''}
@@ -703,15 +738,9 @@ function render() {
           ${a.research_area ? `<div class="d-item"><label>Research Area</label><span>${esc(a.research_area)}</span></div>` : ''}
         </div>
         ${a.abstract ? `<div class="d-abstract"><strong>Abstract:</strong> ${highlight(a.abstract.replace(/<[^>]+>/g, ''), currentQuery)}</div>` : ''}
-        ${a.doi ? `
-        <div class="d-cite">
-          <div class="d-cite-text" id="cite-${i}"><strong>Cite this article:</strong> <span class="cite-content"></span></div>
-          <button class="d-cite-copy" onclick="event.stopPropagation();copyCite(${i})">复制</button>
-        </div>` : ''}
         <div class="d-links">
           ${a.url ? `<a href="${a.url}" target="_blank" onclick="event.stopPropagation()">View on SciOpen →</a>` : ''}
           ${a.pdf ? `<a href="${a.pdf}" target="_blank" onclick="event.stopPropagation()">Download PDF →</a>` : ''}
-          ${a.doi ? `<a href="javascript:void(0)" onclick="event.stopPropagation();downloadRIS(${i})" style="color:#27ae60">Download RIS →</a>` : ''}
         </div>
       </div>
     </div>`;
@@ -721,7 +750,7 @@ function render() {
 /* ── Toggle ── */
 function toggle(card) {
   card.classList.toggle('open');
-  const btn = card.querySelector('.btn-expand');
+  const btn = card.querySelector('.toggle-btn');
   if (btn) {
     btn.textContent = card.classList.contains('open') ? '收起 ▴' : '展开 ▾';
   }
