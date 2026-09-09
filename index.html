@@ -709,7 +709,7 @@ function render() {
     const formattedAuthors = (a.authors||[]).map(formatAuthor);
     const shortNames = formattedAuthors.join(', ');
     const kws = (a.keywords||[]).slice(0,5).map(k => `<span class="kw">${highlight(k.replace(/<[^>]+>/g, ''), currentQuery)}</span>`).join('');
-     const volIssue = (a.volume || a.issue) ? `Vol.${a.volume||'?'} Issue ${a.issue||'?'}` : '';
+     const volIssue = (a.volume || a.issue) ? `Vol.${a.volume||'?'} Iss. ${a.issue||'?'}` : '';
 
     return `
     <div class="card" data-idx="${i}">
@@ -719,16 +719,17 @@ function render() {
           ${a.year ? `<span class="badge-year">${a.year}</span>` : ''}
           ${a.type ? `<span class="badge-type">${esc(a.type)}</span>` : ''}
            ${volIssue ? `<span class="badge-type">${esc(volIssue)}</span>` : ''}
-          <button class="btn-expand toggle-btn" onclick="event.stopPropagation();toggle(this.closest('.card'))">展开 ▾</button>
+          <button class="btn-expand toggle-btn" onclick="event.stopPropagation();toggle(this.closest('.card'))">Expand ▾</button>
         </div>
       </div>
       <div class="card-authors">${shortNames}</div>
       ${kws ? `<div class="card-keywords">${kws}</div>` : ''}
+      ${a.research_area ? `<div class="card-keywords"><span style="font-size:0.78rem;color:#666;margin-right:4px;font-weight:600">Research area:</span><span class="kw" style="background:#fff3e0;color:#e65100;font-weight:600">${esc(a.research_area)}</span></div>` : ''}
        ${a.doi ? `<div class="card-doi"><a href="https://doi.org/${a.doi}" target="_blank" onclick="event.stopPropagation()">https://doi.org/${esc(a.doi)}</a></div>` : ''}
       ${a.doi ? `
       <div class="card-cite" onclick="event.stopPropagation()">
         <span class="card-cite-text">${getCiteText(a)}</span>
-        <button class="card-cite-btn" onclick="copyCite(${i})">复制</button>
+        <button class="card-cite-btn" onclick="copyCite(${i})">Copy</button>
         <a class="card-cite-btn" href="javascript:void(0)" onclick="downloadRIS(${i})" style="background:#27ae60;color:#fff;text-decoration:none;display:inline-block;padding:3px 10px;border-radius:4px;font-size:0.72rem">RIS</a>
       </div>` : ''}
       <div class="detail">
@@ -752,7 +753,7 @@ function toggle(card) {
   card.classList.toggle('open');
   const btn = card.querySelector('.toggle-btn');
   if (btn) {
-    btn.textContent = card.classList.contains('open') ? '收起 ▴' : '展开 ▾';
+    btn.textContent = card.classList.contains('open') ? 'Collapse ▴' : 'Expand ▾';
   }
   if (card.classList.contains('open')) {
     const idx = parseInt(card.dataset.idx);
@@ -863,10 +864,10 @@ function fallbackCopy(text, btn) {
 }
 
 function showCopied(btn) {
-  btn.textContent = '已复制 ✓';
+  btn.textContent = 'Copied ✓';
   btn.classList.add('copied');
   setTimeout(() => {
-    btn.textContent = '复制';
+    btn.textContent = 'Copy';
     btn.classList.remove('copied');
   }, 1500);
 }
