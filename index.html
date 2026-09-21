@@ -53,6 +53,21 @@ body {
 }
 .header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.3px; }
 .header p { font-size: 0.85rem; opacity: 0.8; font-weight: 400; }
+.header-links { display: flex; gap: 10px; }
+.header-link {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.header-link:hover { background: rgba(255,255,255,0.35); }
 
 .export-btns { display: flex; gap: 8px; }
 .export-btn {
@@ -412,6 +427,14 @@ body {
   .header p {
     font-size: 0.75rem;
   }
+  .header-links {
+    display: flex;
+    gap: 8px;
+  }
+  .header-link {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
   .export-btns {
     display: none;
   }
@@ -535,6 +558,8 @@ body {
   .filter-select { width: 100%; }
   .card-head { flex-direction: column; }
   .badges { flex-shrink: 1; }
+  .header-links { display: flex; gap: 8px; }
+  .header-link { font-size: 0.75rem; padding: 5px 12px; }
 }
 </style>
 </head>
@@ -546,7 +571,10 @@ body {
       <h1>Journal of Advanced Ceramics 2024-2025</h1>
       <p>Article Index & Search</p>
     </div>
-
+    <div class="header-links">
+      <a href="https://www.sciopen.com/journal/2226-4108" target="_blank" class="header-link">Home page</a>
+      <a href="https://www.editorialmanager.com/jace/default.aspx" target="_blank" class="header-link">Submission link</a>
+    </div>
   </div>
 </header>
 
@@ -573,7 +601,7 @@ body {
 </div>
 
 <script>
-const DATA_URL = 'articles_md/articles.json?v=20260908';
+const DATA_URL = 'articles_md/articles.json?v=20260921';
 let allArticles = [];
 let filteredArticles = [];
 
