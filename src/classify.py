@@ -244,8 +244,8 @@ RESEARCH_AREAS = [
         "name_zh": "生物陶瓷",
         "keywords": [
             "bioceramic", "biomedical ceramic",
-            "hydroxyapatite", "hap",
-            "tricalcium phosphate", "tcp",
+            "hydroxyapatite", "hap,",
+            "tricalcium phosphate", "tcp,",
             "bioglass", "bioactive glass",
             "bone regeneration", "bone repair",
             "scaffold", "tissue engineering",
