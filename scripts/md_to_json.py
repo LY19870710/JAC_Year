@@ -21,7 +21,7 @@ def get_db_data():
         return {}
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    c.execute('''SELECT doi, type, abstract, corresponding_author, corresponding_email,
+    c.execute('''SELECT doi, year, type, abstract, corresponding_author, corresponding_email,
                         corresponding_authors, corresponding_emails, funding, institutions,
                         research_area, research_area_zh
                  FROM articles''')
@@ -29,16 +29,17 @@ def get_db_data():
     for row in c.fetchall():
         doi = row[0]
         data[doi] = {
-            'type': row[1],
-            'abstract': clean_html(row[2]) if row[2] else '',
-            'corresponding_author': row[3] or '',
-            'corresponding_email': row[4] or '',
-            'corresponding_authors': row[5] or '',
-            'corresponding_emails': row[6] or '',
-            'funding': clean_html(row[7]) if row[7] else '',
-            'institutions': row[8] or '',
-            'research_area': row[9] or '',
-            'research_area_zh': row[10] or '',
+            'year': row[1] or 0,
+            'type': row[2] or '',
+            'abstract': clean_html(row[3]) if row[3] else '',
+            'corresponding_author': row[4] or '',
+            'corresponding_email': row[5] or '',
+            'corresponding_authors': row[6] or '',
+            'corresponding_emails': row[7] or '',
+            'funding': clean_html(row[8]) if row[8] else '',
+            'institutions': row[9] or '',
+            'research_area': row[10] or '',
+            'research_area_zh': row[11] or '',
         }
     conn.close()
     return data
@@ -84,6 +85,8 @@ def parse_markdown_metadata(filepath):
 
     # DOI
     doi = metadata.get('DOI', '')
+    # Try to get year from DOI, but this may be wrong for some articles
+    # (e.g., DOI 2025 but actually published in Vol.15 2026)
     year_match = re.search(r'JAC\.(\d{4})', doi)
     year = int(year_match.group(1)) if year_match else None
 
@@ -190,6 +193,9 @@ def main():
                 if doi in db_data:
                     db = db_data[doi]
                     article['type'] = db.get('type', article.get('type', ''))
+                    # Override year from database (DOI year may differ from journal year)
+                    if db.get('year'):
+                        article['year'] = db['year']
                     if db.get('abstract'):
                         article['abstract'] = db['abstract']
                     article['corresponding_author'] = db.get('corresponding_author', '')
