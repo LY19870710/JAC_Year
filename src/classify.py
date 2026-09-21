@@ -251,7 +251,9 @@ RESEARCH_AREAS = [
             "scaffold", "tissue engineering",
             "implant material", "dental ceramic",
             "biocompatibility", "antibacterial",
-            "drug delivery", "wound healing"
+            "drug delivery", "wound healing",
+            "osseointegration", "cell growth",
+            "tissue regeneration", "bone substitute"
         ]
     },
     {
