@@ -809,7 +809,7 @@ function render() {
       </div>
       <div class="card-authors">${shortNames}</div>
       ${kws ? `<div class="card-keywords">${kws}</div>` : ''}
-      ${a.research_area ? `<div class="card-keywords"><span style="font-size:0.78rem;color:#666;margin-right:4px;font-weight:600">Research area:</span><span class="kw" style="background:#fff3e0;color:#e65100;font-weight:600">${esc(a.research_area)}</span></div>` : ''}
+      ${a.research_area_zh ? `<div class="card-keywords"><span style="font-size:0.78rem;color:#666;margin-right:4px;font-weight:600">研究方向:</span><span class="kw" style="background:#fff3e0;color:#e65100;font-weight:600">${esc(a.research_area_zh)}</span></div>` : ''}
        ${a.doi ? `<div class="card-doi"><a href="https://doi.org/${a.doi}" target="_blank" onclick="event.stopPropagation()">https://doi.org/${esc(a.doi)}</a></div>` : ''}
       ${a.doi ? `
       <div class="card-cite" onclick="event.stopPropagation()">
