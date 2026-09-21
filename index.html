@@ -943,63 +943,78 @@ function exportJSON() {
 }
 
 /* ── Download BibTeX ── */
+function stripHtml(text) {
+  if (!text) return '';
+  return text.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\\//g, '/').replace(/\s+/g, ' ').trim();
+}
+
 function downloadBibTeX(idx) {
   const a = filteredArticles[idx];
   if (!a) return;
   const bib = [];
-  const authorStr = (a.authors||[]).map(au => {
-    const name = (au.name || '').trim();
-    const parts = name.split(/\s+/);
-    return parts.length >= 2 ? parts[parts.length-1] + ', ' + parts.slice(0,-1).join(' ') : name;
-  }).join(' and ');
-  const key = 'JAC' + (a.year||'') + '_' + (a.doi||'').replace(/.*\//,'');
+  // Author format: "First Last and First Last" (matching SciOpen)
+  const authorStr = (a.authors||[]).map(au => (au.name || '').trim()).join(' and ');
+  // Key: FirstAuthorLastName + Year
+  const firstAuthor = (a.authors||[])[0] || {};
+  const firstName = (firstAuthor.name || '').trim();
+  const nameParts = firstName.split(/\s+/);
+  const lastAuthor = nameParts.length > 1 ? nameParts[nameParts.length-1] : firstName;
+  const key = lastAuthor.replace(/[^a-zA-Z]/g, '') + (a.year||'');
   bib.push('@article{' + key + ',');
-  if (authorStr) bib.push('  author = {' + authorStr + '},');
-  bib.push('  title = {' + (a.title||'').replace(/<[^>]+>/g, '') + '},');
-  bib.push('  journal = {Journal of Advanced Ceramics},');
-  bib.push('  year = {' + (a.year||'') + '},');
-  if (a.volume) bib.push('  volume = {' + a.volume + '},');
-  if (a.issue) bib.push('  number = {' + a.issue + '},');
+  bib.push('author = {' + authorStr + '},');
+  bib.push('title = {' + (a.title||'').replace(/<[^>]+>/g, '') + '},');
+  bib.push('year = {' + (a.year||'') + '},');
+  bib.push('journal = {Journal of Advanced Ceramics},');
+  if (a.volume) bib.push('volume = {' + a.volume + '},');
+  if (a.issue) bib.push('number = {' + a.issue + '},');
   if (a.doi) {
     const m = a.doi.match(/JAC\.(\d+)\.(\d+)/);
-    if (m) bib.push('  pages = {' + m[2] + '},');
-    bib.push('  doi = {' + a.doi + '},');
+    if (m) bib.push('pages = {' + m[2] + '},');
   }
-  if (a.url) bib.push('  url = {' + a.url + '},');
-  bib.push('  publisher = {Science Press and Springer Science+Business Media}');
+  if (a.keywords && a.keywords.length) bib.push('keywords = {' + a.keywords.join(', ') + '},');
+  if (a.url) bib.push('url = {' + a.url + '},');
+  if (a.doi) bib.push('doi = {' + a.doi + '},');
+  if (a.abstract) bib.push('abstract = {' + stripHtml(a.abstract) + '},');
   bib.push('}');
   const fn = (a.doi||'JAC').replace(/[/\\]/g,'_') + '.bib';
-  download(bib.join('\r\n') + '\r\n', fn, 'application/x-bibtex;charset=utf-8;');
+  download(bib.join('
+\n') + '
+\n', fn, 'application/x-bibtex;charset=utf-8;');
 }
 
 /* ── Export BibTeX (bulk) ── */
 function exportBibTeX() {
   const entries = filteredArticles.map(a => {
-    const authorStr = (a.authors||[]).map(au => {
-      const name = (au.name || '').trim();
-      const parts = name.split(/\s+/);
-      return parts.length >= 2 ? parts[parts.length-1] + ', ' + parts.slice(0,-1).join(' ') : name;
-    }).join(' and ');
-    const key = 'JAC' + (a.year||'') + '_' + (a.doi||'').replace(/.*\//,'');
+    const authorStr = (a.authors||[]).map(au => (au.name || '').trim()).join(' and ');
+    const firstAuthor = (a.authors||[])[0] || {};
+    const firstName = (firstAuthor.name || '').trim();
+    const nameParts = firstName.split(/\s+/);
+    const lastAuthor = nameParts.length > 1 ? nameParts[nameParts.length-1] : firstName;
+    const key = lastAuthor.replace(/[^a-zA-Z]/g, '') + (a.year||'');
     const lines = [];
-    lines.push('@article{' + key + ',');
-    if (authorStr) lines.push('  author = {' + authorStr + '},');
-    lines.push('  title = {' + (a.title||'').replace(/<[^>]+>/g, '') + '},');
-    lines.push('  journal = {Journal of Advanced Ceramics},');
-    lines.push('  year = {' + (a.year||'') + '},');
-    if (a.volume) lines.push('  volume = {' + a.volume + '},');
-    if (a.issue) lines.push('  number = {' + a.issue + '},');
+    lines.push('@article{' + key + ', ');
+    lines.push('author = {' + authorStr + '},');
+    lines.push('title = {' + (a.title||'').replace(/<[^>]+>/g, '') + '},');
+    lines.push('year = {' + (a.year||'') + '},');
+    lines.push('journal = {Journal of Advanced Ceramics},');
+    if (a.volume) lines.push('volume = {' + a.volume + '},');
+    if (a.issue) lines.push('number = {' + a.issue + '},');
     if (a.doi) {
       const m = a.doi.match(/JAC\.(\d+)\.(\d+)/);
-      if (m) lines.push('  pages = {' + m[2] + '},');
-      lines.push('  doi = {' + a.doi + '},');
+      if (m) lines.push('pages = {' + m[2] + '},');
     }
-    if (a.url) lines.push('  url = {' + a.url + '},');
-    lines.push('  publisher = {Science Press and Springer Science+Business Media}');
+    if (a.keywords && a.keywords.length) lines.push('keywords = {' + a.keywords.join(', ') + '},');
+    if (a.url) lines.push('url = {' + a.url + '},');
+    if (a.doi) lines.push('doi = {' + a.doi + '},');
+    if (a.abstract) lines.push('abstract = {' + stripHtml(a.abstract) + '},');
     lines.push('}');
-    return lines.join('\r\n');
+    return lines.join('
+\n');
   });
-  download(entries.join('\r\n\r\n') + '\r\n', 'JAC_articles.bib', 'application/x-bibtex;charset=utf-8;');
+  download(entries.join('
+\n
+\n') + '
+\n', 'JAC_articles.bib', 'application/x-bibtex;charset=utf-8;');
 }
 
 /* ── Download RIS ── */
