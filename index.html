@@ -574,7 +574,7 @@ body {
     <div class="header-links">
       <a href="https://www.sciopen.com/journal/2226-4108" target="_blank" class="header-link">Home page</a>
       <a href="https://mc03.manuscriptcentral.com/jacer" target="_blank" class="header-link">Submission link</a>
-      <button class="header-link" onclick="exportBibTeX()" style="cursor:pointer;font-family:inherit">BibTeX</button>
+      <a href="javascript:void(0)" class="header-link" onclick="exportBibTeX()" style="cursor:pointer;font-family:inherit;display:inline-block;text-align:center">BibTeX</a>
     </div>
   </div>
 </header>
@@ -602,7 +602,7 @@ body {
 </div>
 
 <script>
-const DATA_URL = 'articles_md/articles.json?v=20260922';
+const DATA_URL = 'articles_md/articles.json?v=20260923';
 let allArticles = [];
 let filteredArticles = [];
 
