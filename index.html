@@ -561,6 +561,46 @@ body {
   .header-links { display: flex; gap: 8px; }
   .header-link { font-size: 0.75rem; padding: 5px 12px; }
 }
+/* ── Back to Top ── */
+.back-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(230,126,34,0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 99;
+  border: none;
+  user-select: none;
+}
+.back-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.back-top:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+@media (max-width: 640px) {
+  .back-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -600,6 +640,18 @@ body {
 <div class="footer">
   Journal of Advanced Ceramics 2024-2025 &copy; 2026 — Data from <a href="https://www.sciopen.com" target="_blank">SciOpen</a>
 </div>
+<button id="backTop" class="back-top" title="返回搜索框">▴</button>
+<script>
+  /* ── Back to Top ── */
+  const $backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    $backTop.classList.toggle('visible', window.scrollY > 400);
+  });
+  $backTop.addEventListener('click', () => {
+    $search.focus();
+    $search.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
 
 <script>
 const DATA_URL = 'articles_md/articles.json?v=20260923';
