@@ -574,6 +574,7 @@ body {
     <div class="header-links">
       <a href="https://www.sciopen.com/journal/2226-4108" target="_blank" class="header-link">Home page</a>
       <a href="https://mc03.manuscriptcentral.com/jacer" target="_blank" class="header-link">Submission link</a>
+      <button class="header-link" onclick="exportBibTeX()" style="cursor:pointer;font-family:inherit">BibTeX</button>
     </div>
   </div>
 </header>
@@ -763,6 +764,7 @@ function render() {
         <span class="card-cite-text">${getCiteText(a)}</span>
         <button class="card-cite-btn" onclick="copyCite(${i})">Copy</button>
         <a class="card-cite-btn" href="javascript:void(0)" onclick="downloadRIS(${i})" style="background:#27ae60;color:#fff;text-decoration:none;display:inline-block;padding:3px 10px;border-radius:4px;font-size:0.72rem">RIS</a>
+        <a class="card-cite-btn" href="javascript:void(0)" onclick="downloadBibTeX(${i})" style="background:#9b59b6;color:#fff;text-decoration:none;display:inline-block;padding:3px 10px;border-radius:4px;font-size:0.72rem">BibTeX</a>
       </div>` : ''}
       <div class="detail">
         <div class="detail-grid">
@@ -938,6 +940,66 @@ function exportJSON() {
     abstract: a.abstract
   }));
   download(JSON.stringify(data, null, 2), 'JAC_articles.json', 'application/json');
+}
+
+/* ── Download BibTeX ── */
+function downloadBibTeX(idx) {
+  const a = filteredArticles[idx];
+  if (!a) return;
+  const bib = [];
+  const authorStr = (a.authors||[]).map(au => {
+    const name = (au.name || '').trim();
+    const parts = name.split(/\s+/);
+    return parts.length >= 2 ? parts[parts.length-1] + ', ' + parts.slice(0,-1).join(' ') : name;
+  }).join(' and ');
+  const key = 'JAC' + (a.year||'') + '_' + (a.doi||'').replace(/.*\//,'');
+  bib.push('@article{' + key + ',');
+  if (authorStr) bib.push('  author = {' + authorStr + '},');
+  bib.push('  title = {' + (a.title||'').replace(/<[^>]+>/g, '') + '},');
+  bib.push('  journal = {Journal of Advanced Ceramics},');
+  bib.push('  year = {' + (a.year||'') + '},');
+  if (a.volume) bib.push('  volume = {' + a.volume + '},');
+  if (a.issue) bib.push('  number = {' + a.issue + '},');
+  if (a.doi) {
+    const m = a.doi.match(/JAC\.(\d+)\.(\d+)/);
+    if (m) bib.push('  pages = {' + m[2] + '},');
+    bib.push('  doi = {' + a.doi + '},');
+  }
+  if (a.url) bib.push('  url = {' + a.url + '},');
+  bib.push('  publisher = {Science Press and Springer Science+Business Media}');
+  bib.push('}');
+  const fn = (a.doi||'JAC').replace(/[/\\]/g,'_') + '.bib';
+  download(bib.join('\r\n') + '\r\n', fn, 'application/x-bibtex;charset=utf-8;');
+}
+
+/* ── Export BibTeX (bulk) ── */
+function exportBibTeX() {
+  const entries = filteredArticles.map(a => {
+    const authorStr = (a.authors||[]).map(au => {
+      const name = (au.name || '').trim();
+      const parts = name.split(/\s+/);
+      return parts.length >= 2 ? parts[parts.length-1] + ', ' + parts.slice(0,-1).join(' ') : name;
+    }).join(' and ');
+    const key = 'JAC' + (a.year||'') + '_' + (a.doi||'').replace(/.*\//,'');
+    const lines = [];
+    lines.push('@article{' + key + ',');
+    if (authorStr) lines.push('  author = {' + authorStr + '},');
+    lines.push('  title = {' + (a.title||'').replace(/<[^>]+>/g, '') + '},');
+    lines.push('  journal = {Journal of Advanced Ceramics},');
+    lines.push('  year = {' + (a.year||'') + '},');
+    if (a.volume) lines.push('  volume = {' + a.volume + '},');
+    if (a.issue) lines.push('  number = {' + a.issue + '},');
+    if (a.doi) {
+      const m = a.doi.match(/JAC\.(\d+)\.(\d+)/);
+      if (m) lines.push('  pages = {' + m[2] + '},');
+      lines.push('  doi = {' + a.doi + '},');
+    }
+    if (a.url) lines.push('  url = {' + a.url + '},');
+    lines.push('  publisher = {Science Press and Springer Science+Business Media}');
+    lines.push('}');
+    return lines.join('\r\n');
+  });
+  download(entries.join('\r\n\r\n') + '\r\n', 'JAC_articles.bib', 'application/x-bibtex;charset=utf-8;');
 }
 
 /* ── Download RIS ── */
