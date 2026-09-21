@@ -329,10 +329,10 @@ RESEARCH_AREAS = [
         "name": "Excellent Chinese Review Papers",
         "name_zh": "优秀中文综述论文推荐",
         "keywords": [
-            "review", "综述", "progress in",
-            "advance in", "trend in",
-            "overview of", "summary of",
-            "perspective", "commentary"
+            "综述论文", "中文综述", "review article",
+            "progress in ceramics", "advance in ceramics",
+            "trend in ceramics", "overview of ceramics",
+            "perspective on", "commentary on"
         ]
     },
 ]
