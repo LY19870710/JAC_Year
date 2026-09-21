@@ -952,15 +952,13 @@ function downloadBibTeX(idx) {
   const a = filteredArticles[idx];
   if (!a) return;
   const bib = [];
-  // Author format: "First Last and First Last" (matching SciOpen)
   const authorStr = (a.authors||[]).map(au => (au.name || '').trim()).join(' and ');
-  // Key: FirstAuthorLastName + Year
   const firstAuthor = (a.authors||[])[0] || {};
   const firstName = (firstAuthor.name || '').trim();
   const nameParts = firstName.split(/\s+/);
   const lastAuthor = nameParts.length > 1 ? nameParts[nameParts.length-1] : firstName;
   const key = lastAuthor.replace(/[^a-zA-Z]/g, '') + (a.year||'');
-  bib.push('@article{' + key + ',');
+  bib.push('@article{' + key + ', ');
   bib.push('author = {' + authorStr + '},');
   bib.push('title = {' + (a.title||'').replace(/<[^>]+>/g, '') + '},');
   bib.push('year = {' + (a.year||'') + '},');
@@ -974,12 +972,10 @@ function downloadBibTeX(idx) {
   if (a.keywords && a.keywords.length) bib.push('keywords = {' + a.keywords.join(', ') + '},');
   if (a.url) bib.push('url = {' + a.url + '},');
   if (a.doi) bib.push('doi = {' + a.doi + '},');
-  if (a.abstract) bib.push('abstract = {' + stripHtml(a.abstract) + '},');
+  if (a.abstract) bib.push('abstract = {' + stripHtml(a.abstract) + '}');
   bib.push('}');
   const fn = (a.doi||'JAC').replace(/[/\\]/g,'_') + '.bib';
-  download(bib.join('
-\n') + '
-\n', fn, 'application/x-bibtex;charset=utf-8;');
+  download(bib.join('\r\n'), fn, 'application/x-bibtex;charset=utf-8;');
 }
 
 /* ── Export BibTeX (bulk) ── */
@@ -1006,15 +1002,11 @@ function exportBibTeX() {
     if (a.keywords && a.keywords.length) lines.push('keywords = {' + a.keywords.join(', ') + '},');
     if (a.url) lines.push('url = {' + a.url + '},');
     if (a.doi) lines.push('doi = {' + a.doi + '},');
-    if (a.abstract) lines.push('abstract = {' + stripHtml(a.abstract) + '},');
+    if (a.abstract) lines.push('abstract = {' + stripHtml(a.abstract) + '}');
     lines.push('}');
-    return lines.join('
-\n');
+    return lines.join('\r\n');
   });
-  download(entries.join('
-\n
-\n') + '
-\n', 'JAC_articles.bib', 'application/x-bibtex;charset=utf-8;');
+  download(entries.join('\r\n\r\n'), 'JAC_articles.bib', 'application/x-bibtex;charset=utf-8;');
 }
 
 /* ── Download RIS ── */
