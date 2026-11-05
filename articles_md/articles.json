@@ -1,5 +1,2484 @@
 [
   {
+    "doi": "10.26599/JAC.2026.9221381",
+    "title": "Artificial core–shell cofired architectures for high-performance microwave dielectric ceramics",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221381",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221381.pdf",
+    "authors": [
+      {
+        "name": "Qiya Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiaobo Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Bo Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jie Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yunzhou Shi",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yongzheng Wen",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Ji Zhou",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "microwave dielectric ceramics (MWDCs)",
+      "artificial core–shell architecture",
+      "temperature stability",
+      "low dielectric loss",
+      "ZnNb2O6"
+    ],
+    "abstract": "The rapid advancement of 5G/6G communication technologies imposes ever-increasing demands on microwave dielectric ceramics (MWDCs). However, it remains challenging to simultaneously achieve good temperature stability and high Q×f values. Metamaterials with artificially designed structures exhibit extraordinary properties, and metamaterialogy holds great potential for advancing conventional materials. Inspired by this paradigm, an artificial core–shell cofired architecture was designed to realize high-performance MWDCs. The architecture employed the Zn1.01Nb2O6 (ZNO) matrix as the shell and positive temperature coefficient of resonant frequency (τf) compensators, including TiO2 (TO), CaTiO3 (CTO), or SrTiO3 (STO), in either green or presintered states, as cores. The τf values of all the core–shell samples were effectively tuned to near zero, while high Q×f values were retained. Specifically, the ZNO–TO core–shell ceramic with a 1.43 wt% presintered TO core exhibited εr ≈ 25.32, Q×f ≈ 119,100 GHz, and τf ≈ −4.8 ppm/°C, while the temperature-stable counterparts using the CTO or STO cores retained Q×f ≥ 67,800 GHz. Furthermore, high frequency structure simulator (HFSS) simulation of a cylindrical dielectric resonator antenna (CDRA) based on the optimized ZNO–TO core–shell ceramic predicted favorable impedance matching (voltage standing wave ratio (VSWR) ≈ 1.015), radiation efficiency above 90%, and a peak realized gain of 6.13 dBi at 4.31 GHz. This preliminarily demonstrates the feasibility of CDRA applications. The artificial core–shell architecture provides a general strategy for synergistically optimizing microwave dielectric properties by tailoring the electric field participation and confining heterogeneous interfacial reactions, which is beneficial for developing the high-performance MWDCs required for next-generation communication technologies.",
+    "research_area": "Dielectric, Piezoelectric & Ferroelectric Ceramics",
+    "research_area_zh": "介电、压电、铁电及功能化耦合材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "20 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221380",
+    "title": "Unraveling phase evolution and polarization anomalies driven by chemical strain in BNT-based energy storage ceramics",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221380",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221380.pdf",
+    "authors": [
+      {
+        "name": "You Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Dong-Xu Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wenjie Peng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jia-Jia Ren",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhenxiang Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiaokun Huang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Chongwen Yu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiaojun Zeng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zong-Yang Shen",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "ferroelectric ceramics",
+      "dielectric energy storage",
+      "polarization behavior",
+      "chemical strain",
+      "Bi0.5Na0.5TiO3 (BNT)"
+    ],
+    "abstract": "Chemical substitution in ferroelectric ceramics is widely used to tune the phase stability and electromechanical response; however, the role of substitution-induced chemical strain on polarization and structural stability remains insufficiently understood. Herein, we report an anomalous evolution of the phase transition temperature and polarization behavior in Ca-doped Bi0.5Na0.5TiO3-based (BNT-based) ferroelectric ceramics that is distinct from previously reported chemical modification behavior. These experimental results are closely related to chemical strain-induced oxygen octahedra rotation arising from isovalent substitution with different ion radii at the A-site, and a qualitative composition-strain-polarization response correlation is established. The chemical strain imposes an internal stress on BNT-based ferroelectric ceramics to increase the polarization switching barrier. Notably, a post-annealing treatment effectively relieves this chemical strain, as evidenced by the reduced phase transition temperature, the reduced dielectric constant, and the slimmed polarization curve, and thus, the energy efficiency for dielectric energy storage is effectively enhanced. This work not only uncovers the critical role of chemical strain in influencing ferroelectric phase evolution and anomalous polarization changes but also provides a strain engineering method for designing high-performance dielectric energy storage materials.",
+    "research_area": "Energy Conversion & Storage Materials",
+    "research_area_zh": "能源转换与能源存储材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221379",
+    "title": "Non-hydrothermal synthesis of robust and radiation-resistant sodalite microspheres for effective removal and in situ immobilization of Cs+ and Sr2+",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221379",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221379.pdf",
+    "authors": [
+      {
+        "name": "Min Yi",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Haoyu Chen",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xinpeng Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Lin Shao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Toyohisa Fujita",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xuemin Cui",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Kaituo Wang",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "sodalite zeolite",
+      "geopolymer",
+      "radionuclides",
+      "dynamic adsorption",
+      "radiation resistance",
+      "in situ immobilization"
+    ],
+    "abstract": "The safe management of radioactive 137Cs and 90Sr from nuclear wastewater requires not only efficient capture but also permanent immobilization, yet current strategies often treat these as separate processes, leading to incompatibility and complex operations. Herein, a non-hydrothermal method based on geopolymer technology was developed to fabricate robust sodalite zeolite microspheres (GXU-SODs) for the integrated adsorption–immobilization of Cs+ and Sr2+. The synthesized GXU-SODs exhibited a well-defined crystalline structure and spherical morphology with a compressive strength of 13.88 MPa. Batch adsorption experiments revealed that the maximum adsorption capacities (Qm) of GXU-SODs were 56.67 and 59.64 mg·g−1 for Sr2+ and Cs+ with rapid kinetics of 1.21 and 0.94 g·mg−1·min−1, respectively. The adsorption process followed pseudo-second-order and Langmuir models, indicating monolayer homogeneous chemisorption. Meanwhile, GXU-SODs exhibited excellent radiation resistance, retaining good structural integrity and adsorption performance after 500 kGy. Dynamic adsorption column tests confirmed excellent breakthrough performance and practical applicability in real seawater. The adsorbed GXU-SODs could permanently immobilize radionuclides via simple thermal treatment at 1100 °C without secondary additives, achieving 28-d leaching rates significantly below the regulatory standard. Combining X-ray diffraction (XRD), X-ray photoelectron spectroscopy (XPS), Fourier transform infrared spectroscopy (FTIR), scanning electron microscopy–energy-dispersive X-ray spectroscopy (SEM‒EDS), and density functional theory (DFT) calculations revealed that ion exchange, chemisorption, and lattice incorporation within the sodalite cages were the primary mechanisms for the effective adsorption and long-term immobilization of Sr2+ and Cs+. This work presents a novel, scalable, and energy-efficient synthesis route for advanced sodalite-based materials and establishes an integrated adsorption–immobilization strategy for the treatment and safe disposal of radioactive waste.",
+    "research_area": "Environmental Purification & Remediation Materials",
+    "research_area_zh": "环境净化与环境修复材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "19 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221378",
+    "title": "Interfacial reaction-enabled strengthening of Al2O3f/Al2O3 composite joints brazed via TiO2-modified Ag–Nb2O5 fillers",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Rapid Communication",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221378",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221378.pdf",
+    "authors": [
+      {
+        "name": "Chen Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guiwu Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Qinhan Guo",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Huan Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiangzhao Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guanjun Qiao",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "Al2O3f/Al2O3 composites",
+      "reactive air brazing (RAB)",
+      "microstructures",
+      "interfaces",
+      "mechanical properties"
+    ],
+    "abstract": "Alumina fiber-reinforced alumina ceramic matrix composites (Al2O3f/Al2O3 CMCs) are strategic for extreme-environment applications, motivating the development of compatible joining methods. In this work, reactive air brazing (RAB) of Al2O3f/Al2O3 CMC using Ag–4Nb2O5–xTiO2 (0 ≤ x ≤ 4, in mol%) fillers was performed, and the microstructure evolution, interfacial behavior, and mechanical properties of brazed joints were systematically investigated. The main interfacial reaction product evolves from AgNbO3 to AlNbO4 as the TiO2 content increases, while the Ag interlayer gradually becomes discontinuous. When brazed with Ag–4Nb2O5−2TiO2, the CMC/Al2O3 butt joint exhibits a higher average shear strength (45.3 MPa) among the joints tested, outperforming the CMC/CMC butt joint, CMC/CMC flat joint, and CMC/GH3536 butt joint, with shear strengths of 38.1, 7.6, and 27.7 MPa, respectively. The fracture behavior of these joints is governed by multiple factors, namely interfacial features (the AlNbO4 reaction layer, interlocking structure, and pores) and elemental diffusion from the GH3536 alloy.",
+    "research_area": "Room-Temperature, High-Temperature & UHT Structural Ceramics",
+    "research_area_zh": "室温、高温及超高温结构陶瓷",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221377",
+    "title": "Hollow nanostructured rare-earth-containing high-entropy carbides: Facile electrochemical synthesis and effective electrocatalytic performance for hydrogen evolution",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221377",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221377.pdf",
+    "authors": [
+      {
+        "name": "Hongxia Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jinqiao Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Shiyu Qin",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wen Ma",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yu Bai",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "high-entropy carbides (HECs)",
+      "hollow nanoparticles",
+      "hydrogen evolution reaction (HER)",
+      "rare-earth (RE)",
+      "molten salt electrolysis"
+    ],
+    "abstract": "High-entropy carbides (HECs) have attracted growing attention as promising noble-metal catalyst alternatives for the hydrogen evolution reaction (HER). Nevertheless, the reported HEC nanocrystals remain confined to dense solid structures with metallic components limited to groups IVB–VIB. The first synthesis of hollow nanostructured HECs: (HfNbTaTiZr)C, (HfNbTaTiZrRE)C (RE = Gd, Ce, and Y), and (HfNbTaTiZrCeY)C was achieved by a direct electroreduction process. Electrolysis was conducted at 3.1 V using a graphite (GP) anode and a cathode prepared from mixed oxides/carbon additive powders in molten CaCl2–NaCl at 800 °C. The effects of carbon sources on the microstructure of the product were systematically investigated. The results show that the microstructure of HECs can be easily tailored from solid to hollow particles by selecting different carbon sources. All as-synthesized HECs exhibit a single face-centered cubic (FCC) phase and compositional homogeneity from the nanoscale to the microscale. The engineered hollow nanostructure, coupled with the incorporation of rare-earth (RE) elements, significantly enhanced the electrocatalytic performance of HECs for hydrogen evolution in an alkaline electrolyte. Specifically, the HECs incorporated with dual RE elements exhibited superior performance to those with a single element. Among them, (HfNbTaTiZrCeY)C demonstrated superior HER performance with a low overpotential of 167 mV, a small Tafel slope of 58.8 mV·dec−1, and a low charge transfer resistance (Rct) of 2.7 Ω. This work not only establishes a facile method for synthesizing various hollow rare-earth-containing high-entropy carbide (RE-HEC) nanoparticles but also provides a novel strategy for the design of high-performance nonnoble metal-based catalysts.",
+    "research_area": "High-Entropy Ceramics & Processing Technology",
+    "research_area_zh": "高熵陶瓷的制备及工艺技术",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221376",
+    "title": "Defect-engineered high-entropy spinel ferrite nanofibers via Joule heating for superior microwave absorption",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221376",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221376.pdf",
+    "authors": [
+      {
+        "name": "Haiming Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yuhang Bai",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Ziying Feng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Dan Luo",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yudong Gao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zexian Xu",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "Joule heating",
+      "high-entropy oxides",
+      "nanofiber",
+      "structural defects",
+      "microwave absorption"
+    ],
+    "abstract": "Spinel ferrites with exceptional magnetic permeability, optimal impedance matching, and robust chemical stability have attracted considerable attention in high-performance electromagnetic wave (EMW) absorption applications, yet their insufficient dielectric dissipation and constrained absorption bandwidth limit their use in advanced EMW absorption. Herein, an entropy-driven strategy based on electrospinning and the ultrafast Joule-heating method was designed to fabricate novel defect-rich (Mn0.2Co0.2Ni0.2Cu0.2Zn0.2)Fe2O4 high-entropy spinel ferrite nanofibers (HESF NFs). The results demonstrate that the high configurational entropy of HESF NFs induces severe lattice distortions, abundant oxygen vacancies, and ultradense grain boundaries, significantly reinforcing dipole and interfacial polarization. The inherent conductive dissipation in the three-dimensional (3D) fibrous architecture and multiscale EMW scattering concurrently refine the impedance matching. The quantitative analysis suggests that the entropy-mediated lattice strain and oxygen vacancies govern charge redistribution. Density functional theory (DFT) calculations attribute the enhanced dielectric loss to bandgap narrowing and localized electronic states. All these features endow the resultant HESF NFs with advanced EMW performance, achieving a minimum reflection loss of −53.58 dB at 1.6 mm and an effective absorption bandwidth of 7.82 GHz at 1.8 mm. Overall, defect density plays a critical role in modulating EMW dissipation through Joule-heating technology and should be the focus for designing high-performance EMW absorbers based on HESF NFs.",
+    "research_area": "High-Entropy Ceramics & Processing Technology",
+    "research_area_zh": "高熵陶瓷的制备及工艺技术",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "13 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221375",
+    "title": "Regulating d-band center and d-p orbital alignment to enhance K2NiF4-type cathode performance for protonic ceramic fuel cells",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221375",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221375.pdf",
+    "authors": [
+      {
+        "name": "Zhe Song",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Shaozhi Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Dezhi Geng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhangjin Xie",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Shenchi Qu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jie Hou",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "protonic ceramic fuel cells (PCFCs)",
+      "d-band center",
+      "oxygen reduction reaction (ORR)",
+      "electrocatalysis",
+      "K2NiF4-type"
+    ],
+    "abstract": "Regulating the transition-metal d-band center and metal-oxygen orbital alignment represents a potentially useful approach to improve cathodic oxygen reduction reaction (ORR) kinetics in protonic ceramic fuel cells (PCFCs). Herein, K2NiF4-type La0.5Sr1.5MnO4+δ (LSMO) and Fe-based La0.5Sr1.5FeO4+δ (LSFO) cathodes were investigated to clarify how electronic structure regulation affects oxygen defect chemistry, oxygen/proton transport, and proton-involved ORR activity. Density functional theory (DFT) calculations reveal that the work-function difference between LSFO and LSMO is negligible, whereas LSFO possesses a more favorable Fe 3d–O 2p energy alignment. This electronic configuration lowers the energetic cost of oxygen vacancy formation, improves hydration-related proton incorporation, reduces the proton hopping barrier, and decreases the thermodynamic free energy requirement for key ORR steps. Experimentally, LSFO exhibits enriched oxygen vacancy-related surface oxygen species, much higher electronic conductivity, and accelerated oxygen/proton surface exchange and diffusion. PO2/PH2O-dependent electrochemical impedance spectra further confirm that LSFO promotes multiple p-ORR subprocesses, including interfacial charge/proton transfer, oxygen reduction, and surface oxygen transport. Consequently, the optimized LSFO cathode achieves a peak power density of 2.2 W·cm−2 and a polarization resistance of 0.04 Ω·cm2 at 700 °C, outperforming LSMO and many reported Ruddlesden‒Popper (R–P) cathodes. Moreover, the LSFO cell exhibits stable operation over 400 h. These results demonstrate that coordinated regulation of the d-band center and d-p orbital alignment is a viable way to design high-performance K2NiF4-type PCFC cathodes.",
+    "research_area": "Energy Conversion & Storage Materials",
+    "research_area_zh": "能源转换与能源存储材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221374",
+    "title": "Cold-sintered phosphor film@Cu converter for ultrahigh-brightness laser illumination",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221374",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221374.pdf",
+    "authors": [
+      {
+        "name": "Jiuzhou Zhao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Meiqi Ye",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wenhao Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guankai Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yun Mou",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yang Peng",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "laser lighting",
+      "cold sintering",
+      "phosphor film",
+      "optothermal robustness",
+      "inorganic phosphor converter"
+    ],
+    "abstract": "Phosphor ceramics have been regarded as promising color converters for high-quality laser illumination, but they often suffer from optothermal performance degradation during high-temperature sintering processes. Herein, an optothermal-enhanced cold-sintered phosphor film@Cu (PF@Cu) converter is developed. A low-temperature (150 °C) cold sintering process (CSP) was introduced, and tunable composite pastes were prepared with geopolymer, alkali activator, and phosphor materials. High-performance yellow-emitting PF@Cu (Y-PF@Cu) and yellow/red-emitting PF@Cu (Y/R-PF@Cu) converters were prepared with densified PFs that were tightly integrated with the Cu substrate while effectively preserving the intrinsic luminescent properties of the phosphors. The optimized Y-PF@Cu converter achieves a record luminous flux (LF) of 9624.7 lm@35 W/mm2, a correlated color temperature (CCT) of 5931 K, and a color rendering index (CRI) of 60.7. The further optimized Y/R–PF@Cu converter delivers excellent comprehensive performance, including a high thermal conductivity of 50.6 W/(m·K), an LF of 2652.2 lm@17.5 W/mm2, a CCT of 2604 K, and a significantly improved CRI of 91.2. This work demonstrates the feasibility of CSP for fabricating color converters and provides an efficient strategy for synergistic optothermal optimization in ultrahigh-brightness laser illumination applications.",
+    "research_area": "Transparent & Luminescent Ceramics",
+    "research_area_zh": "透明陶瓷与发光陶瓷",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "13 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221373",
+    "title": "Key role of Ti2SnC surface oxides in tailoring interfacial diffusion behavior and electrical contact properties of Ag-based composites",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221373",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221373.pdf",
+    "authors": [
+      {
+        "name": "Shikun Ma",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Shupeng Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guanyu Chen",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jianxiang Ding",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Fanbin Zeng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xuze Deng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Manyu Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jin Qian",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hengjia Lou",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wei Zheng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Peigen Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Chengjian Ma",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Shihong Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhengming Sun",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "Ag-based electrical contact materials",
+      "MAX phase",
+      "preoxidation",
+      "interfacial reconstruction",
+      "arc erosion resistance"
+    ],
+    "abstract": "To clarify the role of Ti2SnC surface oxides in the arc erosion resistance of Ag-based electrical contacts, a preoxidation strategy is employed to construct a controllable oxide layer at the Ag/Ti2SnC interface. The results show that preoxidation induces surface decomposition of Ti2SnC, leading to the in situ formation of a TiO2-dominated oxide layer and promoting the diffusion of Sn into the Ag matrix. Although such interfacial reconstruction decreases the initial density, tensile strength, and electrical conductivity, it enhances local solid-solution strengthening and increases interfacial hardness. After 10,000 arc discharge cycles, the preoxidized Ag/Ti2SnC@TiO2 composite exhibits lower mass loss, shorter average arcing time, and lower arc energy. Combined with the post-erosion surface morphology, the results suggest that the preformed oxide interface regulates interfacial diffusion behavior, which further affects arc-root attachment and migration, thereby suppressing localized arc action and molten Ag splashing. This study reveals the role of Ti2SnC surface oxides in regulating interfacial structure and arc erosion behavior, providing insights into the interfacial design of Ag/MAX-phase electrical contact materials.",
+    "research_area": "MAX Phase, MAB Phase & 2D Derivatives",
+    "research_area_zh": "MAX相、MAB相及其二维衍生物",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "12 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221372",
+    "title": "Fe-doped BNKBT lead-free piezoceramics with enhanced electromechanical performance for 10 MHz ultrasonic imaging",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221372",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221372.pdf",
+    "authors": [
+      {
+        "name": "Guangzhi Dong",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Bilin Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yifan Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Ning Yang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xinyang Guo",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yi Quan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Chunlong Fei",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yintang Yang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Haitao Huang",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "bismuth sodium titanate (BNT)",
+      "lead-free piezoceramic",
+      "Fe3+-doped",
+      "piezoelectric properties",
+      "ultrasonic transducer"
+    ],
+    "abstract": "Ultrasonic transducers have long relied on lead-based piezoelectric materials. However, the potential harm of lead to the environment and human health has spurred an urgent demand for environmentally friendly lead-free alternative materials. Bismuth sodium titanate (BNT) is regarded as a promising piezoelectric material for lead-free transducers due to its low dielectric constant and acoustic impedance. To address the problem that the previously developed 0.84BNT–0.133BKT–0.027BT composition still struggles to meet the requirements of high-quality biological tissue imaging, this study adopted an acceptor doping strategy and prepared a B-site Fe3+-doped lead-free piezoceramic system. The results show that appropriate Fe3+ doping produces a favorable balance between R3c/P4bm phase-structure modification and defect-related pinning, thereby enhancing the electromechanical response. At x = 0.01, the piezoelectric coefficient reaches the maximum value of 180 pC/N, while the thickness-mode electromechanical coupling factor (kt) reaches 0.42, indicating enhanced thickness-mode electromechanical coupling. The planar 10 MHz ultrasonic transducer fabricated with this composition exhibits high sensitivity, with an insertion loss (|IL|) of 16 dB. After introducing an acoustic focusing lens, the focused transducer achieves axial and lateral resolutions of 182 and 264 μm, respectively. In addition, clear imaging of the internal structure of a porcine eyeball and the surface of a commemorative coin was successfully achieved. These results confirm that the B-site Fe3+-doped BNT–BKT–BT ternary lead-free ceramic has great application potential in high-performance environmentally friendly medical ultrasonic transducers.",
+    "research_area": "Dielectric, Piezoelectric & Ferroelectric Ceramics",
+    "research_area_zh": "介电、压电、铁电及功能化耦合材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "20 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221371",
+    "title": "Broadband-NIR luminescent MgNb2O6:Cr3+ transparent glass ceramics fabricated by comelting and controlled crystallization",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221371",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221371.pdf",
+    "authors": [
+      {
+        "name": "Jinliang Huang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Peihong Shi",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Junhua Lin",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Weijie Yan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Libin Xia",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xinyu Ye",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "glass ceramic (GC)",
+      "MgNb2O6:Cr3+",
+      "biomedical",
+      "near-infrared (NIR)"
+    ],
+    "abstract": "Heat accumulation and severe light scattering limit the applications of near-infrared phosphor-converted light-emitting diodes (NIR pc-LEDs) in the high-power field. Replacing phosphor encapsulation with Cr3+-doped glass-ceramics (GCs) provides an effective solution. However, obtaining transparent GCs with high thermal quenching resistance remains challenging. In this work, a novel Cr3+-doped MgNb2O6 GC was fabricated by co-melting and controlled crystallization using glass-forming and target-phase precursors. The resultant GCs possess acceptable transmittance and favorable thermal quenching resistance. By tuning the Mg/Nb ratio, a single MgNb2O6 crystalline phase was precipitated, and a two-step heat treatment optimized the GC transmittance. With the nucleation temperature (NT) rising from 670 to 750 °C and the crystallization temperature increasing from 820 to 960 °C, the crystallinity, grain size, and luminous intensity gradually increase, whereas the transmittance decreases monotonically. Cr3+ is proposed to simultaneously occupy Mg2+ and Nb5+ sites in MgNb2O6. Broadband NIR emission covering 600–1300 nm with a full width at half maximum (FWHM) of 210 nm is achieved, arising from intermediate and weak crystal fields and moderate electron–phonon coupling (EPC). After nucleation at 730 °C and crystallization at 940 °C, the optimized GC shows a transmittance of approximately 50% and a high absorptivity of 60.5%. The GC exhibits favorable thermal quenching resistance, retaining 67.5% of the initial luminous intensity at 373 K. The NIR LED device integrated with the MgNb2O6:Cr3+ GC delivers an output power of 240.9 mW and a power conversion efficiency of 6.3%, demonstrating promising application prospects in night-vision illumination, food testing, biomedical, and anti-counterfeiting fields.",
+    "research_area": "Glass, Glass-Ceramics & Geopolymer Ceramics",
+    "research_area_zh": "玻璃、玻璃陶瓷及地质聚合物陶瓷",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221370",
+    "title": "Achieving high piezoelectric response and elevated Curie temperature in Sm-modified PMN–PH–PT ceramics: A full-matrix characterization",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221370",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221370.pdf",
+    "authors": [
+      {
+        "name": "Chunyang Gao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Ying Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Al Momin Md Tanveer Karim",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yue Luo",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhenzhu Cao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiaozhou Liao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhenxiang Cheng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Shujun Zhang",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "Pb(Mg1/3Nb2/3)O3–PbHfO3–PbTiO3 (PMN–PH–PT)",
+      "Sm doping",
+      "piezoelectricity",
+      "full matrix",
+      "thermal stability"
+    ],
+    "abstract": "Pb-based ferroelectric ceramics face a fundamental trade-off between a high piezoelectric response (d33) and a low Curie temperature (TC). Here, we demonstrate that combining Sm doping with a high-TC PbHfO3 (PH)-based ternary matrix can effectively shift this balance. A series of 0.01Sm–0.2(Pb(Mg1/3Nb2/3)O3) (PMN)–(0.8−x)PH–x(PbTiO3) (PT) ceramics were designed and systematically characterized. A morphotropic phase boundary (MPB) was identified at x ≈ 0.435, where the optimized composition exhibits a high d33 (≈ 830 pC/N) together with an elevated TC (≈ 256 °C), a combination that lies above the typical d33–TC trend of Pb-based ferroelectric ceramics. In addition, the ceramic exhibits stable piezoelectric performance up to ~230 °C, indicating excellent thermal stability. A full-matrix electromechanical characterization was performed, yielding a self-consistent set of elastic and dielectric constants and piezoelectric coefficients. Compared with a commercial lead zirconate titanate (PZT)-610HD benchmark, the designed ceramic offers a comparable d33 but a 70 °C higher depolarization temperature. Atomic-resolution transmission electron microscopy (TEM) reveals heterogeneous local polar configurations in the optimized composition, providing microscopic structural evidence consistent with its excellent piezoelectric performance. This comprehensive property set not only clarifies the intrinsic structure–property relations but also provides a reliable database for high-temperature piezoelectric device design.",
+    "research_area": "Dielectric, Piezoelectric & Ferroelectric Ceramics",
+    "research_area_zh": "介电、压电、铁电及功能化耦合材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "12 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221369",
+    "title": "Gradient nano-columnar crystallite engineering-enabled BaTiO3/Ba(Zr0.2Ti0.8)O3/BaTiO3 sandwich films with superior energy storage performance via a low thermal budget",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221369",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221369.pdf",
+    "authors": [
+      {
+        "name": "Huali Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xing Zhao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hanfei Zhu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Li Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Ying Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Haijian Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhongshuo Xia",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jianting Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hua Tan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hui Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Chenxi Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zixu Yang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Gang Liu",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "energy storage",
+      "gradient nanocolumnar crystallites",
+      "barium titanate",
+      "sandwich thin film",
+      "low thermal budget"
+    ],
+    "abstract": "Ferroelectric thin-film capacitors exhibit significant potential for applications in pulsed power systems due to their high power density and ultrafast charge/discharge capability. However, the inherent trade-off between polarization and breakdown strength in ferroelectrics fundamentally imposes challenges for the co-optimization of recoverable energy density (Wrec) and energy storage efficiency (η) while also compromising energy storage stability. To address these challenges, a gradient nanocolumnar-crystallite-engineered BaTiO3/Ba(Zr0.2Ti0.8)O3/BaTiO3 sandwich film was constructed via a low thermal budget process at 200 °C. This approach facilitates a unique microstructure featuring gradient-distributed nanocolumnar crystallites in an amorphous-dominated matrix in a spatially separated manner throughout the sandwich film, thereby effectively modulating polarization behavior, mitigating dielectric nonlinearity, and consequently boosting the energy storage performance remarkably. Experimental results demonstrate that this sandwiched structure is endowed with an enhanced maximum polarization (Pmax), a small remnant polarization (Pr), and a much-delayed polarization saturation, which account for a Wrec ≈ 100.6 J/cm3 with an ultrahigh η ≈ 90.9% at 6.1 MV/cm. Furthermore, these sandwich films displayed broad operating temperature (room temperature to 150°C) and frequency (100 Hz to 10 kHz) stability and especially robust cycling reliability (2×109 cycles). Through an innovatively engineered sandwich heterostructure design coupled with a low thermal budget, simultaneous achievements of low-temperature compatibility and superior energy storage characteristics lay a foundation for integrated energy storage devices.",
+    "research_area": "Energy Conversion & Storage Materials",
+    "research_area_zh": "能源转换与能源存储材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "13 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221368",
+    "title": "Strong-bond networks and basal-cleavage resistance govern strength–toughness balance and elevated-temperature retention in Ta-based medium-entropy 211 MAX ceramics",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221368",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221368.pdf",
+    "authors": [
+      {
+        "name": "Lu Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Qifeng Zhuang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiyu Xiao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wei Ding",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Haoran Zhou",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xuefang Yin",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Kaicheng Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Baoze Zhao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Shun Dong",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guobing Ying",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "Ta-based MAX ceramics",
+      "medium-entropy ceramics",
+      "M-site chemistry",
+      "strength–toughness balance",
+      "basal cleavage",
+      "deep potential molecular dynamics (DP-MD)"
+    ],
+    "abstract": "Ta-containing Mn+1AXn (MAX) phases are promising high-temperature structural ceramics, but high density and concurrent optimization of strength, fracture toughness, and elevated-temperature property retention remain challenging. Entropy engineering can tailor M-site chemistry; however, it remains unclear how M-site combinations control the strength–toughness balance and elevated-temperature retention. Here, (TaNbV)2AlC, (TaTiNb)2AlC, (TaTiV)2AlC, and (TaTiNbV)2AlC were synthesized by vacuum hot pressing (HP) and investigated through phase and microstructural characterization, density functional theory (DFT)-based crystal orbital Hamilton population (COHP) analysis, deep potential molecular dynamics (DP-MD), and mechanics-based bridging models. Characterization confirmed a layered M2AlC-type framework and showed no obvious M-site elemental segregation within the examined regions. Compared with Ta2AlC, all medium-entropy ceramics showed reduced density and improved room-temperature flexural strength and fracture toughness, with (TaNbV)2AlC achieving 578 MPa and 8.5 MPa·m1/2. COHP revealed stronger M–C and M–Al bonding in Ta/Nb-centered environments than in Ti- and V-centered environments, explaining the flexural-strength grouping. However, fracture toughness required path-dependent basal-cleavage descriptors beyond the average bond strength. A validated DP-MD model demonstrated structural retention up to 1500 K under inert (oxygen-free) conditions and within the simulation time scale, intrinsic tensile softening, and composition-dependent cleavage-work retention. Qualitative-to-semiquantitative bridging projections indicate that (TaNbV)2AlC provides the highest absolute strength and toughness, whereas (TaTiNbV)2AlC has the best elevated-temperature retention. These results reveal that Ta/Nb-rich bonding and basal-cleavage resistance act as complementary, composition-dependent mechanisms governing the strength–toughness balance and its elevated-temperature retention in this Ta-based 211 MAX series, providing a mechanistic basis for designing entropy-engineered MAX ceramics with room-temperature performance and elevated-temperature property retention as distinct targets.",
+    "research_area": "MAX Phase, MAB Phase & 2D Derivatives",
+    "research_area_zh": "MAX相、MAB相及其二维衍生物",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221367",
+    "title": "Low-temperature densification of constrained GDC interlayers via chemo-mechanical regulation for stable solid oxide fuel cells",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221367",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221367.pdf",
+    "authors": [
+      {
+        "name": "Fuhuan Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yuechao Yao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yucan Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Weifeng Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yanmin Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiaojie Cheng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jun Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yucun Zhou",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Liangfei Xu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Shaorong Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hewu Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jianqiu Li",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "solid oxide fuel cells",
+      "gadolinium-doped ceria interlayer",
+      "constrained sintering",
+      "chemo-mechanical regulation",
+      "interface stability",
+      "scalable manufacturing"
+    ],
+    "abstract": "The constrained densification of ceramic interlayers in solid oxide fuel cells (SOFCs) is strongly influenced by the interplay between constraint effects and diffusion kinetics. While elevated sintering temperatures are commonly employed to overcome stress-retarded densification, they simultaneously accelerate interfacial interdiffusion and reaction-layer formation, creating a long-standing trade-off between microstructural integrity and chemical stability. Here, we demonstrate a chemo-mechanical regulation strategy that effectively mitigates the conflict between these competing processes through concurrent enhancement of sintering kinetics and regulation of green-state packing homogeneity. By combining Co3O4-assisted sintering activation with cold isostatic pressing (CIP), ultrathin Gd-doped ceria (GDC) interlayers achieve an apparent relative density of 98.5% after constrained sintering, enabling densification at 1200 °C, below the temperatures commonly reported for constrained GDC films processed without sintering activation. The resulting dense and continuous interlayer limits Ce–Zr interdiffusion during fabrication and mitigates Sr-related interfacial reactions and reaction-layer formation during operation. Consequently, the optimized anode-supported SOFC delivers a peak power density of 1.36 W·cm−2 at 800 °C and exhibits a normalized degradation rate of 0.48% per 1000 h, calculated from the stabilized 200–460 h operation period at 750 °C. Accelerated thermal aging at 850 °C for 600 h further supports the stability of the engineered heterointerface. The chemo-mechanical strategy was successfully extended to 10 cm × 10 cm cells, supporting their compatibility with scalable wet-processing routes. This work provides a chemo-mechanical perspective for mitigating the interplay between constrained densification and interfacial reactivity in multilayer ceramic systems.",
+    "research_area": "Energy Conversion & Storage Materials",
+    "research_area_zh": "能源转换与能源存储材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "14 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221366",
+    "title": "Phase-transition-regulated precipitation–densification to achieve a hardness–toughness synergy in in situ composite ceramics of triphase silicon nitride",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221366",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221366.pdf",
+    "authors": [
+      {
+        "name": "Shucheng Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Bingtao Feng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhaodong Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Bingbing Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hu Tang",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "silicon nitride",
+      "microstructural engineering",
+      "phase transition",
+      "composite",
+      "high-temperature and high-pressure (HPHT)"
+    ],
+    "abstract": "Structural materials generally struggle to simultaneously achieve high hardness and toughness. Composites, as a “complementary advantages” strategy, aim to optimize the synergy between hardness and toughness through the regulation of microstructure and composition. However, conventional composite strategies commonly suffer from insufficient interfacial compatibility and an inhomogeneous distribution of reinforcing phases, limiting the full realization of multiphase synergistic strengthening effects. Here, we successfully synthesized homogeneous triphase silicon nitride ceramics via an in situ composite strategy under high-temperature and high-pressure (HPHT) conditions, achieving synergistic enhancement in hardness and toughness with a Vickers hardness of (26.34±0.61) GPa and a fracture toughness of (6.02±0.48) MPa·m1/2. The superior mechanical properties are attributed to the precise regulation of microstructural evolution through the phase-transition pathway, establishing a sequential precipitation–densification mechanism that regulates γ phase precipitation and transformation kinetics while allowing concurrent α-to-β transformation and progressive densification. Specifically, nanoscale γ phase particles significantly enhance the hardness, whereas high-aspect-ratio β grains effectively improve fracture toughness through crack bridging, crack arrest, and reinitiation mechanisms. This phase-transition-regulated in situ composite strategy based on silicon nitride polymorphs provides new insights into microstructural engineering for synergistic hardening and toughening of advanced structural ceramics.",
+    "research_area": "Room-Temperature, High-Temperature & UHT Structural Ceramics",
+    "research_area_zh": "室温、高温及超高温结构陶瓷",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "19 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221365",
+    "title": "High-entropy ceramics for tribology applications: Recent advances and future directions",
+    "year": 2026,
+    "volume": "15",
+    "issue": "10",
+    "type": "Review",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221365",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221365.pdf",
+    "authors": [
+      {
+        "name": "Xiande Zheng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Qichun Sun",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wei Yan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jicheng Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hengzhong Fan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jingqing Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guoqing Wei",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yanchun Zhou",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Qiangqiang Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Weibin Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yuan Fang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yunfeng Su",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hongxiang Chen",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Mingliang Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hailong Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yongsheng Zhang",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "high-entropy ceramics",
+      "tribology",
+      "high-temperature lubrication",
+      "lubrication mechanisms",
+      "refractory ceramics",
+      "wear-resistant ceramics"
+    ],
+    "abstract": "As an emerging class of multifunctional materials, high-entropy ceramics (HECs) exhibit a unique combination of properties that have not yet been fully elucidated, enabled by their distinctive high-entropy design concept. These materials provide valuable scientific insights and significant research potential in the field of tribology. This review critically assesses the tribological performance of HECs across six major categories: carbides, borides, silicides, oxides, nitrides, and MAX phases. Comparative studies among different systems reveal that carbides and nitrides have received far more investigation than silicides and borides, reflecting an unbalanced research landscape. While HECs generally exhibit enhanced wear resistance and adaptive lubrication compared with conventional ceramics, the field currently suffers from a lack of standardized tribological data, insufficient mechanistic understanding of the high-entropy effect, and high synthesis costs. Future efforts should prioritize data-driven rational design, multiscale mechanistic modeling, and cost-effective manufacturing strategies to accelerate the transition of HECs from laboratory to industrial applications.",
+    "research_area": "High-Entropy Ceramics & Processing Technology",
+    "research_area_zh": "高熵陶瓷的制备及工艺技术",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "14 October 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221364",
+    "title": "Composition-optimized Hf–Zr–Ti–C–N coatings for exceptional ablation resistance",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221364",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221364.pdf",
+    "authors": [
+      {
+        "name": "Zheng Peng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Lu Yu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Junping Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jianbo Song",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Weide Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Lei Guo",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Qingsong Ma",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jiecai Han",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "ultrahigh-temperature ceramics",
+      "Hf–Zr–Ti–C–N",
+      "multielement coating",
+      "ablation-resistant mechanism"
+    ],
+    "abstract": "Multielement carbonitrides have emerged as promising candidates for ultrahigh-temperature thermal protection, yet the influence of compositional variation on their ablation behavior remains insufficiently understood. Here, a series of Hf–Zr–Ti–C–N bulk ceramics with systematically varied metallic atomic ratios are fabricated by spark plasma sintering. A comprehensive evaluation of fracture toughness, flexural strength and oxyacetylene flame ablation performance identifies Hf4/6Zr1/6Ti1/6CN as the optimal ceramic matrix, which is subsequently applied as a coating on graphite with a SiC-graded functional transition layer. After ablation for 120 s at 3000 °C, the coating exhibits excellent ablation resistance, with mass and linear ablation rates of −1.23±0.25 mg/s and −2.07±0.37 μm/s, respectively. Its superior ablation resistance originates from a synergistic interplay of phase transformation into a dense HfO2-dominated oxide barrier, the self-healing effect of the SiO2-rich phase coupled with stress relaxation by the Si–C–O nanowire network, and interfacial strengthening induced by the Si-enriched diffusion layer. Combined with molecular dynamics simulations, the oxidation evolution pathway during the initial stage of ablation is further elucidated and validated at the atomic scale. This work establishes a composition-optimized carbonitride coating with outstanding ablation resistance and provides a mechanistic framework for the rational design of next-generation thermal protection systems intended for extreme aerospace environments.",
+    "research_area": "High-Entropy Ceramics & Processing Technology",
+    "research_area_zh": "高熵陶瓷的制备及工艺技术",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "15 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221363",
+    "title": "Near-zero hysteresis in BaTiO3-based piezoceramic enabled by non-freezing high-active glassy polar nanoregions",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221363",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221363.pdf",
+    "authors": [
+      {
+        "name": "Hongbo Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yuhan Luan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Rongchuan He",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xudong Luo",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xu Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiaoqiang Song",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Qingquan Xiao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Li Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jiajun Ma",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "An Xue",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guifen Fan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Dawei Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Fangfang Zeng",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "high-active glassy polar nanoregions (HAG-PNRs)",
+      "defects",
+      "multiphase coexistence",
+      "damping",
+      "strain hysteresis"
+    ],
+    "abstract": "Near-zero strain hysteresis (Hs) is critical for the performance and reliability of electromechanical devices, yet its realization in environmentally friendly piezoelectric ceramics remains a challenge. Although defect engineering, phase boundary engineering, and the construction of polar nanoregions (PNRs) have been widely explored to reduce strain hysteresis, these individual approaches have yet to achieve significant improvements. Herein, we propose an effective strategy to engineer high-active glassy polar nanoregions (HAG-PNRs) and defect dipoles in Ba(1−x)(Sn0.11Ti0.89)O3–0.5xSb2O3 ceramics with multiphase coexistence. By reducing the domain switching energy barrier and frictional damping in piezoelectric ceramics, an ultralow strain hysteresis (~1.25%) is achieved, representing one of the lowest strain hysteresis values reported in ceramic systems to date. This work offers a novel design paradigm for developing BaTiO3-based lead-free piezoceramics with near-zero strain hysteresis through the controlled formation of HAG-PNRs.",
+    "research_area": "Dielectric, Piezoelectric & Ferroelectric Ceramics",
+    "research_area_zh": "介电、压电、铁电及功能化耦合材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221362",
+    "title": "A defect-chemical framework for transparent piezoelectric perovskites through donor-induced phase transitions",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221362",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221362.pdf",
+    "authors": [
+      {
+        "name": "Su-Jin Ha",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Young Kook Moon",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hyun-Ae Cha",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jong-Jin Choi",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Byung-Dong Hahn",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Byeong-Jae Min",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hyun-Cheol Song",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Sahn Nahm",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Seong-Hui Choi",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Il-Ryeol Yoo",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Kyung-Hoon Cho",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Do-Cheon Ahn",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Cheol-Woo Ahn",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "perovskite oxides",
+      "donor doping",
+      "defect chemistry",
+      "polymorphic phase transition",
+      "transparent piezoelectrics"
+    ],
+    "abstract": "Transparent piezoelectrics are often conceived as fundamentally distinct from conventional ferroelectric ceramics. However, this study reveals that transparency can be realized without altering the primary chemical framework but rather through a strategically controlled donor-doping protocol. From an inorganic chemical perspective, this phenomenon is rooted in the defect chemistry of ABO3 perovskites, where donor incorporation synergistically regulates charge compensation, lattice distortion, and interfacial sintering kinetics. Aliovalent donor doping induces cation-vacancy formation and attenuates local structural distortions, guiding ferroelectric lattices toward a pseudocubic state to suppress birefringence. Simultaneously, defect-mediated mass transport facilitates liquid-phase-mediated densification and regulates grain growth, eliminating scattering from residual porosity and grain boundaries. Consequently, optical transparency emerges as an intrinsic consequence of coupled defect equilibria, phase stability, and sintering dynamics. To validate the generalizability of this design concept, we systematically investigated a representative donor-doped perovskite series, including Bi3+-doped (K,Na)NbO3 (KNN) and La3+-doped Pb(Zr,Ti)O3 (PZT). Crucially, this study introduces a new paradigm that allows researchers to transform their established piezoelectric compositions into transparent multifunctional systems by incorporating donors, rather than abandoning proven materials for entirely new systems. Despite their distinct parent structures, both systems exhibit a unified donor-induced transformation into transparent piezoelectric states. Our findings demonstrate that transparent functionality can be integrated into existing piezoelectric systems through strategic modulation of defect equilibria and phase stability, providing a general defect-chemical framework for understanding and designing multifunctional transparent perovskite piezoelectrics. While this study focuses on establishing the defect-chemical origin of transparency using total transmittance, detailed evaluations of haze and in-line transmittance for display and imaging applications are deferred to future work.",
+    "research_area": "Dielectric, Piezoelectric & Ferroelectric Ceramics",
+    "research_area_zh": "介电、压电、铁电及功能化耦合材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "15 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221361",
+    "title": "Oxidation of multi-principal component diborides at 2300 °C under ultrafast heating",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221361",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221361.pdf",
+    "authors": [
+      {
+        "name": "Yizhou Cao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Ji-Xuan Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Weiqiang Cheng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jingyuan Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wenbo Xie",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Pai Peng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guo-Jun Zhang",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "oxidation resistance",
+      "ultrafast heating",
+      "ultrahigh temperature",
+      "multiprincipal component ceramics",
+      "boride"
+    ],
+    "abstract": "Multi-principal component diboride (MEB) ceramics are promising candidates for ultrahigh-temperature thermal protection systems. However, their intrinsic oxidation behavior above 2000 °C remains poorly understood because conventional testing methods have limitations. Here, an ultrafast heating oxidation test (UHOT) with a heating rate of 100 °C/s was applied to investigate the oxidation behavior of (Zr1/4Hf1/4Ta1/4Ti1/4)B2, (Zr1/4Hf1/4Ta1/4Nb1/4)B2, (Zr1/3Hf1/3Ta1/3)B2, and monolithic ZrB2 ceramics at 2300 °C under cyclic oxidation conditions. After five 1-min cyclic exposures at this temperature, totaling 5 min, MEB ceramics form multi-layered oxide scales, while ZrB2 ceramic develops only a porous and cracked single-layer scale. Among them, the Ti-containing composition exhibits the thinnest scale, the densest outer layer, the least mass loss, and intact scale integrity. Beyond the thermodynamic contribution of configurational entropy, this superior performance mainly arises from the dual role of the functional element Ti. First, it forms a liquid Ti-containing oxide phase that densifies the outer (Zr,Hf)O2-based layer derived from the structural elements Zr and Hf, enabling the outer layer to act as an effective oxygen diffusion barrier. Second, it promotes the formation of a porous needle-like Ta2O5 network in the inner layer during cooling, which can relieve thermal stress and prevent interfacial separation during cyclic heating and cooling. This work establishes a rapid-heating evaluation protocol and shows that oxidation resistance in these materials is governed by elemental functionality rather than entropy alone, offering a design principle for both equimolar and nonequimolar multiprincipal component nonoxide ceramics for reusable thermal protection applications.",
+    "research_area": "High-Entropy Ceramics & Processing Technology",
+    "research_area_zh": "高熵陶瓷的制备及工艺技术",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221360",
+    "title": "Multiscale SiC fiber/nanowire aerogels for broadband electromagnetic wave absorption via scalable ceramic papermaking coupled with CVI",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221360",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221360.pdf",
+    "authors": [
+      {
+        "name": "Xiaotong Chen",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jingyi Chen",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wanxun Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Chang Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wenqing Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Ying Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Rujie He",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "SiC aerogel",
+      "multiscale architecture",
+      "ceramic papermaking",
+      "electromagnetic wave absorption",
+      "fire-strengthening"
+    ],
+    "abstract": "The escalating demand for multifunctional thermal protection systems (TPSs) necessitates advanced materials that concurrently withstand extreme environments and mitigate electromagnetic wave (EMW) radiation. However, single-scale coarse fiber frameworks often suffer from limited polarization interfaces and loose mechanical interlocking. To address this, by coupling a scalable room-temperature ceramic papermaking strategy with chemical vapor infiltration (CVI), we fabricate multiscale all-ceramic SiCf/SiCnw aerogels (SFWs) that seamlessly bridge millimeter-scale fibers to nanoscale nanowires. Operating entirely under ambient conditions without the need for size-limiting equipment, this highly scalable and versatile strategy enables the fabrication of large-area components with arbitrary geometries. Optimizing the matrix fiber length to 5 mm unlocks sufficient interfiber void space for the uniform proliferation of ultrahigh-aspect-ratio SiC nanowires. The resulting SFW-5 M aerogel achieves an ultralow density of merely 0.23 g·cm−3 alongside an exceptional minimum reflection loss (RLmin) of −46.62 dB. Under 1000 °C flame exposure, the back-surface temperature is reliably restricted to approximately 250 °C. Crucially, rather than undergoing catastrophic embrittlement, prolonged ablation triggers a striking “fire-strengthening” effect, simultaneously enhancing compressive peak stresses and expanding the effective absorption bandwidth (EAB) to 11.5 GHz—effectively spanning the C, X, and Ku bands (72% of the 2–18 GHz range). Driven by cross-scale synergy between the fibrous scaffold and nanowire network, these durable aerogels overcome the inherent limitations of single-scale scaffolds, offering a scalable paradigm for next-generation aerospace TPS design.",
+    "research_area": "Microwave Absorbing & Transmitting Ceramics",
+    "research_area_zh": "吸波陶瓷与透波陶瓷",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "11 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221359",
+    "title": "Decoupling the factors governing diffuse phase transition and relaxor–ferroelectric evolution in high-entropy tetragonal tungsten bronze ceramics",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221359",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221359.pdf",
+    "authors": [
+      {
+        "name": "Chongyang Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Weijia Guo",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xingchen Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Bowen Yin",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yutian Lu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hui Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhenxing Yue",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "tetragonal tungsten bronze",
+      "high entropy",
+      "relaxor ferroelectrics",
+      "incommensurate modulation"
+    ],
+    "abstract": "High-entropy engineering has emerged as an effective strategy for tailoring structural disorder and functional responses in tetragonal tungsten bronze (TTB) ferroelectrics. However, how configurational entropy, crystal structure, modulation characteristics, and relaxor dynamics govern the macroscopic electrical response remains insufficiently understood. Here, K(NaPr)1−x(SrBa)xNb5O15 ceramics with continuously varying configurational entropy were designed to investigate the origin of relaxor–ferroelectric evolution. With increasing Sr/Ba substitution, the electrical response evolves from an ergodic relaxor state with slim hysteresis loops and four current peaks to a ferroelectric-like state with double current peaks, broader loops, and increased remanent and maximum polarizations. This evolution is accompanied by an increased lattice parameter c and tetragonality (c/a), indicating a structural evolution toward a more stable polar state. The dielectric anomalies and Vogel–Fulcher analysis further reveal an increase in freezing temperature and a decrease in activation energy, indicating strengthened coupling among polar nanoregions and a gradual evolution from the relaxor state toward a nonergodic relaxor or ferroelectric state. Notably, this trend is opposite to the commonly expected enhancement of relaxor behavior in high-entropy systems, suggesting that configurational entropy does not simply strengthen relaxor characteristics through increased compositional disorder. Instead, configurational entropy modulates the order–disorder state of A-site occupation, thereby changing the octahedral tilting patterns and the modulation structure, which affects the diffuseness of the phase transition. These results demonstrate that the macroscopic electrical response in the high-entropy K(NaPr)1−x(SrBa)xNb5O15 system is regulated by crystal structure, modulation structure, and polar nanoregion dynamics, providing new insight into the relaxor behavior of TTB ferroelectrics.",
+    "research_area": "Dielectric, Piezoelectric & Ferroelectric Ceramics",
+    "research_area_zh": "介电、压电、铁电及功能化耦合材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221358",
+    "title": "Multiscale synergistic design for enhanced energy storage performance in Bi0.5Na0.5TiO3-based lead-free dielectrics under various electric fields",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Review",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221358",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221358.pdf",
+    "authors": [
+      {
+        "name": "Pu Mao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xinyang Zhao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Ruirui Kang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhilun Lu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Lixue Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xiaojie Lou",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "relaxor ferroelectric (RFE)",
+      "lead-free",
+      "bulk Bi0.5Na0.5TiO3 (BNT)-based ceramics",
+      "energy storage performance",
+      "various electric fields"
+    ],
+    "abstract": "Dielectric capacitors have been recognized as promising devices for advanced pulse power systems due to their high power density and fast charge‒discharge rates. The dielectrics must simultaneously achieve a large energy storage density and high efficiency to support the rapid development of dielectric capacitors. Among the various dielectric ceramics investigated thus far, the Bi0.5Na0.5TiO3 (BNT)-based lead-free relaxor ferroelectric (RFE) has recently become increasingly attractive for dielectric energy storage owing to its high spontaneous polarization and temperature corresponding to the peak of maximum permittivity (Tm) in dielectric constant spectroscopy. Extensive efforts have been devoted to developing high-performance BNT-based ceramics in extreme conditions, and significant progress has been made. To meet the application demands of energy storage devices across diverse electric fields, it is imperative to understand the fundamental principles of energy storage and devise targeted optimization strategies for BNT-based ceramics. This review provides an overview of energy storage theory and essential determinants governing the capacitive performance of dielectric materials, encompassing polarization response, breakdown characteristics, relaxation behavior, and dielectric properties. Furthermore, we elucidate tailored multiscale design strategies to optimize the energy storage capability of BNT-based ceramics across various electric field (E-field) regions: low E-field (&lt; 300 kV/cm), moderate E-field (300–500 kV/cm), and high E-field (&gt; 500 kV/cm). We further present the developmental progress and future outlook of BNT-based ceramics for advanced electrostatic capacitor applications.",
+    "research_area": "Energy Conversion & Storage Materials",
+    "research_area_zh": "能源转换与能源存储材料",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221357",
+    "title": "Multiscale hardening and toughening of (Ti,Zr,V,Nb,Mo)C high-entropy carbides through coexisting phase separation and precipitation mechanisms",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221357",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221357.pdf",
+    "authors": [
+      {
+        "name": "Zhixuan Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Na Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zongyao Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jiatai Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Qiang Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guorui Chang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Weili Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Weibin Zhang",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "high-entropy carbide",
+      "phase separation",
+      "phase precipitation",
+      "mechanical properties"
+    ],
+    "abstract": "The engineering application of transition metal carbides is often constrained by the inherent hardness–toughness trade-off. While phase modulation is an effective strategy, the intrinsic brittleness of ceramics still limits the achievable toughening. Taking (Ti,Zr,V,Nb,Mo)C high-entropy carbide as a model system, this work proposes a novel strategy to reconcile this trade-off by leveraging synergistic phase separation and precipitation. The as-sintered single-phase solid solution was subjected to optimized aging treatment, yielding a microstructure characterized by coexisting spinodal decomposition domains and precipitates. Specifically, a multiscale synergistic strengthening mechanism is revealed. At the atomic scale, unique interface engineering combines semicoherent spinodal interfaces with incoherent precipitate interfaces. This activates microscale defect engineering by inducing high-density dislocations, nanotwins, and stacking faults. This multiscale system constructs a composite structure at the mesoscale where spinodal and precipitation domains coexist, effectively impeding dislocation motion and deflecting crack propagation. Driven by this mechanism, the material aged at 1300 °C for 20 h achieves an optimal synergy of properties, demonstrating concurrent increases in hardness (36%) and fracture toughness (45%) compared with the as-sintered state. This work opens a new avenue for designing advanced ceramic materials with superior damage tolerance.",
+    "research_area": "High-Entropy Ceramics & Processing Technology",
+    "research_area_zh": "高熵陶瓷的制备及工艺技术",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "15 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221356",
+    "title": "Tracking the formation of double Schottky barriers during sintering of ZnO varistor ceramics using in-situ dielectric spectroscopy",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221356",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221356.pdf",
+    "authors": [
+      {
+        "name": "Jiale Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhuolin Cheng",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jiatong Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Zhuang Tang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yuguang Ge",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xuetong Zhao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jianying Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Kangning Wu",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "varistor",
+      "sintering",
+      "double Schottky barrier",
+      "dielectric spectroscopy",
+      "negative permittivity"
+    ],
+    "abstract": "Deciphering the dynamic evolution of double Schottky barriers (DSBs) during high-temperature sintering remains a fundamental challenge in establishing structure–function relationships in ZnO varistor ceramics. In-situ dielectric spectroscopy is employed to continuously monitor capacitance and conductance throughout the entire sintering process, with measurement fidelity ensured by rigorous decoupling of system impedance. During sintering, a pronounced transition to negative permittivity in ZnO varistor ceramics is directly observed above 700 °C, originating from electron plasma oscillations within the semiconducting bulk. The apparent activation energy (Ea) of direct current (DC) conductance is identified as a robust descriptor for tracking DSB evolution. The results reveal a temporal decoupling between microstructural densification and electrical functionalization: Grain growth is largely completed during the heating and soaking stages, whereas DSB formation predominantly occurs during the cooling stage. Specifically, from 800 to 650 °C, Ea increases from nearly 0 to approximately 1.4 eV, accompanied by an increase in grain boundary resistance (Rgb), indicating the progressive formation of DSBs. Scanning electron microscopy–energy-dispersive X-ray spectroscopy (SEM–EDS) line scans of quenched samples further reveal grain boundary enrichment of Bi and Sb, accompanied by the redistribution of Mn and Ni after soaking and during cooling, supporting the concurrent evolution of the grain boundary chemical environment. Upon further cooling, DSB formation suppresses the free-carrier response, Rgb increases markedly, and the negative permittivity gradually disappears. Meanwhile, Ea decreases slightly from 650 to 600 °C and exhibits a distinct peak in the 500–600 °C range. In-situ X-ray diffraction (XRD) shows that this feature coincides with the gradual disappearance of β-Bi2O3 and the increasing dominance of α-Bi2O3, suggesting that the Bi-rich phase transition contributes to the subsequent modification of DSBs. By directly linking in-situ electrical behavior to microstructural evolution during sintering, this work provides a deterministic framework for the rational design and performance optimization of functional electroceramics.",
+    "research_area": "Sensitive Materials & Applications",
+    "research_area_zh": "敏感材料及其应用",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "16 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221355",
+    "title": "Acoustic softening dominates over Klemens–Abeles disorder in governing the lattice thermal conductivity of (Gd1−xSmx)TaO4 ceramics",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221355",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221355.pdf",
+    "authors": [
+      {
+        "name": "Chunyu Jiang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Bingzhi Ge",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Huiyi Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Qinhui Zhao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xunlei Chen",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Cheng Xu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jie Yang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jing Feng",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "lattice thermal conductivity",
+      "rare-earth (RE) tantalates",
+      "fergusonite solid solution",
+      "acoustic softening",
+      "thermal barrier coatings"
+    ],
+    "abstract": "Low thermal conductivity oxide ceramics are usually designed around point-defect scattering. Cation mass and ionic-radius mismatch, the Klemens–Abeles descriptors, serve as the primary screening variables. Here, we show that single-phase fergusonite (Gd1−xSmx)TaO4 ceramics (x = 0–1) reveal a second, distinct route to low conductivity. This route involves acoustic softening coupled to unit-cell dilation. Replacing Gd with Sm expands the rare-earth (RE)–O coordination shell while leaving the TaO6 octahedron nearly unchanged. The unit cell grows monotonically with x, and the lattice softens. The mean sound velocity and Debye temperature both drop by approximately 20% from x = 0 to x = 0.8. The room-temperature lattice thermal conductivity decreases by 32%, from 5.11 to 3.48 W·m−1·K−1. A Cahill minimum-conductivity estimate is built from sound velocity and atomic number density alone. It reproduces most of this decrease. This result shows that acoustic softening, rather than disorder, sets the baseline trend. Disorder is still active but offset. The Klemens–Abeles scattering parameter peaks at x = 0.2–0.6, away from the conductivity minimum at x = 0.8. The end member SmTaO4 provides a decisive test. Its sound velocity matches that of the x = 0.8 composition, but its conductivity rebounds. This isolates residual RE-sublattice disorder as the extra channel that deepens the minimum. Acoustic softening and unit-cell volume therefore deserve a place alongside mass and radius mismatch when screening complex oxides for low thermal conductivity.",
+    "research_area": "Thermal & Environmental Barrier Coatings",
+    "research_area_zh": "热障涂层、环境障涂层及其他保护性涂层",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "29 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221354",
+    "title": "Data-driven discovery of high-entropy rare earth aluminates for high-temperature thermal barrier applications",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221354",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221354.pdf",
+    "authors": [
+      {
+        "name": "Kaili Chu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wenhui Zhao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yun Fan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Huimin Xiang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yuchen Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yiran Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wenxian Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Bin Liu",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "high-entropy rare earth (RE) aluminates",
+      "machine learning",
+      "single-phase formation ability",
+      "thermal/environmental barrier coatings (T/EBCs)"
+    ],
+    "abstract": "High-entropy rare earth (RE) aluminates are promising candidates for thermal/environmental barrier coatings (T/EBCs), while the immense compositional space presents significant challenges for traditional experimental discovery. To address this issue, artificial neural network (ANN), support vector machine (SVM), and random forest classification (RFC) are employed as three machine learning models to predict the single-phase formation ability of (REⅠ1/4REⅡ1/4REⅢ1/4REⅣ1/4)4Al2O9 materials. Both the ANN and RFC models achieve optimal validation accuracy, demonstrating their outstanding ability to capture complex patterns from the dataset. SHapley Additive exPlanations (SHAP) analysis is utilized to interpret the contribution of feature descriptors, revealing the significant impact of factors such as average ionic radius ( r¯) on phase stability. According to the prediction results of machine learning, three representative ceramic samples are selected, and single-phase monoclinic crystal structures and uniform elemental distribution are confirmed by X-ray diffraction (XRD) and scanning electron microscopy (SEM). The synthesized ceramics exhibit quasiductile behavior with enhanced damage tolerance combined with lower thermal conductivity, thus making them promising candidates for next-generation T/EBCs.",
+    "research_area": "Computational Modeling & Simulation",
+    "research_area_zh": "材料计算与模拟",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "18 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221353",
+    "title": "Rethinking brittleness in ceramics: The emergence of room-temperature plasticity",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Review",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221353",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221353.pdf",
+    "authors": [
+      {
+        "name": "Zhitong Xu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jie Zhang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Liran Dong",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Yuanwei Chao",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guanghua Liu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Kexin Chen",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "ceramics",
+      "room-temperature plasticity",
+      "deformation mechanism",
+      "structural design",
+      "mechanical properties",
+      "dislocation engineering"
+    ],
+    "abstract": "Ceramics are valued for their high strength, thermal stability, and chemical inertness, but their structural applications are limited by intrinsic room-temperature (RT) brittleness. The stress required for dislocation motion in strongly ionic/covalent ceramics often exceeds their fracture strength, leading to catastrophic failure before plastic deformation occurs. Overcoming this limitation remains a major challenge in materials science. Recent studies have shown that ceramics exhibit RT plasticity through mechanisms including dislocation, phase transformation, and grain boundary sliding (GBS). These findings challenge the conventional view of ceramics as purely brittle materials and suggest that plasticity can be achieved not only in microscale specimens but also in bulk and structurally engineered ceramic systems. Several strategies have been developed to promote RT plasticity. Defect engineering, the controlled introduction and activation of dislocations, is critical for regulating deformation behavior. Structural designs such as coherent interfaces, layered architectures, and amorphous–crystalline composites can reduce dislocation nucleation barriers and improve deformation compatibility. Nanocrystalline structuring and external field regulation further enhance plasticity by altering local stress distributions and diffusion pathways. In situ characterization and strain measurement techniques have enabled direct observation and accurate quantification of deformation processes, improving the understanding of the relationship between structure, defects, and mechanical response. Despite these advances, achieving reliable and scalable plasticity in bulk ceramics remains challenging. Future work should focus on intrinsic plastic ceramic systems, scalable fabrication, and integrated multiscale design strategies. These efforts may enable the development of ceramics with improved damage tolerance and deformability for advanced structural and functional applications.",
+    "research_area": "Room-Temperature, High-Temperature & UHT Structural Ceramics",
+    "research_area_zh": "室温、高温及超高温结构陶瓷",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "04 September 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221352",
+    "title": "Enhanced luminescence, thermal stability, and scintillation performance in Zn2SiO4:Mn2+ phosphors via a lattice modification strategy based on Mg2+ co-doping",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221352",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221352.pdf",
+    "authors": [
+      {
+        "name": "Simin Yu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guanlin He",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Xinglin Jiang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Hai Guo",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "Zn2SiO4:Mn2+,Mg2+ phosphors",
+      "scintillator",
+      "lattice modification",
+      "anti-thermal quenching",
+      "X-ray imaging"
+    ],
+    "abstract": "Mn2+-based inorganic scintillation phosphors have attracted considerable attention due to their tunable optical properties, low toxicity, and high luminescent efficiency. However, their practical applications commonly suffer from extreme thermal quenching. In this paper, a lattice modification strategy involving the introduction of Mg2+ into Zn2SiO4:Mn2+ phosphors is proposed to improve the thermal stability and luminescence of Mn2+. The X-ray excited luminescence (XEL) intensity of Zn2SiO4:Mn2+,Mg2+ phosphors is 493% of that of Bi4Ge3O12 powders and is enhanced by 2 times compared to that of Zn2SiO4:Mn2+ phosphors. The corresponding flexible film exhibits a high spatial resolution of 20 lp/mm and excellent stability after immersion in H2O or CH3CH2OH for 10 d. In addition, the Zn2SiO4:Mn2+,Mg2+ phosphors present unique anti-thermal quenching luminescence. Its XEL intensity at 483 K is 126% of that at 303 K. Through thermoluminescence analysis, the anti-thermal quenching of Mn2+ can be explained by the fact that Mg2+ incorporation effectively reduces structural defects induced by Mn2+–Zn2+ substitution. This work confirms the scintillation potential of Zn2SiO4:Mn2+,Mg2+ phosphors and offers a meaningful strategy for developing novel scintillators for advanced X-ray imaging applications.",
+    "research_area": "Transparent & Luminescent Ceramics",
+    "research_area_zh": "透明陶瓷与发光陶瓷",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "28 August 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
+    "doi": "10.26599/JAC.2026.9221351",
+    "title": "Non-equimolar compositional design engineered thermal expansion coefficients and conductivities of m'-RETaO4 (RE = Sc, Y, Tm, Ho, Dy, Gd) high-entropy ceramics",
+    "year": 2026,
+    "volume": "15",
+    "issue": "9",
+    "type": "Research Article",
+    "url": "https://www.sciopen.com/article/10.26599/JAC.2026.9221351",
+    "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JAC.2026.9221351.pdf",
+    "authors": [
+      {
+        "name": "Bingyan Wu",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Guangrong Li",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Lin Chen",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jiankun Wang",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Wei Pan",
+        "email": "",
+        "institution": ""
+      },
+      {
+        "name": "Jing Feng",
+        "email": "",
+        "institution": ""
+      }
+    ],
+    "keywords": [
+      "nonequimolar design",
+      "high-entropy ceramics",
+      "lattice distortion",
+      "disorders",
+      "environmental barrier coatings (EBCs)"
+    ],
+    "abstract": "Rare-earth tantalates (RETaO4) have been extensively investigated as thermal protective materials, but their application as environmental barrier coatings (EBCs) for ceramic matrix composites (CMCs) is limited by their high thermal expansion coefficients (TECs ≥ 9.0×10−6 K−1). High-entropy design provides a feasible route to tailor the thermal properties of RETaO4; however, most reports focus on equimolar RETaO4 high-entropy ceramics (HECs). In this study, a series of nonequimolar monoclinic-prime (m') RETaO4 HECs are designed and synthesized to clarify the composition-structure-property relationships. The nonequimolar design is employed to regulate configurational complexity, polyhedral distortion, and lattice strain in m'-RETaO4 within the same phase. Atomic-scale transmission electron microscopy (TEM) and geometric phase analysis (GPA) characterizations reveal the associated local distortion and lattice strain. These observations link nonequimolar composition with local structural distortion and macroscopic thermal transport behavior. The lowest thermal conductivity reaches 1.52–2.68 W·m−1·K−1 at 25–900 °C, and this is mainly attributed to RE-site disorder, lattice strain, and polyhedral distortion. Polyhedral distortion also suppresses thermal expansion by restricting atomic anharmonic vibrations. Among the designed compositions, the optimized nonequimolar m'-RETaO4 HEC (Sc0.2Y0.2Tm0.2Ho0.2Dy0.1Gd0.1)TaO4 exhibits the lowest TEC of 6.2×10−6 K−1 at 1500 °C, which is closer to that of SiC-based CMCs than the other compositions, indicating its potential as a candidate EBC material. This work proposes that polyhedral distortion and lattice strain are important structural factors for tailoring the thermal properties of nonequimolar RETaO4 HECs, providing guidance for the design of complex oxides.",
+    "research_area": "High-Entropy Ceramics & Processing Technology",
+    "research_area_zh": "高熵陶瓷的制备及工艺技术",
+    "received": "",
+    "revised": "",
+    "accepted": "",
+    "published": "28 August 2026",
+    "views": "",
+    "downloads": "",
+    "citations_crossref": "",
+    "citations_wos": "",
+    "citations_scopus": "",
+    "citations_csdb": "",
+    "altmetric": "",
+    "corresponding_author": "",
+    "corresponding_email": "",
+    "corresponding_authors": "",
+    "corresponding_emails": "",
+    "funding": "",
+    "institutions": ""
+  },
+  {
     "doi": "10.26599/JAC.2026.9221350",
     "title": "Two-step solid-state synthesis of 413 high-purity high-entropy MAX phases based on the structural genetic mechanism and investigation of their microwave absorption performance",
     "year": 2026,
